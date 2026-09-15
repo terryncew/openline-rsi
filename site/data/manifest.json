@@ -1,0 +1,195 @@
+{
+  "copied_at": "2026-09-15",
+  "copies": [
+    {
+      "copy_path": "evidence/rsi-003/RSI_003_DESIGN_DRAFT.md",
+      "frozen_ref": "n/a (design draft, local)",
+      "key": "rsi003_design",
+      "record_type": "design draft",
+      "sha256": "192e260fe6ae2194bbea6309258c4f88d0b49793188dabb2121cde13a4bfbd14",
+      "source_path": "rsi-003-design/RSI_003_DESIGN_DRAFT.md",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-003/RSI_003_PREREGISTRATION.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi003_prereg",
+      "record_type": "preregistration",
+      "sha256": "e2dacf20b6c0b7a22c56fae84be31151a68057079d1188a26aecb7d595a2a145",
+      "source_path": "openline-airlock/experiments/rsi-003/RSI_003_PREREGISTRATION.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-003/RSI_003_RECEIPT.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi003_receipt",
+      "record_type": "result receipt",
+      "sha256": "81fae997106c825e3d5ed38f1c20a507eb7961bee50025577b3e4af12ae963ae",
+      "source_path": "openline-airlock/proofs/rsi-003/RSI_003_RECEIPT.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-003/RSI_003_FREEZE_NOTE.md",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi003_freeze",
+      "record_type": "freeze note",
+      "sha256": "da02271147f3c80b19c8fce89b2c6e1832b5a8f0ead5cf6c311e14890dba5c15",
+      "source_path": "openline-airlock/proofs/rsi-003/RSI_003_FREEZE_NOTE.md",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-003/RSI_003_INTEGRITY_MANIFEST.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi003_manifest",
+      "record_type": "integrity manifest",
+      "sha256": "de2f29b49711fd213c75a807c762e697d064868be20c3491c0afd20b438319aa",
+      "source_path": "openline-airlock/proofs/rsi-003/RSI_003_INTEGRITY_MANIFEST.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-004/RSI_004_PREREGISTRATION_DESIGN_DRAFT.json",
+      "frozen_ref": "n/a (design draft, local)",
+      "key": "rsi004_prereg",
+      "record_type": "preregistration",
+      "sha256": "5750248e5236c506270fd5506bd695f62468dbc3114305cc2284e40d7a544d9c",
+      "source_path": "rsi-004-design/RSI_004_PREREGISTRATION.json",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-004/RSI_004_FREEZE_NOTE.md",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi004_freeze",
+      "record_type": "freeze note",
+      "sha256": "c28720279d4e1cf4ac8f95c6eaf36ae94360e64b58913890a123bf5c892d3855",
+      "source_path": "openline-airlock/proofs/rsi-004/RSI_004_FREEZE_NOTE.md",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-004/RSI_004_PRIMARY_HARNESS_ERROR.txt",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi004_error",
+      "record_type": "harness error capture",
+      "sha256": "e3810e63e42b2f7654196720248b19323b0a509ab7da41043a21209f98cf34ac",
+      "source_path": "openline-airlock/proofs/rsi-004/RSI_004_PRIMARY_HARNESS_ERROR.txt",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-004/RSI_004_INTEGRITY_MANIFEST.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi004_manifest",
+      "record_type": "integrity manifest",
+      "sha256": "73b591d010cc8a3bdb1fbeea648c25d7c31161378c0c47082c9eb697df8c629f",
+      "source_path": "openline-airlock/proofs/rsi-004/RSI_004_INTEGRITY_MANIFEST.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-005/FREEZE_NOTE.md",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi005_freeze",
+      "record_type": "freeze note",
+      "sha256": "a4ca391ac7e5f5f2973bc4c304b133878265f69015f9d37ecd7fb80dea03cedf",
+      "source_path": "openline-airlock/proofs/rsi-005/FREEZE_NOTE.md",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-005/result.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi005_result",
+      "record_type": "result",
+      "sha256": "76fa61f785158b729eb59d1524d98abbee94f5857805ac0c008e475c3ad14855",
+      "source_path": "openline-airlock/proofs/rsi-005/result.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-005/primary-stdout.txt",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi005_stdout",
+      "record_type": "primary stdout",
+      "sha256": "fd06b23a53b5cbc6d94dd0ad1c2da36b178a4e4a9483ecf66c6e0865dea6a4be",
+      "source_path": "openline-airlock/proofs/rsi-005/primary-stdout.txt",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-005/INTEGRITY_MANIFEST.md",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi005_manifest",
+      "record_type": "integrity manifest",
+      "sha256": "bd48fa04187c9b53458ae140d9f47a48f3e79e37fca026de31c508af6e18bcd9",
+      "source_path": "openline-airlock/proofs/rsi-005/INTEGRITY_MANIFEST.md",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/ril-001r/RIL_001R_PREREGISTRATION.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "ril_prereg",
+      "record_type": "preregistration",
+      "sha256": "d7c6c8f0b1c7abd54f6841a5befe88459668682f78c32d354d8406ac0d874c24",
+      "source_path": "openline-airlock/experiments/ril-001r/RIL_001R_PREREGISTRATION.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/ril-001r/RIL_001R_FREEZE.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "ril_freeze_json",
+      "record_type": "freeze record",
+      "sha256": "134ed9b96d1950329be4faceea73269b4f8dd07ae790a209134223fd23051aa5",
+      "source_path": "openline-airlock/proofs/ril-001r/RIL_001R_FREEZE.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/ril-001r/RIL_001R_FREEZE.md",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "ril_freeze_md",
+      "record_type": "freeze note",
+      "sha256": "69b728b620834dc5e2637661f5fdb506187c529d2ddbfa4ad67232c70f0d87f5",
+      "source_path": "openline-airlock/proofs/ril-001r/RIL_001R_FREEZE.md",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-004/RSI_004_PREREGISTRATION.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi004_prereg_authorized",
+      "record_type": "preregistration (authorized, frozen before primary contact)",
+      "sha256": "8e9ceb9bc928c710920893a79fa99661f93d2456bc3acf1586a8175eb51ca8fd",
+      "source_path": "openline-airlock/experiments/rsi-004-lineage-aware-inheritance/RSI_004_PREREGISTRATION.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/rsi-005/RSI_005_PREREGISTRATION.json",
+      "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
+      "key": "rsi005_prereg",
+      "record_type": "preregistration",
+      "sha256": "256b41d726f5f8597b4e23ed2169f10974a034d9433f5fd0d5ba861ead8f2ac5",
+      "source_path": "openline-airlock/experiments/rsi-005-lineage-aware-inheritance/RSI_005_PREREGISTRATION.json",
+      "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    }
+  ],
+  "external_references": [
+    {
+      "key": "ril_001r_raw_result",
+      "kind": "raw execution result",
+      "limitation": "Raw RIL_001R_RESULT.json bytes are not in the frozen local record; only the SHA-256 is quoted in the local freeze note. The terminal numbers and verdict shown in the replay come from the local freeze record, not the raw result.",
+      "ref": "https://github.com/terryncew/openline-airlock/actions/runs/34804600363/artifacts/10332197672",
+      "sha256": "26ceb9402d7d3f82da9443bd0cdca21b91dafba34b57dc51b0a41e85cc309074"
+    }
+  ],
+  "schema": "openline.rsi.evidence-manifest.v1"
+}
