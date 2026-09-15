@@ -1,0 +1,233 @@
+{
+  "earned": [
+    "The mechanism-level lesson: questioned standing must propagate along the lineage, not stop at the reopened generation.",
+    "A lineage-aware projector that enforces required ancestry, validated by RSI-005's PASS under its own preregistered falsifiers."
+  ],
+  "future_slots": [
+    {
+      "key": "productivity_result",
+      "label": "Productivity result",
+      "plain": "Does governed inheritance make later research more productive per dollar? RIL-001R asked this and did not establish an advantage. RSI-006 is the next attempt at this question \u2014 not the first. Its freeze record will plug in here when earned.",
+      "plug_in": "data/contrast.json \u2192 ril_lane, and future: data/replay-rsi006.json (same schema)",
+      "status": "unresolved"
+    },
+    {
+      "key": "replication",
+      "label": "Independent replication",
+      "plain": "No independent replication has been earned for any result in this replay. A replication campaign's freeze record will plug in here.",
+      "plug_in": "data/replication-*.json (same schema), linked from the replicated stage",
+      "status": "unresolved"
+    },
+    {
+      "key": "correction_demonstration",
+      "label": "Integrated correction",
+      "plain": "No integrated correction demonstration has been earned. When one is, its record will attach here \u2014 as a standing event after the historical result, never rewriting it.",
+      "plug_in": "standing.entries[] gains a correction event; the historical verdict stays frozen",
+      "status": "unresolved"
+    }
+  ],
+  "investigation": {
+    "arc": [
+      "RSI-003",
+      "RSI-004",
+      "RSI-005"
+    ],
+    "id": "RSI-003",
+    "lineage": {
+      "predecessor": null,
+      "successor": "RSI-004"
+    },
+    "question": "When gen1's receiver evidence is reopened, does questioned standing propagate to gen2, which inherited from gen1's installed policy \u2014 or does the system keep building on a questioned foundation?",
+    "status": "completed",
+    "title": "Does a questioned inheritance propagate?"
+  },
+  "not_earned": [
+    "The final RSI productivity claim \u2014 a later test still needs an inherited method mutation to beat its unchanged parent on fresh verified results per dollar.",
+    "Repeatability, independent-seed replication, statistical superiority, cumulative optimization, or hostile-process isolation."
+  ],
+  "schema": "openline.rsi.replay.v1",
+  "stages": [
+    {
+      "key": "question",
+      "plain": {
+        "body": "The system keeps an installed policy for each generation of its own research method. When the evidence behind gen1's policy was reopened and gen1's standing changed to \u201cquestioned\u201d, the question was whether that doubt would travel down the lineage to gen2 \u2014 which had inherited gen1's installed policy \u2014 or whether the system would keep building on a questioned foundation.",
+        "headline": "What was it trying to learn?"
+      },
+      "record": {
+        "evidence_key": "rsi003_design",
+        "plain": "Design reasoning recorded 2026-09-14, before implementation. \u201cDesign decided. No experiment code written.\u201d",
+        "record_type": "design draft"
+      },
+      "status": "frozen",
+      "why_permitted": "This is the opening of the investigation: a question recorded in a design draft before any experiment code existed.",
+      "marker": "The question",
+      "marker_status": "open"
+    },
+    {
+      "key": "prediction",
+      "plain": {
+        "body": "Before running, the preregistration wrote down the verdicts it would accept \u2014 and named one of them as the predicted outcome: the system would fail to propagate questioned standing. The projector was known to be generation-local: it took no lineage input, so gen2 would keep its inherited standing even after gen1 was questioned.",
+        "headline": "What did it expect?"
+      },
+      "prediction": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED",
+      "record": {
+        "evidence_key": "rsi003_prereg",
+        "plain": "Predicted verdict recorded in advance: FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED \u2014 \u201cgen1 becomes questioned after REOPEN but gen2 retains inherited standing through the unchanged projector. Predicted given the projector finding.\u201d Falsifiers written per verdict.",
+        "record_type": "preregistration"
+      },
+      "status": "frozen",
+      "why_permitted": "The preregistration was frozen and its hash recorded inside the later result receipt, binding prediction to outcome before execution.",
+      "marker": "Predicted in advance",
+      "marker_status": "predicted"
+    },
+    {
+      "key": "experiment",
+      "limitations": [
+        "The receipt embeds ephemeral /tmp paths (e.g. reopen_evidence.standing_record). Those paths are not inspectable now; the hashes are the durable evidence."
+      ],
+      "plain": {
+        "body": "RSI-003 ran. A valid, receiver-signed REOPEN arrived for gen1 after its support witness went missing. The mechanism reprojected standing: gen1 became questioned. Gen2 \u2014 which inherited gen1's installed policy \u2014 stayed inherited. A forged REOPEN was rejected. Installed references were byte-identical at every checkpoint.",
+        "headline": "The run."
+      },
+      "record": {
+        "evidence_key": "rsi003_receipt",
+        "plain": "Pre-REOPEN: gen1 and gen2 inherited. Post-REOPEN: gen1 questioned, gen2 inherited; the established set kept only gen2. Zero lineage records reached either projector invocation. The never-executed gen3 admission probe computed ADMIT.",
+        "record_type": "result receipt"
+      },
+      "status": "frozen",
+      "why_permitted": "Execution followed the frozen preregistration; the receipt is the pushed-run record.",
+      "marker": "Observed",
+      "marker_status": "observed"
+    },
+    {
+      "key": "observed_result",
+      "plain": {
+        "body": "The observed verdict was exactly the predicted one: FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED. Questioned standing did not propagate through inherited ancestry. The prediction came true \u2014 and the prediction was that the mechanism was broken.",
+        "headline": "What actually happened?"
+      },
+      "record": {
+        "evidence_key": "rsi003_receipt",
+        "plain": "Formal verdict: FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED.",
+        "record_type": "result receipt"
+      },
+      "status": "frozen",
+      "verdict": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED",
+      "why_permitted": "The verdict is read verbatim from the frozen receipt; it matches the preregistered prediction character for character.",
+      "marker": "Observed",
+      "marker_status": "observed"
+    },
+    {
+      "key": "failure_preserved",
+      "plain": {
+        "body": "The freeze note preserves the failure as the finding. It does not reinterpret the result and it does not repair the projector. Anti-rescue rules closed RSI-003 permanently: no rerun, no repair, no tuning under this ID. The recorded finding: recursive inheritance exists, but the projector does not propagate questioned standing through inherited ancestry.",
+        "headline": "The failure was locked, not fixed."
+      },
+      "record": {
+        "evidence_key": "rsi003_freeze",
+        "plain": "\u201cThis note states the recorded result only. It does not reinterpret it, and it does not repair the projector. The successor repair is designed under a new experiment ID.\u201d",
+        "record_type": "freeze note"
+      },
+      "status": "frozen",
+      "verdict": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED",
+      "why_permitted": "The freeze note is the terminal record; anti-rescue was in effect from the first pushed run.",
+      "marker": "Locked",
+      "marker_status": "locked"
+    },
+    {
+      "also": {
+        "evidence_key": "rsi004_prereg",
+        "plain": "The earlier repair proposal draft, set aside before any primary contact \u2014 shown so the supersession is inspectable, not hidden.",
+        "record_type": "design draft (superseded)"
+      },
+      "key": "lesson_extracted",
+      "plain": {
+        "body": "The lesson from the failure \u2014 a projector must walk the lineage, not just the generation \u2014 was not applied as a fix. It was frozen as a new, falsifiable experiment: a lineage-aware projector to be tested under its own ID, with its own verdicts, cause codes, and anti-rescue rules. The repair proposal itself went through drafts that were explicitly set aside before any contact, and the final preregistration was decided frozen before primary contact.",
+        "headline": "What changed because of that?"
+      },
+      "record": {
+        "evidence_key": "rsi004_prereg_authorized",
+        "plain": "RSI-004 preregistration, decided frozen before primary contact. It explicitly supersedes the two prior drafts (which never saw contact) and pins the repaired projector, the lineage schema airlock.improvement.lineage.v1, verdict precedence, and 8 cause codes.",
+        "record_type": "preregistration (authorized, frozen before primary contact)"
+      },
+      "status": "frozen",
+      "why_permitted": "A method change is accepted only as a new preregistered experiment, never as a repair to a closed ID.",
+      "marker": "A new prediction",
+      "marker_status": "predicted"
+    },
+    {
+      "key": "repair_attempt_fails",
+      "plain": {
+        "body": "RSI-004's single authorized run crashed in under a second: the runner expected a state/ directory that was never created, so writing the phase token raised FileNotFoundError. Zero phases ran. No REOPEN, no result, no verdict of any kind. The freeze records what did not happen as carefully as what did.",
+        "headline": "The first repair crashed."
+      },
+      "record": {
+        "evidence_key": "rsi004_freeze",
+        "plain": "Exit code 1 in under one second. Exact error: FileNotFoundError: '/tmp/airlock-rsi-004-rsooyorf/state/.phase_token'. What did NOT happen: zero of 12 phases ran; no Nightshift contact; no REOPEN; no result.json; no verdict.",
+        "record_type": "freeze note"
+      },
+      "status": "frozen",
+      "why_permitted": "The crash is preserved as a harness failure with an explicit no-verdict close; the record refuses to manufacture an outcome from a crash.",
+      "marker": "Crashed \u2014 no verdict",
+      "marker_status": "crashed"
+    },
+    {
+      "key": "failure_preserved_again",
+      "plain": {
+        "body": "The one-run authorization was consumed by the crash. RSI-004 is permanently closed with a harness failure and no scientific outcome \u2014 not a failed hypothesis, a failed run. RSI-003's receipt hash was re-verified untouched. The repair would have to earn its verdict under a new ID.",
+        "headline": "The crash was locked too."
+      },
+      "record": {
+        "evidence_key": "rsi004_freeze",
+        "plain": "\u201cNo rerun, no repair, no tuning, no threshold change, no reinterpretation, no completion of the outcome under this experiment ID. A successor repair would require a new experiment ID and separate authorization.\u201d RSI-003 receipt hash re-verified: 81fae997\u2026ae963ae.",
+        "record_type": "freeze note"
+      },
+      "status": "frozen",
+      "why_permitted": "Anti-rescue consumed the single authorized invocation; the record distinguishes \u201cno verdict\u201d from \u201cnegative verdict\u201d.",
+      "marker": "Locked",
+      "marker_status": "locked"
+    },
+    {
+      "claim_boundary": [
+        "Four installed generations plus one unexecuted admission probe. Not a claim about open-ended recursion.",
+        "Does not earn the final RSI claim: a later test still needs an inherited method mutation to beat its unchanged parent on fresh verified results per dollar.",
+        "PASS under this ID validates the repaired projector's lineage semantics; it does not re-litigate RSI-003, which stays frozen."
+      ],
+      "key": "repair_earns_acceptance",
+      "plain": {
+        "body": "RSI-005 tested the repaired projector under its own ID and its own preregistration. After REOPEN, gen1, gen2, and gen3 all became questioned \u2014 the doubt propagated down the lineage. The never-executed gen4 admission probe was denied. Receipts and installed references were unchanged. The formal verdict: PASS_RSI_005_LINEAGE_AWARE_INHERITANCE. And RSI-003 and RSI-004 stayed exactly as frozen: this PASS does not re-litigate either.",
+        "headline": "Why was that change allowed to survive?"
+      },
+      "record": {
+        "evidence_key": "rsi005_freeze",
+        "plain": "Formal verdict: PASS_RSI_005_LINEAGE_AWARE_INHERITANCE. Post-REOPEN standings: gen1/gen2/gen3 questioned; unrelated rootU inherited. Dependency witnesses: gen2\u2192gen1, gen3\u2192gen2\u2192gen1. Gen4 probe DENIED. \u201cPASS under this ID validates the repaired projector's lineage semantics; it does not re-litigate RSI-003, which stays frozen.\u201d",
+        "record_type": "freeze note"
+      },
+      "status": "frozen",
+      "verdict": "PASS_RSI_005_LINEAGE_AWARE_INHERITANCE",
+      "why_permitted": "The repair earned its verdict by passing its own preregistered falsifiers under a new ID, with the old verdicts untouched and the claim boundary stating exactly what the PASS does and does not earn.",
+      "marker": "Earned",
+      "marker_status": "earned"
+    }
+  ],
+  "standing": {
+    "as_of": "2026-09-15",
+    "entries": [
+      {
+        "current_standing": "Stands as the recorded finding: the projector did not propagate questioned standing through inherited ancestry.",
+        "experiment": "RSI-003",
+        "historical_verdict": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED"
+      },
+      {
+        "current_standing": "Permanently closed. No scientific outcome to stand or fall.",
+        "experiment": "RSI-004",
+        "historical_verdict": "none \u2014 harness crash, no verdict"
+      },
+      {
+        "current_standing": "Stands as the recorded finding for the repaired projector's lineage semantics, within its claim boundary.",
+        "experiment": "RSI-005",
+        "historical_verdict": "PASS_RSI_005_LINEAGE_AWARE_INHERITANCE"
+      }
+    ],
+    "note": "Historical verdicts and current standing are recorded separately. No standing change has been recorded for any of these experiments since their freezes."
+  }
+}

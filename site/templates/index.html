@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Does a questioned inheritance propagate? — openline-rsi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">openline-rsi</a></div>
+    <nav>
+      <a href="index.html" aria-current="page">The replay</a>
+      <a href="investigations.html">Other investigations</a>
+      <a href="methods.html">Methods &amp; provenance</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="kicker">Recorded replay · recursive self-improvement research</p>
+    <h1>When the evidence behind an inherited method was questioned, did the question reach everything that inherited it?</h1>
+    <p class="lede" id="inv-question"></p>
+    <p class="meta" id="inv-meta"></p>
+  </section>
+
+  <ul class="questions">
+    <li><span class="q">The five questions this replay answers</span>What was it trying to learn?</li>
+    <li>What did it expect?</li>
+    <li>What actually happened?</li>
+    <li>What changed because of that?</li>
+    <li>Why was that change allowed to survive?</li>
+  </ul>
+
+  <div class="timeline" id="timeline" aria-live="polite"></div>
+
+  <section class="panel">
+    <h2>What this investigation earned — and what it didn&rsquo;t</h2>
+    <div class="two-col">
+      <div class="earned"><h3>Earned</h3><div id="earned"></div></div>
+      <div class="not-earned"><h3>Not earned</h3><div id="not-earned"></div></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Standing: history and present, kept separate</h2>
+    <p>A frozen verdict is what was recorded. Current standing is what holds now. They are different fields, dated separately.</p>
+    <div id="standing-body"></div>
+    <p id="standing-note" style="color:var(--ink-faint);font-size:14.5px"></p>
+  </section>
+
+  <section>
+    <h2 style="font-family:var(--serif);font-weight:400;font-size:28px;margin:40px 0 6px">What&rsquo;s still open</h2>
+    <p style="color:var(--ink-soft)">These are structural slots, not placeholders. &ldquo;Not yet resolved&rdquo; is a valid state of this product.</p>
+    <div id="slots"></div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p><strong>openline-rsi</strong> renders frozen scientific records. It is a presentation layer: it runs no experiments, modifies no evidence, and is not an authority over any result. The source repositories remain authoritative.</p>
+    <p>Verify the evidence yourself: <code>python3 tools/verify_evidence.py</code> from the repository root. See <a href="methods.html">Methods &amp; provenance</a>.</p>
+  </div>
+</footer>
+
+<script type="application/json" id="replay-data"><!--__REPLAY_JSON__--></script>
+<script type="application/json" id="manifest-data"><!--__MANIFEST_JSON__--></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methods &amp; provenance — openline-rsi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">openline-rsi</a></div>
+    <nav>
+      <a href="index.html">The replay</a>
+      <a href="investigations.html">Other investigations</a>
+      <a href="methods.html" aria-current="page">Methods &amp; provenance</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap prose">
+  <h1>Methods &amp; provenance</h1>
+  <p>The replay has honesty rules of its own. They are enforced by validation, not just stated here.</p>
+
+  <h2>The rules of this replay</h2>
+  <ul>
+    <li>Every stage marked as evidence-bound cites a frozen record with a SHA-256. No citation, no render — the validator fails the build.</li>
+    <li>Unresolved stages render as explicitly empty, labeled slots. There is no state that looks complete while no result exists.</li>
+    <li>Nothing is narrated as inevitable progress. The replay preserves the moments where the process did not know what would happen.</li>
+    <li>Historical verdicts and current standing are separate fields, dated separately.</li>
+    <li>The replay never invents <em>earned</em> / <em>not earned</em> — those come from the records' own claim boundaries.</li>
+    <li>No fixtures, mocks, or synthetic results are used to fill a missing scientific result. Ever.</li>
+  </ul>
+
+  <h2>What this repository is and isn&rsquo;t</h2>
+  <p><strong>openline-rsi is a presentation layer.</strong> It renders frozen records from the scientific repositories. It is not a dependency of Airlock or of RSI-006, not an experiment runner, not an alternate receipt authority, and not a place that modifies or repairs historical evidence. The source repositories and their frozen records remain authoritative.</p>
+  <p>Evidence in this repo is a <em>copy</em>, made once and hash-pinned. Run the verification:</p>
+  <pre><code>python3 tools/verify_evidence.py   # hashes every copied record, fails on mismatch
+python3 tools/validate_replay.py   # enforces the data contract above</code></pre>
+
+  <h2>Provenance of the v0 evidence</h2>
+  <p>Sixteen frozen records were copied from <code>terryncew/openline-airlock</code> (main at <code>c82f0242e6556bbc8d920291f444090b526adeee</code>) and two design drafts from the local workspace. The full manifest — source path, record type, digest, verification status — is <code>site/data/manifest.json</code>.</p>
+  <p>One record is referenced but not copied: the raw <code>RIL_001R_RESULT.json</code> bytes live only in a GitHub Actions artifact. The replay marks this as an external reference with its limitation stated, and shows the freeze record's terminal numbers instead of reconstructing the raw result.</p>
+
+  <h2>Weaknesses, encoded rather than smoothed over</h2>
+  <ul>
+    <li>RSI-003's receipt embeds ephemeral <code>/tmp</code> paths. The replay presents hashes as the durable evidence, never the paths as inspectable locations.</li>
+    <li>RIL-001R's raw result bytes are off-workspace (artifact <code>10332197672</code>). The replay dead-ends honestly at the hash.</li>
+    <li>RIL-001R's negative is arena-limited: both arms saturated at 24/24, and the formal verdict is INCONCLUSIVE on a measurement defect. Stated as &ldquo;no advantage observed on a saturated arena&rdquo; — never &ldquo;the recursive arm lost&rdquo;.</li>
+    <li>RSI-004's failure is a harness crash with no scientific verdict — shown as &ldquo;crashed, no verdict&rdquo;, not as a failed hypothesis.</li>
+    <li>The Q3 seal hashes elsewhere in the program are runner-printed lines only — &ldquo;recorded, not relied upon&rdquo;. They are not part of this replay.</li>
+    <li>The PLOS correction case in <code>openline-claim-graph</code> is partly authored (fixture keys, authored edges). It is a mechanism demonstration, not machine-generated experimental evidence, and has no place in a scientific slot.</li>
+  </ul>
+
+  <h2>Where future records plug in</h2>
+  <ul>
+    <li><strong>RSI-006 productivity result</strong> → the RIL contrast lane grows: a new record in <code>site/data/contrast.json</code> bound to the RSI-006 freeze record. RIL history is not replaced.</li>
+    <li><strong>Independent replication</strong> → <code>site/data/replication-*.json</code> in the same replay schema, linked from the replicated stage.</li>
+    <li><strong>Integrated correction</strong> → a new event in the top-level <code>standing</code> object of <code>site/data/replay.json</code>. The historical verdict stays frozen; the correction attaches after it.</li>
+  </ul>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Frozen records are cited, not paraphrased into stronger claims. If a sentence on this site outruns its evidence, that is a bug — report it against the record it cites.</p>
+  </div>
+</footer>
+</body>
+</html>
