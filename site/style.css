@@ -353,6 +353,7 @@ details.evidence summary:focus-visible { outline: 2px solid var(--accent); outli
   .stage { grid-template-columns: 1fr; gap: 12px; padding: 24px 0 28px; }
   .folio { text-align: left; font-size: 32px; padding-top: 0; }
   .stage h2 { font-size: 24px; }
+  .stage .verdict { white-space: normal; overflow-wrap: break-word; }
   .ev-body dl { grid-template-columns: 1fr; gap: 2px; }
   .ev-body dt { padding-top: 8px; }
   .stop { padding: 28px 22px; }
@@ -370,3 +371,4 @@ details.evidence summary:focus-visible { outline: 2px solid var(--accent); outli
 /* prevent horizontal overflow */
 img, pre, table { max-width: 100%; }
 .stage .verdict, .ev-body dd { overflow-wrap: break-word; }
+.stage .body, .excerpt, .stage .why, .slot p, .slot h3 { overflow-wrap: break-word; word-break: break-word; }
