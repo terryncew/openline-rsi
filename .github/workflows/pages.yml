@@ -33,9 +33,14 @@ jobs:
       - name: Validate replay data
         run: python3 tools/validate_replay.py
       - name: Stage publish tree
+        # Pages serves the pages at the site root, so evidence links must be
+        # root-relative ("evidence/...") in the deployed copy. The repo's own
+        # site/app.js keeps "../evidence/..." so a local clone opened from
+        # site/ still resolves to the repo-root evidence/ directory.
         run: |
           rm -rf public && mkdir -p public
           cp site/index.html site/investigations.html site/methods.html site/style.css site/app.js public/
+          sed -i 's|href="../|href="|' public/app.js
           cp -r evidence public/evidence
       - uses: actions/upload-pages-artifact@v3
         with:
