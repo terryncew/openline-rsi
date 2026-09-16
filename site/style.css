@@ -377,83 +377,89 @@ body.page-story {
 .page-story {
   --wb-display: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.wb-top { border-bottom: 4px solid #000; background: #fff; }
-.wb-top-inner {
+.page-story .wb-top { border-bottom: 4px solid #000; background: #fff; }
+.page-story .wb-top-inner {
   max-width: 1240px; margin: 0 auto; padding: 20px 24px;
   display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap;
 }
-.wb-brand {
+.page-story .wb-brand {
   font-family: var(--wb-display); font-size: 24px; color: #000;
   text-decoration: none; letter-spacing: 0;
 }
-.wb-top nav { display: flex; gap: 30px; }
-.wb-top nav a { color: #000; text-decoration: none; font-weight: 700; font-size: 16px; }
-.wb-top nav a:hover, .wb-top nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+.page-story .wb-top nav { display: flex; gap: 30px; }
+.page-story .wb-top nav a { color: #000; text-decoration: none; font-weight: 700; font-size: 16px; }
+.page-story .wb-top nav a:hover, .page-story .wb-top nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
 
-/* one comic panel = title zone / picture zone / caption zone, stacked, never side by side */
-.panel { max-width: 1150px; margin: 0 auto; padding: 9vh 24px 10vh; }
-.panel + .panel, .receipts { border-top: 6px solid #000; }
-.panel-title { max-width: 640px; margin: 0 auto 5vh; text-align: center; }
-.panel-title h1, .panel-title h2, .boom, .receipts nav a {
+/* one comic panel = title zone / picture zone / caption zone, stacked, never side by side
+   scoped under .page-story so the case-file / methods / investigations .panel rules keep their own appearance */
+.page-story .panel {
+  max-width: 1150px; margin: 0 auto; padding: 9vh 24px 10vh;
+  background: #fff; border: 0; border-radius: 0;
+  border-top: 6px solid #000;
+}
+.page-story .panel-cover { border-top: none; }
+.page-story .receipts { border-top: 6px solid #000; }
+.page-story .panel-title { max-width: 640px; margin: 0 auto 5vh; text-align: center; }
+.page-story .panel-title h1, .page-story .panel-title h2, .page-story .boom, .page-story .receipts nav a {
   font-family: var(--wb-display); text-transform: uppercase;
   line-height: 0.95; letter-spacing: -0.01em; margin: 0; color: #000;
 }
-.panel-title h1 { font-size: clamp(52px, 8vw, 120px); }
-.panel-title h2 { font-size: clamp(40px, 5.6vw, 84px); }
-.cover-strap {
+.page-story .panel-title h1 { font-size: clamp(52px, 8vw, 120px); }
+.page-story .panel-title h2 { font-size: clamp(40px, 5.6vw, 84px); }
+.page-story .cover-strap {
   font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
   font-size: clamp(13px, 1.6vw, 18px); margin: 22px 0 0; color: #000;
 }
-.cover-line {
+.page-story .cover-line {
   font-family: var(--wb-display); text-transform: uppercase;
   font-size: clamp(24px, 3.4vw, 44px); line-height: 1.05; margin: 26px 0 0; color: #000;
 }
-.panel-art { margin: 0 auto; max-width: 1120px; overflow: hidden; }
-.panel-art svg { display: block; width: 100%; height: auto; }
-.panel-cap { max-width: 600px; margin: 5vh auto 0; text-align: center; border-top: 3px solid #000; padding-top: 4vh; }
-.cap-line { font-size: 20px; line-height: 1.55; margin: 0 0 14px; }
-.boom { font-size: clamp(44px, 6.4vw, 92px); margin: 26px 0 0; }
-.rec { margin: 28px 0 0; font-size: 17px; font-weight: 700; }
-.rec a { color: #000; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
-.receipts { max-width: 1150px; margin: 0 auto; padding: 9vh 24px 15vh; text-align: center; }
-.receipts nav { margin-top: 40px; display: grid; gap: 30px; }
-.receipts nav a { font-size: clamp(36px, 5.4vw, 72px); color: #000; text-decoration: none; line-height: 1; display: block; }
-.receipts nav a:hover { text-decoration: underline; text-underline-offset: 8px; }
-.rec-sub { font-size: 16px; color: #333; margin: -18px 0 0; }
-.rec-note { max-width: 640px; margin: 44px auto 0; font-size: 17px; line-height: 1.55; color: #111; }
-.rec-note a { color: #000; }
-.passage { text-align: center; padding: 30px 0 34px; }
-.passage svg { width: 148px; height: auto; display: inline-block; }
-.wb-foot { border-top: 6px solid #000; background: #fff; }
-.wb-foot-inner { max-width: 1150px; margin: 0 auto; padding: 36px 24px 56px; font-size: 14px; line-height: 1.6; }
-.wb-foot-inner p { margin: 0 0 10px; max-width: 60em; }
-.wb-foot code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; background: #eee; padding: 2px 6px; }
+.page-story .panel-art { margin: 0 auto; max-width: 1120px; overflow: hidden; }
+.page-story .panel-art svg { display: block; width: 100%; height: auto; }
+.page-story .panel-cap { max-width: 600px; margin: 5vh auto 0; text-align: center; border-top: 3px solid #000; padding-top: 4vh; }
+.page-story .cap-line { font-size: 20px; line-height: 1.55; margin: 0 0 14px; }
+.page-story .boom { font-size: clamp(44px, 6.4vw, 92px); margin: 26px 0 0; }
+.page-story .rec { margin: 28px 0 0; font-size: 17px; font-weight: 700; }
+.page-story .rec a { color: #000; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.page-story .receipts { max-width: 1150px; margin: 0 auto; padding: 9vh 24px 15vh; text-align: center; }
+.page-story .receipts nav { margin-top: 40px; display: grid; gap: 30px; }
+.page-story .receipts nav a { font-size: clamp(36px, 5.4vw, 72px); color: #000; text-decoration: none; line-height: 1; display: block; }
+.page-story .receipts nav a:hover { text-decoration: underline; text-underline-offset: 8px; }
+.page-story .rec-sub { font-size: 16px; color: #333; margin: -18px 0 0; }
+.page-story .rec-note { max-width: 640px; margin: 44px auto 0; font-size: 17px; line-height: 1.55; color: #111; }
+.page-story .rec-note a { color: #000; }
+.page-story .passage { text-align: center; padding: 30px 0 34px; }
+.page-story .passage svg { width: 148px; height: auto; display: inline-block; }
+.page-story .wb-foot { border-top: 6px solid #000; background: #fff; }
+.page-story .wb-foot-inner { max-width: 1150px; margin: 0 auto; padding: 36px 24px 56px; font-size: 14px; line-height: 1.6; }
+.page-story .wb-foot-inner p { margin: 0 0 10px; max-width: 60em; }
+.page-story .wb-foot code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; background: #eee; padding: 2px 6px; }
 
 /* one-time reveal; no-JS and reduced-motion stay readable */
-html.js .panel, html.js .receipts { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
-html.js .panel.revealed, html.js .receipts.revealed { opacity: 1; transform: none; }
+html.js .page-story .panel, html.js .page-story .receipts { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+html.js .page-story .panel.revealed, html.js .page-story .receipts.revealed { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  html.js .panel, html.js .receipts { transition: none; opacity: 1; transform: none; }
+  html.js .page-story .panel, html.js .page-story .receipts { transition: none; opacity: 1; transform: none; }
 }
 
 @media (max-width: 860px) {
-  .panel { padding: 8vh 0 9vh; }
-  .panel-title { padding: 0 20px; }
-  .panel-cap { margin-left: 20px; margin-right: 20px; }
+  .page-story .panel { padding: 8vh 0 9vh; }
+  .page-story .panel-title { padding: 0 20px; }
+  .page-story .panel-cap { margin-left: 20px; margin-right: 20px; }
   /* recompose: crop into the action so the yellow card stays large */
-  .panel-art svg { width: 168%; max-width: none; }
-  .art-cover svg { margin-left: -24%; }
-  .art-p1 svg { margin-left: -24%; }
-  .art-p2 svg { margin-left: -37%; }
-  .art-p3 svg { margin-left: -41%; }
-  .panel-title h1 { font-size: clamp(44px, 14vw, 72px); }
-  .panel-title h2 { font-size: clamp(36px, 11vw, 56px); }
-  .cover-line { font-size: clamp(22px, 7vw, 34px); }
-  .boom { font-size: clamp(38px, 12vw, 60px); }
-  .receipts nav a { font-size: clamp(32px, 10vw, 52px); }
-  .receipts { padding-left: 20px; padding-right: 20px; }
-  .wb-top-inner { padding: 16px 20px; }
-  .wb-top nav { gap: 20px; }
+  .page-story .panel-art svg { width: 168%; max-width: none; }
+  .page-story .art-cover svg { margin-left: -24%; }
+  .page-story .art-p1 svg { margin-left: -24%; }
+  .page-story .art-p2 svg { margin-left: -37%; }
+  .page-story .art-p3 svg { margin-left: -41%; }
+  .page-story .panel-title h1 { font-size: clamp(44px, 14vw, 72px); }
+  .page-story .panel-title h2 { font-size: clamp(36px, 11vw, 56px); }
+  .page-story .cover-line { font-size: clamp(22px, 7vw, 34px); }
+  .page-story .boom { font-size: clamp(38px, 12vw, 60px); }
+  .page-story .receipts nav a { font-size: clamp(32px, 10vw, 52px); }
+  .page-story .receipts { padding-left: 20px; padding-right: 20px; }
+  .page-story .wb-top-inner { padding: 16px 20px; }
+  .page-story .wb-top nav { gap: 20px; }
 }
 
 
