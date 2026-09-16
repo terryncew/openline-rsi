@@ -7,8 +7,8 @@
     {
       "key": "productivity_result",
       "label": "Productivity result",
-      "plain": "Does governed inheritance make later research more productive per dollar? RIL-001R asked this and did not establish an advantage. RSI-006 is the next attempt at this question \u2014 not the first. Its freeze record will plug in here when earned.",
-      "plug_in": "data/contrast.json \u2192 ril_lane, and future: data/replay-rsi006.json (same schema)",
+      "plain": "Does governed inheritance make later research more productive per dollar? RIL-001R asked this and did not establish an advantage. RSI-006 was the next attempt at this question \u2014 and it never ran. Its Q6 substrate line ended pre-contact with the frozen outcome NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY: the mechanism repair earned Q6_MECHANISM_HOLDS, but the final environment-qualification path required more new qualification architecture than the preregistered Q6 bound allowed, so the productivity experiment was never authorized. RSI-006 will not fill this slot. The productivity question itself remains unanswered; no further attempt is currently authorized. See the RSI-006 contrast lane for the terminal branch.",
+      "plug_in": "data/contrast.json -> rsi-006 lane (terminal branch, frozen). The ril-001r lane is unchanged. No replication data exists.",
       "status": "unresolved"
     },
     {
@@ -210,7 +210,7 @@
     }
   ],
   "standing": {
-    "as_of": "2026-09-15",
+    "as_of": "2026-09-16",
     "entries": [
       {
         "current_standing": "Stands as the recorded finding: the projector did not propagate questioned standing through inherited ancestry.",

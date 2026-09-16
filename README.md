@@ -1,10 +1,45 @@
 # openline-rsi
 
-This repository replays a real investigation into recursive self-improvement — a system that revises its own research method, one generation at a time — from frozen records: predictions written down before each run, results recorded after. You can step through what the system tried to learn, what it expected, what actually happened, and why each change to the method was allowed to survive. Every step links to the evidence behind it.
+A replayable record of real investigations into recursive self-improvement — systems that revise their own research method, one generation at a time — built from frozen evidence: predictions written down before each run, results recorded after. Every claim links to the record behind it, and every record is hash-pinned so you can check it yourself.
 
 Claims about self-improving AI are usually stories told after the fact. This one you can check.
 
-## The investigation
+## What this is
+
+`openline-rsi` is a statement repository: evidence-backed claims plus a legible method you can copy. It replays what was predicted, what actually happened, what evidence survives, and what claim was earned — for each investigation, including the ones that failed, crashed, or stopped before contact.
+
+It is not the Airlock runtime, a teaching starter, a generic agent framework, a product SDK, or a graveyard of experiment reports. Airlock remains the thing you can adopt operationally; this repo is where the claims about the method are kept checkable.
+
+## What you can do here
+
+**Step through the investigations.** Open `site/index.html` in a browser — no server, no credentials. It walks each investigation stage by stage: question, prediction, run, verdict, lock. Each stage links directly to the frozen record it came from. `site/investigations.html` holds the subordinate lanes and the explicitly empty future slots.
+
+**Verify the evidence yourself.** The records are copies, made once and hash-pinned:
+
+```bash
+python3 tools/verify_evidence.py   # confirm every copied record still matches its digest
+python3 tools/validate_replay.py   # confirm every earned stage binds to evidence
+```
+
+`site/data/manifest.json` lists every record with its source and digest. The Methods & provenance page (`site/methods.html`) describes the record types, the verification steps, and the known limitations — including the one external reference that exists only as a GitHub artifact.
+
+**Structure your own investigation the same way.** The reusable thing here is not a framework to install; it is a structure for making a claim checkable.
+
+## Build your own investigation
+
+The pattern this repo demonstrates, in seven steps:
+
+1. Pick a consequential claim you want to test.
+2. Write down beforehand what would count, what would falsify it, and what must stay frozen — a preregistration, not a plan you edit after seeing results.
+3. Separate the thing being tested from the machinery that decides whether the evidence counts. A receiver you don't control defines "better"; you never grade your own homework.
+4. Run the test through receiver-owned checks, and preserve the receipts.
+5. Keep positive, negative, failed, and stopped runs as frozen records. Never rewrite them; never hide the unfavorable branch.
+6. Publish a replayable statement whose evidence anyone can verify independently. `SCHEMA.md` defines the data model this repo uses (`openline.rsi.replay.v1`); `site/methods.html` states the honesty rules the validator enforces.
+7. If a result earns something useful, that mechanism can then become part of a product, workflow, service, or other system. That operational step lives outside this repo — in Airlock's case, Airlock itself is the thing people adopt.
+
+That is what a reader should be able to take away: "I understand how this was done, I can verify it, and I could structure one of my own claims this way."
+
+## The investigations
 
 The system under study keeps an installed policy for each generation of its own research method. The question that started everything: when the evidence behind the first generation's policy was reopened and that generation's standing changed to "questioned," would the doubt travel down to the second generation — which had inherited the first generation's policy — or would the system keep building on a questioned foundation?
 
@@ -16,27 +51,23 @@ The lesson — doubt has to travel down the lineage, not stop at the generation 
 
 **RSI-005** tested the redesigned component under its own ID and its own preregistration. After the reopening, all three generations became questioned — the doubt propagated down the lineage. An admission probe for a never-executed fourth generation was denied. Receipts and installed references were unchanged. Formal verdict: `PASS_RSI_005_LINEAGE_AWARE_INHERITANCE`. RSI-003 and RSI-004 stayed exactly as frozen; the PASS does not re-litigate either one.
 
-What the arc earned: questioned standing must propagate along the lineage — and a redesigned component that passed its own preregistered tests. What it did not earn: the productivity claim — whether any of this makes later research cheaper per verified result. That question belongs to a later test.
+What the arc earned: questioned standing must propagate along the lineage — and a redesigned component that passed its own preregistered tests. What it did not earn: the productivity claim — whether any of this makes later research cheaper per verified result.
 
-## What you can see here
+## The productivity question, briefly
 
-**The replay.** Open `site/index.html` in a browser — no server, no credentials. It walks the investigation stage by stage: question, prediction, run, verdict, lock, and the two successor experiments. Each stage links directly to the frozen record it came from.
+That productivity question was asked once on live infrastructure as RIL-001R. The verdict was `INCONCLUSIVE_RIL_001R_LIVE_EXECUTION`: negative evidence, preserved rather than hidden. It appears here as a contrast lane.
 
-**The evidence.** `evidence/` holds the frozen records the replay is built from: design drafts, preregistrations, result receipts, and freeze notes for RSI-003, RSI-004, and RSI-005, plus the earlier productivity attempt. The records are hash-pinned and never edited; `site/data/manifest.json` lists every record with its source and digest.
+RSI-006 was the next attempt at that question, not the first. The planned productivity test was not authorized under its frozen protocol. Q6's mechanism repair held, but qualification required more new architecture than the preregistered bound allowed, so the experiment stopped before scientific contact.
 
-**How the records were produced and checked.** The Methods & provenance page (`site/methods.html`) describes the record types, the verification steps, and the known limitations — including the one external reference that exists only as a GitHub artifact.
-
-## An earlier attempt, kept for context
-
-Before this arc, the productivity question — does governed recursive improvement actually produce more verified progress per dollar? — was asked once on live infrastructure as RIL-001R. The verdict was `INCONCLUSIVE_RIL_001R_LIVE_EXECUTION`: negative evidence, preserved rather than hidden. It appears here as a contrast lane. RSI-006 is the next attempt at that question, not the first.
+The full terminal branch — preregistration, mechanism result, and the Gate-2A freeze record — is preserved as its own contrast lane, not hidden. The productivity question itself remains unanswered, and no further attempt is currently authorized.
 
 ## What's unresolved
 
-- **Productivity result.** RSI-006 has not earned it yet.
+- **Productivity result.** The planned RSI-006 productivity test was not authorized under its frozen protocol. The question itself remains unanswered.
 - **Independent replication.** No result in this replay has been independently replicated.
 - **Integrated correction.** Not yet demonstrated.
 
-These render in the replay as explicitly empty slots. They are open questions, not features.
+These render in the replay as explicitly empty slots.
 
 ## Running it
 
@@ -57,7 +88,7 @@ site/
   templates/          page templates; data is injected at build time
   data/
     replay.json       the RSI-003 → RSI-004 → RSI-005 investigation
-    contrast.json     the RIL productivity history
+    contrast.json     subordinate lanes: the RIL productivity history, the terminal RSI-006 branch
     manifest.json     every evidence record: source path, digest, verification
   app.js              renders the pages from the inlined data (no backend)
 evidence/             frozen record copies, hash-pinned (never edited)
@@ -71,4 +102,4 @@ CONTRIBUTING.md       contributor guidance and repository scope
 
 ## Provenance
 
-v0 evidence: 16 frozen records copied from `terryncew/openline-airlock` (main `c82f0242e6556bbc8d920291f444090b526adeee`), 2 design drafts from the local workspace, and 1 external reference (RIL-001R raw result bytes, GitHub artifact only — the limitation is stated in the manifest). The source repositories and their frozen records remain authoritative.
+v0 evidence: 16 frozen records copied from `terryncew/openline-airlock` (main `c82f0242e6556bbc8d920291f444090b526adeee`), 2 design drafts from the local workspace, and 1 external reference (RIL-001R raw result bytes, GitHub artifact only — the limitation is stated in the manifest). The RSI-006 terminal branch added 2 more frozen records from `terryncew/openline-airlock` at main `d3b29da9a83c8ee65ee095fae1b052460e08ece3` (the Q6 preregistration, frozen at its PR #166 merge `b947b3d3151432975e2c722f8647e593cd3ab257`, and the Gate-2A NO-GO freeze record from PR #169). The source repositories and their frozen records remain authoritative.

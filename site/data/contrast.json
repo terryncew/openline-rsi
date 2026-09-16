@@ -1,1 +1,63 @@
-{"lanes":[{"experiment":"RIL-001R","id":"ril-001r","kind":"contrast","plain":{"body":"Before RSI-006, the productivity question — does a governed recursive improvement actually produce more verified progress per dollar? — was already asked once, on live infrastructure. The answer was negative evidence, preserved, not hidden.","headline":"The earlier productivity attempt did not produce the claim."},"records":[{"evidence_key":"ril_prereg","plain":"Preregistered acceptance rules: minimum raw success-rate advantage 0.05, minimum success-per-dollar ratio 1.2, at least one recursive promotion with subsequent live use, per-arm spend ceiling $2.25. Cost accounting by pinned-Hermes telemetry only — no imputation, no reconstruction.","record_type":"preregistration"},{"evidence_key":"ril_freeze_json","plain":"Formal verdict: INCONCLUSIVE_RIL_001R_LIVE_EXECUTION — the receiver compared numeric limit values by string representation (worker emitted 0.50, receiver expected Decimal string 0.5). Terminal: 24/24 control, 24/24 recursive; control $0.88007, recursive $0.89462; success-per-dollar ratio 0.9837, below the preregistered 1.2 threshold. Scientific interpretation: recursive_advantage NOT_ESTABLISHED.","record_type":"freeze record"}],"status":"completed","verdict":"INCONCLUSIVE_RIL_001R_LIVE_EXECUTION","weaknesses":["Raw result bytes are not in the frozen local record. The full RIL_001R_RESULT.json lives in a GitHub Actions artifact; only its SHA-256 is quoted locally. This replay shows the freeze record's terminal numbers — inspectable at the artifact link, not reconstructed here.","Both arms saturated the 24-case arena at 24/24, so the ratio was measured where neither arm could show an advantage. Present as “no advantage observed on a saturated arena”, never as “the recursive arm lost”.","The formal verdict is INCONCLUSIVE on a measurement defect. The negative finding is preserved separately from the verdict."],"why_it_matters":"This lane is the history that the future RSI-006 productivity slot plugs into. RSI-006 is the next attempt at this question — not the first. Nothing here is replaced when RSI-006 earns its result; the lane grows."}],"schema":"openline.rsi.contrast.v1"}
+{
+  "lanes": [
+    {
+      "experiment": "RIL-001R",
+      "id": "ril-001r",
+      "kind": "contrast",
+      "plain": {
+        "body": "Before RSI-006, the productivity question \u2014 does a governed recursive improvement actually produce more verified progress per dollar? \u2014 was already asked once, on live infrastructure. The answer was negative evidence, preserved, not hidden.",
+        "headline": "The earlier productivity attempt did not produce the claim."
+      },
+      "records": [
+        {
+          "evidence_key": "ril_prereg",
+          "plain": "Preregistered acceptance rules: minimum raw success-rate advantage 0.05, minimum success-per-dollar ratio 1.2, at least one recursive promotion with subsequent live use, per-arm spend ceiling $2.25. Cost accounting by pinned-Hermes telemetry only \u2014 no imputation, no reconstruction.",
+          "record_type": "preregistration"
+        },
+        {
+          "evidence_key": "ril_freeze_json",
+          "plain": "Formal verdict: INCONCLUSIVE_RIL_001R_LIVE_EXECUTION \u2014 the receiver compared numeric limit values by string representation (worker emitted 0.50, receiver expected Decimal string 0.5). Terminal: 24/24 control, 24/24 recursive; control $0.88007, recursive $0.89462; success-per-dollar ratio 0.9837, below the preregistered 1.2 threshold. Scientific interpretation: recursive_advantage NOT_ESTABLISHED.",
+          "record_type": "freeze record"
+        }
+      ],
+      "status": "completed",
+      "verdict": "INCONCLUSIVE_RIL_001R_LIVE_EXECUTION",
+      "weaknesses": [
+        "Raw result bytes are not in the frozen local record. The full RIL_001R_RESULT.json lives in a GitHub Actions artifact; only its SHA-256 is quoted locally. This replay shows the freeze record's terminal numbers \u2014 inspectable at the artifact link, not reconstructed here.",
+        "Both arms saturated the 24-case arena at 24/24, so the ratio was measured where neither arm could show an advantage. Present as \u201cno advantage observed on a saturated arena\u201d, never as \u201cthe recursive arm lost\u201d.",
+        "The formal verdict is INCONCLUSIVE on a measurement defect. The negative finding is preserved separately from the verdict."
+      ],
+      "why_it_matters": "This lane is the history that the future RSI-006 productivity slot plugs into. RSI-006 is the next attempt at this question \u2014 not the first. Nothing here is replaced when RSI-006 earns its result; the lane grows."
+    },
+    {
+      "id": "rsi-006",
+      "experiment": "RSI-006",
+      "kind": "contrast",
+      "status": "completed",
+      "verdict": "NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY",
+      "plain": {
+        "headline": "The next productivity attempt stopped before the experiment.",
+        "body": "RSI-006 was the planned preregistered test of whether recursively inherited improvement produces more independently verified useful work per dollar than the matched unchanged process on fresh work. It never ran. The Q6 execution substrate had to pass a frozen environment-qualification gate first, and the preregistration had written a complexity stop into that gate in advance. Q6 repaired the coordinator-death mechanism \u2014 Gate 1 stands as Q6_MECHANISM_HOLDS \u2014 but carrying the new execution surface through the existing qualification machinery required roughly 960 new qualification-architecture lines against a preregistered bound of a thin wrapper of at most 150 lines. The stop rule fired. No Stage 1 ran, no environment receipt was frozen, no scientific contact occurred. So there is no productivity-advantage result, no no-advantage result, and no inconclusive-experiment result. The productivity question itself remains unanswered."
+      },
+      "records": [
+        {
+          "evidence_key": "rsi006_prereg",
+          "record_type": "preregistration",
+          "plain": "Q6 preregistration, frozen and merged before any implementation (PR #166, merge b947b3d3151432975e2c722f8647e593cd3ab257). It froze the mechanism contract and the section-9 complexity stop: if establishing the Q6 environment binding requires a large new qualification framework rather than the thin wrapper (at most 150 lines), STOP and return NO-GO."
+        },
+        {
+          "evidence_key": "rsi006_gate2a_freeze",
+          "record_type": "freeze record",
+          "plain": "Terminal Gate-2A freeze (PR #169, merge d3b29da9a83c8ee65ee095fae1b052460e08ece3). Gate 1 stands Q6_MECHANISM_HOLDS: the coordinator-death recovery mechanism was implemented and frozen (merge 51329a43), then repaired for frozen-contract conformance (repair d802828, final Gate-1 merge 258639f4). The Gate-2A qualification construction (branch gate2/rsi-006-q6-stage1-binding at 6a549872, unmerged and preserved) passed its correctness tests \u2014 77 of 77 fixtures, plus a 51 of 51 Q5 regression \u2014 but required q6_receipt.py at 463 lines and a new q6_stage1.py at 497 lines, falsifying the preregistered bound. Frozen outcome: NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY. This is not a NOT_QUALIFIED substrate verdict: no Stage 1 executed, no witness armed, no reboot, no Q6 environment receipt frozen, no terminal qualification execution, no scientific contact. RSI-006 productivity execution is permanently unauthorized under this preregistration. There is no Q7."
+        }
+      ],
+      "weaknesses": [
+        "This lane records a stop before contact, not an experiment result. It establishes that the productivity test was not authorized \u2014 it does not establish advantage, no-advantage, or inconclusiveness about recursive improvement.",
+        "The Q2 through Q5 substrate line is summarized here, not re-litigated: Q2 closed INCONCLUSIVE_RSI_006_Q2_PRECONDITION_FAILURE (baseline collection error, zero observations); Q3 closed with execution failure after contact and no verdict of any kind; Q4 froze the durable-transaction boundary; Q5 closed terminally as FAIL_CLOSED_UNCERTAIN_EXECUTION_AFTER_CONTACT \u2014 an execution description, with scientific verdict explicitly not earned. Their frozen records stand in the airlock repository.",
+        "The rejected Gate-2A construction is preserved on its branch for inspection but was never merged; its 77/77 correctness result is evidence about the larger design, not about the bounded wrapper that was preregistered."
+      ],
+      "why_it_matters": "This is the terminal branch of the productivity question's history. The planned RSI-006 productivity test was not authorized under its frozen protocol \u2014 not because the mechanism failed (Q6_MECHANISM_HOLDS stands), but because the preregistered complexity stop fired before scientific contact. The credibility point is that the stop rule actually stopped us. The productivity question \u2014 whether inherited improvement beats the unchanged process per dollar on fresh work \u2014 remains unanswered, and no further attempt is currently authorized."
+    }
+  ],
+  "schema": "openline.rsi.contrast.v1"
+}
