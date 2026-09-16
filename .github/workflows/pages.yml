@@ -6,7 +6,7 @@ name: Deploy public replay to GitHub Pages
 
 on:
   push:
-    branches: [main, launch/openline-rsi-public-release]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
