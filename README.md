@@ -16,27 +16,37 @@ The lesson — doubt has to travel down the lineage, not stop at the generation 
 
 **RSI-005** tested the redesigned component under its own ID and its own preregistration. After the reopening, all three generations became questioned — the doubt propagated down the lineage. An admission probe for a never-executed fourth generation was denied. Receipts and installed references were unchanged. Formal verdict: `PASS_RSI_005_LINEAGE_AWARE_INHERITANCE`. RSI-003 and RSI-004 stayed exactly as frozen; the PASS does not re-litigate either one.
 
-What the arc earned: questioned standing must propagate along the lineage — and a redesigned component that passed its own preregistered tests. What it did not earn: the productivity claim — whether any of this makes later research cheaper per verified result. That question belongs to a later test.
+What the arc earned: questioned standing must propagate along the lineage — and a redesigned component that passed its own preregistered tests. What it did not earn: the productivity claim — whether any of this makes later research cheaper per verified result. That question belonged to a later test.
+
+That later test was RSI-006. It never ran.
 
 ## What you can see here
 
 **The replay.** Open `site/index.html` in a browser — no server, no credentials. It walks the investigation stage by stage: question, prediction, run, verdict, lock, and the two successor experiments. Each stage links directly to the frozen record it came from.
 
-**The evidence.** `evidence/` holds the frozen records the replay is built from: design drafts, preregistrations, result receipts, and freeze notes for RSI-003, RSI-004, and RSI-005, plus the earlier productivity attempt. The records are hash-pinned and never edited; `site/data/manifest.json` lists every record with its source and digest.
+**The evidence.** `evidence/` holds the frozen records the replay is built from: design drafts, preregistrations, result receipts, and freeze notes for RSI-003, RSI-004, and RSI-005, the earlier productivity attempt, and the terminal RSI-006 branch (the Q6 preregistration and the Gate-2A NO-GO freeze record). The records are hash-pinned and never edited; `site/data/manifest.json` lists every record with its source and digest.
 
 **How the records were produced and checked.** The Methods & provenance page (`site/methods.html`) describes the record types, the verification steps, and the known limitations — including the one external reference that exists only as a GitHub artifact.
 
-## An earlier attempt, kept for context
+## The productivity question, and where it stands
 
-Before this arc, the productivity question — does governed recursive improvement actually produce more verified progress per dollar? — was asked once on live infrastructure as RIL-001R. The verdict was `INCONCLUSIVE_RIL_001R_LIVE_EXECUTION`: negative evidence, preserved rather than hidden. It appears here as a contrast lane. RSI-006 is the next attempt at that question, not the first.
+Before this arc, the productivity question — does governed recursive improvement actually produce more verified progress per dollar? — was asked once on live infrastructure as RIL-001R. The verdict was `INCONCLUSIVE_RIL_001R_LIVE_EXECUTION`: negative evidence, preserved rather than hidden. It appears here as a contrast lane.
+
+RSI-006 was the next attempt at that question, not the first. It never ran.
+
+I tried to get to a preregistered test of whether an AI improvement process could improve itself. I stopped before the productivity experiment because the final execution substrate violated a complexity limit written down in advance. The mechanism repair worked. The qualification architecture exceeded the bound. Here is the record.
+
+Concretely: RSI-006's Q6 line first repaired the coordinator-death recovery mechanism — Gate 1 stands as `Q6_MECHANISM_HOLDS`. But the frozen Q6 preregistration required the final environment-qualification binding to be a thin wrapper of at most 150 lines, with an explicit stop written in advance: if binding the new execution surface to the qualification machinery required a large new qualification framework, STOP and return NO-GO. The construction that implemented the desired qualification semantics needed roughly 960 lines across the new qualification layer — `q6_receipt.py` grew to 463 lines and a new `q6_stage1.py` added 497 — while passing all 77 of its correctness fixtures. Correctness passed; boundedness failed. Gate 2A therefore terminated pre-contact as `NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY`. That is not a NOT_QUALIFIED substrate verdict: no Stage 1 ran, no environment receipt was frozen, no scientific contact occurred. RSI-006 productivity execution is permanently unauthorized under this preregistration. There is no Q7.
+
+The credibility point is that the stop rule actually stopped us. The productivity question itself — whether inherited improvement beats the unchanged process per dollar on fresh work — remains unanswered, and no further attempt is currently authorized. The terminal branch is preserved as its own contrast lane, not hidden.
 
 ## What's unresolved
 
-- **Productivity result.** RSI-006 has not earned it yet.
+- **Productivity result.** The planned RSI-006 productivity test was not authorized under its frozen protocol — the Q6 substrate line ended pre-contact at `NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY`. The question itself remains unanswered.
 - **Independent replication.** No result in this replay has been independently replicated.
 - **Integrated correction.** Not yet demonstrated.
 
-These render in the replay as explicitly empty slots. They are open questions, not features.
+The first slot above is not simply "open": RSI-006, the planned vehicle, is terminally closed and will not fill it. These render in the replay as explicitly empty slots.
 
 ## Running it
 
@@ -57,7 +67,7 @@ site/
   templates/          page templates; data is injected at build time
   data/
     replay.json       the RSI-003 → RSI-004 → RSI-005 investigation
-    contrast.json     the RIL productivity history
+    contrast.json     the RIL productivity history and the terminal RSI-006 branch
     manifest.json     every evidence record: source path, digest, verification
   app.js              renders the pages from the inlined data (no backend)
 evidence/             frozen record copies, hash-pinned (never edited)
@@ -71,4 +81,4 @@ CONTRIBUTING.md       contributor guidance and repository scope
 
 ## Provenance
 
-v0 evidence: 16 frozen records copied from `terryncew/openline-airlock` (main `c82f0242e6556bbc8d920291f444090b526adeee`), 2 design drafts from the local workspace, and 1 external reference (RIL-001R raw result bytes, GitHub artifact only — the limitation is stated in the manifest). The source repositories and their frozen records remain authoritative.
+v0 evidence: 16 frozen records copied from `terryncew/openline-airlock` (main `c82f0242e6556bbc8d920291f444090b526adeee`), 2 design drafts from the local workspace, and 1 external reference (RIL-001R raw result bytes, GitHub artifact only — the limitation is stated in the manifest). The RSI-006 terminal branch added 2 more frozen records from `terryncew/openline-airlock` at main `d3b29da9a83c8ee65ee095fae1b052460e08ece3` (the Q6 preregistration, frozen at its PR #166 merge `b947b3d3151432975e2c722f8647e593cd3ab257`, and the Gate-2A NO-GO freeze record from PR #169). The source repositories and their frozen records remain authoritative.

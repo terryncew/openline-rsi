@@ -68,6 +68,35 @@
     "The formal verdict is INCONCLUSIVE on a measurement defect. The negative finding is preserved separately from the verdict."
    ],
    "why_it_matters": "This lane is the history that the future RSI-006 productivity slot plugs into. RSI-006 is the next attempt at this question — not the first. Nothing here is replaced when RSI-006 earns its result; the lane grows."
+  },
+  {
+   "experiment": "RSI-006",
+   "id": "rsi-006",
+   "kind": "contrast",
+   "plain": {
+    "body": "RSI-006 was the planned preregistered test of whether recursively inherited improvement produces more independently verified useful work per dollar than the matched unchanged process on fresh work. It never ran. The Q6 execution substrate had to pass a frozen environment-qualification gate first, and the preregistration had written a complexity stop into that gate in advance. Q6 repaired the coordinator-death mechanism — Gate 1 stands as Q6_MECHANISM_HOLDS — but carrying the new execution surface through the existing qualification machinery required roughly 960 new qualification-architecture lines against a preregistered bound of a thin wrapper of at most 150 lines. The stop rule fired. No Stage 1 ran, no environment receipt was frozen, no scientific contact occurred. So there is no productivity-advantage result, no no-advantage result, and no inconclusive-experiment result. The productivity question itself remains unanswered.",
+    "headline": "The next productivity attempt stopped before the experiment."
+   },
+   "records": [
+    {
+     "evidence_key": "rsi006_prereg",
+     "plain": "Q6 preregistration, frozen and merged before any implementation (PR #166, merge b947b3d3151432975e2c722f8647e593cd3ab257). It froze the mechanism contract and the section-9 complexity stop: if establishing the Q6 environment binding requires a large new qualification framework rather than the thin wrapper (at most 150 lines), STOP and return NO-GO.",
+     "record_type": "preregistration"
+    },
+    {
+     "evidence_key": "rsi006_gate2a_freeze",
+     "plain": "Terminal Gate-2A freeze (PR #169, merge d3b29da9a83c8ee65ee095fae1b052460e08ece3). Gate 1 stands Q6_MECHANISM_HOLDS: the coordinator-death recovery mechanism was implemented and frozen (merge 51329a43), then repaired for frozen-contract conformance (repair d802828, final Gate-1 merge 258639f4). The Gate-2A qualification construction (branch gate2/rsi-006-q6-stage1-binding at 6a549872, unmerged and preserved) passed its correctness tests — 77 of 77 fixtures, plus a 51 of 51 Q5 regression — but required q6_receipt.py at 463 lines and a new q6_stage1.py at 497 lines, falsifying the preregistered bound. Frozen outcome: NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY. This is not a NOT_QUALIFIED substrate verdict: no Stage 1 executed, no witness armed, no reboot, no Q6 environment receipt frozen, no terminal qualification execution, no scientific contact. RSI-006 productivity execution is permanently unauthorized under this preregistration. There is no Q7.",
+     "record_type": "freeze record"
+    }
+   ],
+   "status": "completed",
+   "verdict": "NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY",
+   "weaknesses": [
+    "This lane records a stop before contact, not an experiment result. It establishes that the productivity test was not authorized — it does not establish advantage, no-advantage, or inconclusiveness about recursive improvement.",
+    "The Q2 through Q5 substrate line is summarized here, not re-litigated: Q2 closed INCONCLUSIVE_RSI_006_Q2_PRECONDITION_FAILURE (baseline collection error, zero observations); Q3 closed with execution failure after contact and no verdict of any kind; Q4 froze the durable-transaction boundary; Q5 closed terminally as FAIL_CLOSED_UNCERTAIN_EXECUTION_AFTER_CONTACT — an execution description, with scientific verdict explicitly not earned. Their frozen records stand in the airlock repository.",
+    "The rejected Gate-2A construction is preserved on its branch for inspection but was never merged; its 77/77 correctness result is evidence about the larger design, not about the bounded wrapper that was preregistered."
+   ],
+   "why_it_matters": "This is the terminal branch of the productivity question's history. The planned RSI-006 productivity test was not authorized under its frozen protocol — not because the mechanism failed (Q6_MECHANISM_HOLDS stands), but because the preregistered complexity stop fired before scientific contact. The credibility point is that the stop rule actually stopped us. The productivity question — whether inherited improvement beats the unchanged process per dollar on fresh work — remains unanswered, and no further attempt is currently authorized."
   }
  ],
  "schema": "openline.rsi.contrast.v1"
@@ -81,8 +110,8 @@
   {
    "key": "productivity_result",
    "label": "Productivity result",
-   "plain": "Does governed inheritance make later research more productive per dollar? RIL-001R asked this and did not establish an advantage. RSI-006 is the next attempt at this question — not the first. Its freeze record will plug in here when earned.",
-   "plug_in": "data/contrast.json → ril_lane, and future: data/replay-rsi006.json (same schema)",
+   "plain": "Does governed inheritance make later research more productive per dollar? RIL-001R asked this and did not establish an advantage. RSI-006 was the next attempt at this question — and it never ran. Its Q6 substrate line ended pre-contact with the frozen outcome NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY: the mechanism repair earned Q6_MECHANISM_HOLDS, but the final environment-qualification path required more new qualification architecture than the preregistered Q6 bound allowed, so the productivity experiment was never authorized. RSI-006 will not fill this slot. The productivity question itself remains unanswered; no further attempt is currently authorized. See the RSI-006 contrast lane for the terminal branch.",
+   "plug_in": "data/contrast.json -> rsi-006 lane (terminal branch, frozen). The ril-001r lane is unchanged. No replication data exists.",
    "status": "unresolved"
   },
   {
@@ -284,7 +313,7 @@
   }
  ],
  "standing": {
-  "as_of": "2026-09-15",
+  "as_of": "2026-09-16",
   "entries": [
    {
     "current_standing": "Stands as the recorded finding: the projector did not propagate questioned standing through inherited ancestry.",
@@ -306,7 +335,7 @@
  }
 }</script>
 <script type="application/json" id="manifest-data">{
- "copied_at": "2026-09-15",
+ "copied_at": "2026-09-16",
  "copies": [
   {
    "copy_path": "evidence/rsi-003/RSI_003_DESIGN_DRAFT.md",
@@ -485,6 +514,26 @@
    "record_type": "preregistration",
    "sha256": "256b41d726f5f8597b4e23ed2169f10974a034d9433f5fd0d5ba861ead8f2ac5",
    "source_path": "openline-airlock/experiments/rsi-005-lineage-aware-inheritance/RSI_005_PREREGISTRATION.json",
+   "source_repo": "terryncew/openline-airlock",
+   "verification": "verified-copy"
+  },
+  {
+   "copy_path": "evidence/rsi-006/PREREGISTRATION.md",
+   "frozen_ref": "main commit d3b29da9a83c8ee65ee095fae1b052460e08ece3 (prereg merge b947b3d3151432975e2c722f8647e593cd3ab257)",
+   "key": "rsi006_prereg",
+   "record_type": "preregistration (Q6 completion recorder)",
+   "sha256": "a96c9599beca833a34e78d8ed47c3e1136dca40dc2b3aeb955934db46e779a60",
+   "source_path": "openline-airlock/experiments/rsi-006-q6-completion-recorder/PREREGISTRATION.md",
+   "source_repo": "terryncew/openline-airlock",
+   "verification": "verified-copy"
+  },
+  {
+   "copy_path": "evidence/rsi-006/QUALIFICATION_BINDING_NO_GO.md",
+   "frozen_ref": "main commit d3b29da9a83c8ee65ee095fae1b052460e08ece3 (PR #169 merge)",
+   "key": "rsi006_gate2a_freeze",
+   "record_type": "freeze record (Gate-2A terminal NO-GO)",
+   "sha256": "77a83b8c5ce06cddbebdc4f6aeadb99bc1159debbc3e11fb227a08c08d245a64",
+   "source_path": "openline-airlock/proofs/rsi-006-q6/QUALIFICATION_BINDING_NO_GO.md",
    "source_repo": "terryncew/openline-airlock",
    "verification": "verified-copy"
   }

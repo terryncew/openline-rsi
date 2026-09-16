@@ -1,5 +1,5 @@
 {
-  "copied_at": "2026-09-15",
+  "copied_at": "2026-09-16",
   "copies": [
     {
       "copy_path": "evidence/rsi-003/RSI_003_DESIGN_DRAFT.md",
@@ -179,6 +179,26 @@
       "sha256": "256b41d726f5f8597b4e23ed2169f10974a034d9433f5fd0d5ba861ead8f2ac5",
       "source_path": "openline-airlock/experiments/rsi-005-lineage-aware-inheritance/RSI_005_PREREGISTRATION.json",
       "source_repo": "terryncew/openline-airlock",
+      "verification": "verified-copy"
+    },
+    {
+      "key": "rsi006_prereg",
+      "copy_path": "evidence/rsi-006/PREREGISTRATION.md",
+      "source_repo": "terryncew/openline-airlock",
+      "source_path": "openline-airlock/experiments/rsi-006-q6-completion-recorder/PREREGISTRATION.md",
+      "frozen_ref": "main commit d3b29da9a83c8ee65ee095fae1b052460e08ece3 (prereg merge b947b3d3151432975e2c722f8647e593cd3ab257)",
+      "record_type": "preregistration (Q6 completion recorder)",
+      "sha256": "a96c9599beca833a34e78d8ed47c3e1136dca40dc2b3aeb955934db46e779a60",
+      "verification": "verified-copy"
+    },
+    {
+      "key": "rsi006_gate2a_freeze",
+      "copy_path": "evidence/rsi-006/QUALIFICATION_BINDING_NO_GO.md",
+      "source_repo": "terryncew/openline-airlock",
+      "source_path": "openline-airlock/proofs/rsi-006-q6/QUALIFICATION_BINDING_NO_GO.md",
+      "frozen_ref": "main commit d3b29da9a83c8ee65ee095fae1b052460e08ece3 (PR #169 merge)",
+      "record_type": "freeze record (Gate-2A terminal NO-GO)",
+      "sha256": "77a83b8c5ce06cddbebdc4f6aeadb99bc1159debbc3e11fb227a08c08d245a64",
       "verification": "verified-copy"
     }
   ],
