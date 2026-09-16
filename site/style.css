@@ -369,14 +369,13 @@ details.evidence summary:focus-visible { outline: 2px solid var(--accent); outli
   .gen-state { font-size: 11.5px; }
 }
 
-/* ---------- story workbook (homepage only: white / black / yellow) ---------- */
+/* ---------- story panels (homepage only: white / black / yellow) ---------- */
 body.page-story {
   background: #fff; color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .page-story {
   --wb-display: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --wb-yellow: #ffe600;
 }
 .wb-top { border-bottom: 4px solid #000; background: #fff; }
 .wb-top-inner {
@@ -391,59 +390,67 @@ body.page-story {
 .wb-top nav a { color: #000; text-decoration: none; font-weight: 700; font-size: 16px; }
 .wb-top nav a:hover, .wb-top nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
 
-.wb-page {
-  max-width: 1240px; margin: 0 auto; padding: 11vh 24px;
-  display: grid; gap: 56px; align-items: center;
-}
-.wb-p1 { grid-template-columns: 1.05fr 1fr; }
-.wb-p2 { grid-template-columns: 1.25fr 1fr; }
-.wb-p3 { grid-template-columns: 1fr 1.25fr; }
-.wb-p4 { display: block; max-width: 1240px; }
-.wb-page h1, .wb-page h2, .wb-boom, .wb-doors nav a {
+/* one comic panel = title zone / picture zone / caption zone, stacked, never side by side */
+.panel { max-width: 1150px; margin: 0 auto; padding: 9vh 24px 10vh; }
+.panel + .panel, .receipts { border-top: 6px solid #000; }
+.panel-title { max-width: 640px; margin: 0 auto 5vh; text-align: center; }
+.panel-title h1, .panel-title h2, .boom, .receipts nav a {
   font-family: var(--wb-display); text-transform: uppercase;
   line-height: 0.95; letter-spacing: -0.01em; margin: 0; color: #000;
 }
-.wb-page h1 { font-size: clamp(46px, 6.8vw, 108px); }
-.wb-page h2 { font-size: clamp(42px, 5.6vw, 88px); }
-.wb-boom { font-size: clamp(40px, 5.4vw, 84px); margin-top: 40px; }
-.wb-small { font-size: 18px; line-height: 1.55; margin: 34px 0 0; }
-.wb-hook { font-size: 23px; font-weight: 700; line-height: 1.4; margin: 26px 0 0; max-width: 20em; }
-.wb-lines { font-size: 20px; line-height: 1.75; margin: 34px 0 0; }
-.wb-note { margin: 30px 0 0; font-size: 17px; font-weight: 700; }
-.wb-note a { color: #000; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
-.wb-page figure { margin: 0; }
-.wb-page svg { display: block; width: 100%; height: auto; }
-.wb-p4-copy { margin: 36px 0 0; max-width: 34em; }
-.wb-p4-copy p { font-size: 18px; line-height: 1.6; margin: 0 0 14px; }
-.wb-p4-art { margin: 48px 0 0; max-width: 1000px; }
-.wb-boom-final { margin: 56px 0 0; }
-.wb-doors { max-width: 1240px; margin: 0 auto; padding: 10vh 24px 16vh; }
-.wb-doors nav { margin-top: 44px; display: grid; gap: 34px; }
-.wb-doors nav a {
-  font-size: clamp(38px, 5.6vw, 76px); color: #000; text-decoration: none;
-  line-height: 1; display: block;
+.panel-title h1 { font-size: clamp(52px, 8vw, 120px); }
+.panel-title h2 { font-size: clamp(40px, 5.6vw, 84px); }
+.cover-strap {
+  font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase;
+  font-size: clamp(13px, 1.6vw, 18px); margin: 22px 0 0; color: #000;
 }
-.wb-doors nav a:hover { text-decoration: underline; text-underline-offset: 8px; }
-.wb-foot { border-top: 4px solid #000; background: #fff; }
-.wb-foot-inner { max-width: 1240px; margin: 0 auto; padding: 36px 24px 56px; font-size: 14px; line-height: 1.6; }
+.cover-line {
+  font-family: var(--wb-display); text-transform: uppercase;
+  font-size: clamp(24px, 3.4vw, 44px); line-height: 1.05; margin: 26px 0 0; color: #000;
+}
+.panel-art { margin: 0 auto; max-width: 1120px; overflow: hidden; }
+.panel-art svg { display: block; width: 100%; height: auto; }
+.panel-cap { max-width: 600px; margin: 5vh auto 0; text-align: center; border-top: 3px solid #000; padding-top: 4vh; }
+.cap-line { font-size: 20px; line-height: 1.55; margin: 0 0 14px; }
+.boom { font-size: clamp(44px, 6.4vw, 92px); margin: 26px 0 0; }
+.rec { margin: 28px 0 0; font-size: 17px; font-weight: 700; }
+.rec a { color: #000; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.receipts { max-width: 1150px; margin: 0 auto; padding: 9vh 24px 15vh; text-align: center; }
+.receipts nav { margin-top: 40px; display: grid; gap: 30px; }
+.receipts nav a { font-size: clamp(36px, 5.4vw, 72px); color: #000; text-decoration: none; line-height: 1; display: block; }
+.receipts nav a:hover { text-decoration: underline; text-underline-offset: 8px; }
+.wb-foot { border-top: 6px solid #000; background: #fff; }
+.wb-foot-inner { max-width: 1150px; margin: 0 auto; padding: 36px 24px 56px; font-size: 14px; line-height: 1.6; }
 .wb-foot-inner p { margin: 0 0 10px; max-width: 60em; }
 .wb-foot code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; background: #eee; padding: 2px 6px; }
 
 /* one-time reveal; no-JS and reduced-motion stay readable */
-html.js .wb-page, html.js .wb-doors { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
-html.js .wb-page.revealed, html.js .wb-doors.revealed { opacity: 1; transform: none; }
+html.js .panel, html.js .receipts { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+html.js .panel.revealed, html.js .receipts.revealed { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html.js .panel, html.js .receipts { transition: none; opacity: 1; transform: none; }
+}
 
 @media (max-width: 860px) {
-  .wb-page { grid-template-columns: 1fr; gap: 40px; padding: 9vh 20px; }
-  .wb-p1-art, .wb-p2-art, .wb-p3-art { margin: 0 -20px; }
-  .wb-p1-art svg, .wb-p2-art svg, .wb-p3-art svg { width: 100%; }
-  .wb-page h1 { font-size: clamp(42px, 13vw, 64px); }
-  .wb-page h2 { font-size: clamp(38px, 11vw, 58px); }
-  .wb-boom { font-size: clamp(36px, 10.5vw, 54px); }
-  .wb-doors nav a { font-size: clamp(34px, 10vw, 52px); }
+  .panel { padding: 8vh 0 9vh; }
+  .panel-title { padding: 0 20px; }
+  .panel-cap { margin-left: 20px; margin-right: 20px; }
+  /* recompose: crop into the action so the yellow card stays large */
+  .panel-art svg { width: 168%; max-width: none; }
+  .art-cover svg { margin-left: -24%; }
+  .art-p1 svg { margin-left: -24%; }
+  .art-p2 svg { margin-left: -37%; }
+  .art-p3 svg { margin-left: -41%; }
+  .panel-title h1 { font-size: clamp(44px, 14vw, 72px); }
+  .panel-title h2 { font-size: clamp(36px, 11vw, 56px); }
+  .cover-line { font-size: clamp(22px, 7vw, 34px); }
+  .boom { font-size: clamp(38px, 12vw, 60px); }
+  .receipts nav a { font-size: clamp(32px, 10vw, 52px); }
+  .receipts { padding-left: 20px; padding-right: 20px; }
   .wb-top-inner { padding: 16px 20px; }
   .wb-top nav { gap: 20px; }
 }
+
 
 /* ---------- case file header ---------- */
 
