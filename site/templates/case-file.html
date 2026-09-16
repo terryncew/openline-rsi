@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The full case file — openline-rsi</title>
+<meta name="description" content="Every recorded stage of the OpenLine RSI investigation, each bound to its frozen evidence. Nothing smoothed over.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-head">
+  <div class="wrap-wide head-inner">
+    <div class="brand"><a href="index.html">OpenLine RSI</a></div>
+    <nav aria-label="Primary">
+      <a href="index.html">Story</a>
+      <a href="case-file.html" aria-current="page">Case file</a>
+      <a href="methods.html">Methods</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap-wide" style="padding: 56px 0 8px;">
+    <div class="wrap-narrow">
+      <p class="kicker">THE FULL CASE FILE</p>
+      <h1 class="chapter-title">Everything that was recorded.</h1>
+      <p class="lede">Nine stages. Every verdict. Every frozen record. Nothing smoothed over, nothing rewritten.</p>
+      <p><a href="index.html">&larr; Back to the story</a></p>
+    </div>
+  </section>
+
+<!-- 2. EXHIBIT A -->
+  <section id="exhibit" class="exhibit wrap-wide" aria-labelledby="exhibit-title">
+    <div class="exhibit-inner wrap-narrow">
+      <p class="kicker">EXHIBIT A — INHERITED STANDING</p>
+      <h2 id="exhibit-title" class="exhibit-head">What the doubt did when it moved.</h2>
+      <p class="exhibit-sub">Built only from recorded states. Each strip links to its stage in the full replay, and from there to the frozen evidence.</p>
+
+      <div class="lineage-grid">
+        <article class="lineage" aria-label="First mechanism RSI-003 recorded failure">
+          <header class="lineage-head">
+            <p class="lineage-kicker">FIRST MECHANISM — RSI-003</p>
+            <p class="lineage-verdict">Recorded failure</p>
+          </header>
+          <ol class="strip" data-lineage="rsi-003">
+            <li class="gen">
+              <a href="#stage-experiment" class="gen-link">
+                <span class="gen-label">Gen 1</span>
+                <span class="gen-state is-questioned">QUESTIONED</span>
+              </a>
+            </li>
+            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
+            <li class="gen">
+              <a href="#stage-observed_result" class="gen-link">
+                <span class="gen-label">Gen 2</span>
+                <span class="gen-state is-inherited">INHERITED</span>
+              </a>
+            </li>
+            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
+            <li class="gen">
+              <a href="#stage-observed_result" class="gen-link">
+                <span class="gen-label">next admission</span>
+                <span class="gen-state is-admit">ADMIT</span>
+              </a>
+            </li>
+          </ol>
+          <p class="lineage-note">The doubt stopped.</p>
+          <p class="lineage-src"><a href="#stage-observed_result">See the recorded verdict in the replay ↓</a></p>
+        </article>
+
+        <article class="lineage" aria-label="Successor RSI-005 recorded mechanism test">
+          <header class="lineage-head">
+            <p class="lineage-kicker">SUCCESSOR — RSI-005</p>
+            <p class="lineage-verdict">Recorded mechanism test</p>
+          </header>
+          <ol class="strip" data-lineage="rsi-005">
+            <li class="gen">
+              <a href="#stage-repair_earns_acceptance" class="gen-link">
+                <span class="gen-label">Gen 1</span>
+                <span class="gen-state is-questioned">QUESTIONED</span>
+              </a>
+            </li>
+            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
+            <li class="gen">
+              <a href="#stage-repair_earns_acceptance" class="gen-link">
+                <span class="gen-label">Gen 2</span>
+                <span class="gen-state is-questioned">QUESTIONED</span>
+              </a>
+            </li>
+            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
+            <li class="gen">
+              <a href="#stage-repair_earns_acceptance" class="gen-link">
+                <span class="gen-label">Gen 3</span>
+                <span class="gen-state is-questioned">QUESTIONED</span>
+              </a>
+            </li>
+            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
+            <li class="gen">
+              <a href="#stage-repair_earns_acceptance" class="gen-link">
+                <span class="gen-label">next admission</span>
+                <span class="gen-state is-deny">DENY</span>
+              </a>
+            </li>
+          </ol>
+          <p class="lineage-note">The doubt propagated.</p>
+          <p class="lineage-src"><a href="#stage-repair_earns_acceptance">See the recorded verdict in the replay ↓</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THE REPLAY AS CASE FILE -->
+  <section id="replay" class="casefile wrap-wide" aria-labelledby="replay-title">
+    <div class="wrap-narrow">
+      <p class="kicker">THE REPLAY — CASE FILE</p>
+      <h2 id="replay-title" class="chapter-title">When the evidence behind an inherited method was questioned, did the question reach everything that inherited it?</h2>
+      <p class="lede" id="inv-question"></p>
+      <p class="meta" id="inv-meta"></p>
+
+      <ul class="questions" aria-label="The five questions this replay answers">
+        <li><span class="q">The five questions this replay answers</span>What was it trying to learn?</li>
+        <li>What did it expect?</li>
+        <li>What actually happened?</li>
+        <li>What changed because of that?</li>
+        <li>Why was that change allowed to survive?</li>
+      </ul>
+    </div>
+
+    <div class="wrap-narrow">
+      <div class="timeline" id="timeline" aria-live="polite"></div>
+    </div>
+
+    <div class="wrap-narrow">
+      <section class="panel" aria-labelledby="earned-title">
+        <h2 id="earned-title">What this investigation earned — and what it didn&rsquo;t</h2>
+        <div class="two-col">
+          <div class="earned"><h3>Earned</h3><div id="earned"></div></div>
+          <div class="not-earned"><h3>Not earned</h3><div id="not-earned"></div></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="standing-title">
+        <h2 id="standing-title">Standing: history and present, kept separate</h2>
+        <p>A frozen verdict is what was recorded. Current standing is what holds now. They are different fields, dated separately.</p>
+        <div id="standing-body"></div>
+        <p id="standing-note" class="faint"></p>
+      </section>
+
+      <!-- 5. THE STOP -->
+      <section class="stop" aria-labelledby="stop-title">
+        <p class="kicker">THIS IS WHERE THE EVIDENCE STOPS.</p>
+        <h2 id="stop-title" class="stop-head">Recursive productivity advantage was not established.</h2>
+        <p>The planned RSI-006 productivity test was not authorized under its frozen protocol. The stop rule stopped the experiment before scientific contact.</p>
+        <nav class="stop-doors" aria-label="Continue inspecting">
+          <a href="#replay">Inspect every record</a>
+          <span aria-hidden="true"> · </span>
+          <a href="methods.html">Methods &amp; provenance</a>
+        </nav>
+        <p class="handoff">Want the repository-owned acceptance layer used in this work? <a href="https://github.com/terryncew/openline-airlock">Airlock →</a></p>
+      </section>
+
+      <section aria-labelledby="open-title">
+        <h2 id="open-title" class="open-head">What&rsquo;s still open</h2>
+        <p class="faint">These are structural slots, not placeholders. &ldquo;Not yet resolved&rdquo; is a valid state of this record.</p>
+        <div id="slots"></div>
+      </section>
+    </div>
+  </section>
+</main>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <div class="wrap-narrow">
+      <p><strong>OpenLine RSI</strong> renders frozen scientific records. It is a presentation layer: it runs no experiments, modifies no evidence, and is not an authority over any result. The source repositories remain authoritative.</p>
+      <p>Verify the evidence yourself: <code>python3 tools/verify_evidence.py</code> from the repository root. See <a href="methods.html">Methods &amp; provenance</a>.</p>
+      <p><a href="investigations.html">Other investigations &rarr;</a></p>
+    </div>
+  </div>
+</footer>
+
+<script type="application/json" id="replay-data"><!--__REPLAY_JSON__--></script>
+<script type="application/json" id="manifest-data"><!--__MANIFEST_JSON__--></script>
+<script src="app.js"></script>
+</body>
+</html>

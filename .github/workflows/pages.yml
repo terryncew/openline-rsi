@@ -1,0 +1,57 @@
+name: Deploy public replay to GitHub Pages
+
+# Publishes the deterministic site/ build plus a read-only copy of evidence/
+# so the replay is one tap from a browser. No backend, no analytics.
+# Evidence is copied, never mutated; build.py keeps the output deterministic.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild site deterministically
+        run: python3 tools/build.py
+      - name: Verify evidence digests
+        run: python3 tools/verify_evidence.py
+      - name: Validate replay data
+        run: python3 tools/validate_replay.py
+      - name: Stage publish tree
+        # Pages serves the pages at the site root, so evidence links must be
+        # root-relative ("evidence/...") in the deployed copy. The repo's own
+        # site/app.js keeps "../evidence/..." so a local clone opened from
+        # site/ still resolves to the repo-root evidence/ directory.
+        run: |
+          rm -rf public && mkdir -p public
+          cp site/index.html site/case-file.html site/investigations.html site/methods.html site/style.css site/app.js public/
+          sed -i 's|href="../|href="|' public/app.js
+          cp -r evidence public/evidence
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

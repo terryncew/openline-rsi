@@ -1,6 +1,6 @@
-/* openline-rsi v0 — renders the replay from inlined JSON data.
-   No network, no backend. Data lives in <script type="application/json"> blocks
-   injected by tools/build.py so the pages work from file:// too. */
+/* OpenLine RSI — sealed case file renderer.
+   Renders the replay from inlined JSON. No network, no backend.
+   Data lives in <script type="application/json"> blocks injected by tools/build.py. */
 
 (function () {
   "use strict";
@@ -21,7 +21,6 @@
   (MANIFEST.copies || []).forEach(function (c) { EVIDENCE[c.key] = c; });
   (MANIFEST.external_references || []).forEach(function (c) { EVIDENCE[c.key] = c; });
 
-  /* Resolve a stage's record binding to the manifest entry. */
   function resolveRecord(rec) {
     if (!rec || !rec.evidence_key) return null;
     var entry = EVIDENCE[rec.evidence_key];
@@ -64,25 +63,29 @@
     return h;
   }
 
-  /* ---------- index.html: the primary replay ---------- */
   function renderReplay() {
     var host = document.getElementById("timeline");
     if (!host) return;
     var R = data("replay-data");
     if (!R) { host.innerHTML = "<p>Replay data missing.</p>"; return; }
 
-    document.getElementById("inv-question").textContent = R.investigation.question;
-    document.getElementById("inv-meta").textContent =
+    var qEl = document.getElementById("inv-question");
+    if (qEl) qEl.textContent = R.investigation.question;
+    var mEl = document.getElementById("inv-meta");
+    if (mEl) mEl.textContent =
       "Investigation " + R.investigation.id + " · arc " +
       R.investigation.arc.join(" → ") + " · standing as of " + R.standing.as_of;
 
     var html = "";
-    R.stages.forEach(function (st) {
+    R.stages.forEach(function (st, idx) {
       var binding = resolveRecord(st.record);
       if (st.also) binding.also = st.also;
-      html += '<section class="stage" data-status="' + esc(st.marker_status) + '">' +
-        '<span class="node" aria-hidden="true"></span>' +
-        '<p class="marker">' + esc(st.marker) + "</p>" +
+      var folio = String(idx + 1).padStart(2, "0");
+      var rectype = st.record ? (st.record.record_type || "") : "";
+      html += '<section class="stage" id="stage-' + esc(st.key) + '" data-status="' + esc(st.marker_status) + '">' +
+        '<div class="folio" aria-hidden="true">' + folio + "</div>" +
+        '<div class="stage-main">' +
+        '<p class="record-type">' + esc(rectype) + (st.marker ? " · " + esc(st.marker) : "") + "</p>" +
         "<h2>" + esc(st.plain.headline) + "</h2>" +
         '<p class="body">' + esc(st.plain.body) + "</p>";
       if (st.verdict) html += '<p class="verdict">' + esc(st.verdict) + "</p>";
@@ -92,7 +95,7 @@
         st.claim_boundary.forEach(function (c) { html += "<li>" + esc(c) + "</li>"; });
         html += "</ul></div>";
       }
-      html += evidenceDrawer(binding) + "</section>";
+      html += evidenceDrawer(binding) + "</div></section>";
     });
     host.innerHTML = html;
 
@@ -111,11 +114,15 @@
         sh += "<tr><td>" + esc(e.experiment) + '</td><td class="v">' + esc(e.historical_verdict) +
           "</td><td>" + esc(e.current_standing) + "</td></tr>";
       });
-      document.getElementById("standing-note").textContent = R.standing.note;
+      var noteEl = document.getElementById("standing-note");
+      if (noteEl) noteEl.textContent = R.standing.note;
       st.innerHTML = sh + "</table>";
     }
     var slots = document.getElementById("slots");
     if (slots) slots.innerHTML = renderSlots(R.future_slots);
+
+    initExhibitMotion();
+    initEvidenceKeyboard();
   }
 
   function renderSlots(list) {
@@ -127,7 +134,6 @@
     }).join("");
   }
 
-  /* ---------- investigations.html: contrast lanes + future slots ---------- */
   function renderInvestigations() {
     var host = document.getElementById("lanes");
     if (!host) return;
@@ -142,10 +148,7 @@
       if (lane.verdict) html += '<p class="verdict">' + esc(lane.verdict) + "</p>";
       (lane.records || []).forEach(function (rec) {
         var b = resolveRecord(rec);
-        if (b) {
-          (rec.weaknesses || []).forEach(function () {});
-          html += evidenceDrawer(b);
-        }
+        if (b) html += evidenceDrawer(b);
       });
       (lane.weaknesses || []).forEach(function (w) {
         html += '<div class="limitation"><strong>Weakness, not smoothed over.</strong> ' + esc(w) + "</div>";
@@ -156,6 +159,43 @@
     host.innerHTML = html;
     var slots = document.getElementById("slots");
     if (slots && R) slots.innerHTML = renderSlots(R.future_slots);
+    initEvidenceKeyboard();
+  }
+
+  function initExhibitMotion() {
+    var strips = document.querySelectorAll(".strip");
+    if (!strips.length) return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      strips.forEach(function (s) { s.classList.add("resolved"); });
+      return;
+    }
+    if (!("IntersectionObserver" in window)) {
+      strips.forEach(function (s) { s.classList.add("resolved"); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add("resolved");
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    strips.forEach(function (s) { io.observe(s); });
+  }
+
+  function initEvidenceKeyboard() {
+    document.querySelectorAll("details.evidence summary").forEach(function (sum) {
+      sum.setAttribute("tabindex", "0");
+      sum.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " ") {
+          ev.preventDefault();
+          var d = sum.parentElement;
+          if (d.hasAttribute("open")) d.removeAttribute("open");
+          else d.setAttribute("open", "");
+        }
+      });
+    });
   }
 
   renderReplay();

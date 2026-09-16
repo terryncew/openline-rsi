@@ -8,17 +8,17 @@
 </head>
 <body>
 <header class="site-head">
-  <div class="wrap">
-    <div class="brand"><a href="index.html">openline-rsi</a></div>
-    <nav>
-      <a href="index.html">The replay</a>
-      <a href="investigations.html" aria-current="page">Other investigations</a>
-      <a href="methods.html">Methods &amp; provenance</a>
+  <div class="wrap-wide head-inner">
+    <div class="brand"><a href="index.html">OpenLine RSI</a></div>
+    <nav aria-label="Primary">
+      <a href="index.html">Story</a>
+      <a href="case-file.html">Case file</a>
+      <a href="methods.html">Methods</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap prose">
+<main class="wrap-narrow prose">
   <h1>Other investigations</h1>
   <p>One investigation dominates this site. What follows is the contrast lane the replay needs: the earlier productivity work, with its negative and inconclusive results preserved exactly. Nothing here is replaced when later results arrive — the record grows.</p>
 
@@ -29,13 +29,14 @@
   <div id="slots"></div>
 
   <h2>Deferred, not forgotten</h2>
-  <p>Two more evidence lines exist and were inspected for the v0 plan, but are not rendered yet: the AUTORESEARCH-LIVE-002 / LIVE-003 rejection-vs-acceptance pair, and the RSI-006-Q → Q2 → Q3 substrate-qualification line. They stay out of v0 to keep the first product small. Their frozen records are untouched, and the data model already supports adding them as contrast lanes.</p>
+  <p>Two more evidence lines exist and were inspected for the v0 plan, but are not rendered yet: the AUTORESEARCH-LIVE-002 / LIVE-003 rejection-vs-acceptance pair, and the RSI-006-Q → Q2 → Q3 per-stage substrate-qualification records (detail lines — distinct from the terminal RSI-006 branch, which is recorded as its own lane above). They stay out of v0 to keep the first product small. Their frozen records are untouched, and the data model already supports adding them as contrast lanes.</p>
 </main>
 
 <footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap-wide"><div class="wrap-narrow">
     <p><strong>openline-rsi</strong> renders frozen scientific records. Verify the evidence: <code>python3 tools/verify_evidence.py</code> from the repository root.</p>
   </div>
+</div>
 </footer>
 
 <script type="application/json" id="contrast-data"><!--__CONTRAST_JSON__--></script>
