@@ -63,13 +63,13 @@ a:hover { color: var(--accent-ink); }
 }
 .brand { font-family: var(--serif); font-size: 19px; letter-spacing: 0.01em; }
 .brand a { color: var(--ink); text-decoration: none; }
-.site-head nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.site-head nav { display: flex; gap: 26px; flex-wrap: wrap; }
 .site-head nav a {
-  color: var(--ink-soft); text-decoration: none; font-size: 15px;
-  padding: 8px 10px; border-radius: 6px; min-height: 44px; display: inline-flex; align-items: center;
+  color: var(--ink-soft); text-decoration: none; font-size: 15px; font-weight: 600;
+  min-height: 44px; display: inline-flex; align-items: center;
 }
-.site-head nav a:hover { background: var(--paper-dim); color: var(--ink); }
-.site-head nav a[aria-current="page"] { color: var(--ink); font-weight: 600; }
+.site-head nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.site-head nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 
 /* ---------- masthead ---------- */
 .masthead { padding: 72px 0 48px; border-bottom: 1px solid var(--rule); }
@@ -369,58 +369,81 @@ details.evidence summary:focus-visible { outline: 2px solid var(--accent); outli
   .gen-state { font-size: 11.5px; }
 }
 
-/* ---------- story acts (homepage is the movie) ---------- */
-.act { padding: 15vh 0 12vh; }
-.act + .act { border-top: 1px solid var(--rule-soft); }
-.act-inner { max-width: 880px; margin: 0 auto; padding: 0 22px; }
-.act-kicker {
-  font-family: var(--mono); font-size: 13px; letter-spacing: 0.18em;
-  text-transform: uppercase; color: var(--ink-faint); margin: 0 0 30px;
+/* ---------- story workbook (homepage only: white / black / yellow) ---------- */
+body.page-story {
+  background: #fff; color: #000;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.act-title {
-  font-family: var(--serif); font-weight: 400;
-  font-size: clamp(46px, 9vw, 104px); line-height: 1.02; letter-spacing: -0.02em;
-  margin: 0 0 34px;
+.page-story {
+  --wb-display: "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --wb-yellow: #ffe600;
 }
-.act-lede {
-  font-family: var(--serif); font-size: clamp(22px, 3.4vw, 32px);
-  line-height: 1.35; margin: 0 0 22px; max-width: 22em;
+.wb-top { border-bottom: 4px solid #000; background: #fff; }
+.wb-top-inner {
+  max-width: 1240px; margin: 0 auto; padding: 20px 24px;
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap;
 }
-.act-body { font-size: 19px; color: var(--ink-soft); max-width: 34em; margin: 0 0 16px; line-height: 1.65; }
-.act-steps { margin: 52px 0; }
-.act-steps p {
-  font-family: var(--serif); font-size: clamp(20px, 3vw, 27px);
-  line-height: 2.1; margin: 0; max-width: 24em;
+.wb-brand {
+  font-family: var(--wb-display); font-size: 24px; color: #000;
+  text-decoration: none; letter-spacing: 0;
 }
-.act-steps .down { color: var(--ink-faint); }
-.act-verdict {
-  font-family: var(--serif); font-weight: 400;
-  font-size: clamp(42px, 8vw, 88px); line-height: 1.08; letter-spacing: -0.015em;
-  margin: 44px 0 0;
+.wb-top nav { display: flex; gap: 30px; }
+.wb-top nav a { color: #000; text-decoration: none; font-weight: 700; font-size: 16px; }
+.wb-top nav a:hover, .wb-top nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+
+.wb-page {
+  max-width: 1240px; margin: 0 auto; padding: 11vh 24px;
+  display: grid; gap: 56px; align-items: center;
 }
-.act-art { margin: 60px 0 12px; }
-.act-art svg { display: block; width: 100%; max-width: 680px; height: auto; margin: 0 auto; }
-.act-record { margin: 28px 0 0; font-size: 16.5px; }
-.act-quiet { text-align: center; }
-.act-quiet .act-body { margin-left: auto; margin-right: auto; }
-.act-quiet .act-steps p { margin-left: auto; margin-right: auto; }
-/* three doors after the movie */
-.doors-act { padding-bottom: 18vh; }
-.act-doors { display: grid; gap: 0; border-top: 1px solid var(--rule); margin-top: 40px; }
-.act-door {
-  display: block; padding: 30px 8px; border-bottom: 1px solid var(--rule);
-  text-decoration: none; color: var(--ink);
+.wb-p1 { grid-template-columns: 1.05fr 1fr; }
+.wb-p2 { grid-template-columns: 1.25fr 1fr; }
+.wb-p3 { grid-template-columns: 1fr 1.25fr; }
+.wb-p4 { display: block; max-width: 1240px; }
+.wb-page h1, .wb-page h2, .wb-boom, .wb-doors nav a {
+  font-family: var(--wb-display); text-transform: uppercase;
+  line-height: 0.95; letter-spacing: -0.01em; margin: 0; color: #000;
 }
-.act-door:hover { background: var(--paper-dim); }
-.act-door-title {
-  display: block; font-family: var(--serif); font-size: clamp(24px, 4vw, 36px);
-  line-height: 1.2; margin-bottom: 6px; color: var(--ink);
+.wb-page h1 { font-size: clamp(46px, 6.8vw, 108px); }
+.wb-page h2 { font-size: clamp(42px, 5.6vw, 88px); }
+.wb-boom { font-size: clamp(40px, 5.4vw, 84px); margin-top: 40px; }
+.wb-small { font-size: 18px; line-height: 1.55; margin: 34px 0 0; }
+.wb-hook { font-size: 23px; font-weight: 700; line-height: 1.4; margin: 26px 0 0; max-width: 20em; }
+.wb-lines { font-size: 20px; line-height: 1.75; margin: 34px 0 0; }
+.wb-note { margin: 30px 0 0; font-size: 17px; font-weight: 700; }
+.wb-note a { color: #000; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.wb-page figure { margin: 0; }
+.wb-page svg { display: block; width: 100%; height: auto; }
+.wb-p4-copy { margin: 36px 0 0; max-width: 34em; }
+.wb-p4-copy p { font-size: 18px; line-height: 1.6; margin: 0 0 14px; }
+.wb-p4-art { margin: 48px 0 0; max-width: 1000px; }
+.wb-boom-final { margin: 56px 0 0; }
+.wb-doors { max-width: 1240px; margin: 0 auto; padding: 10vh 24px 16vh; }
+.wb-doors nav { margin-top: 44px; display: grid; gap: 34px; }
+.wb-doors nav a {
+  font-size: clamp(38px, 5.6vw, 76px); color: #000; text-decoration: none;
+  line-height: 1; display: block;
 }
-.act-door-sub { display: block; font-size: 16px; color: var(--ink-soft); }
-.act-door:hover .act-door-title { color: var(--accent-ink); }
-/* one-time scroll reveal; no-JS and reduced-motion stay readable */
-html.js .act { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
-html.js .act.revealed { opacity: 1; transform: none; }
+.wb-doors nav a:hover { text-decoration: underline; text-underline-offset: 8px; }
+.wb-foot { border-top: 4px solid #000; background: #fff; }
+.wb-foot-inner { max-width: 1240px; margin: 0 auto; padding: 36px 24px 56px; font-size: 14px; line-height: 1.6; }
+.wb-foot-inner p { margin: 0 0 10px; max-width: 60em; }
+.wb-foot code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; background: #eee; padding: 2px 6px; }
+
+/* one-time reveal; no-JS and reduced-motion stay readable */
+html.js .wb-page, html.js .wb-doors { opacity: 0; transform: translateY(22px); transition: opacity 0.6s ease, transform 0.6s ease; }
+html.js .wb-page.revealed, html.js .wb-doors.revealed { opacity: 1; transform: none; }
+
+@media (max-width: 860px) {
+  .wb-page { grid-template-columns: 1fr; gap: 40px; padding: 9vh 20px; }
+  .wb-p1-art, .wb-p2-art, .wb-p3-art { margin: 0 -20px; }
+  .wb-p1-art svg, .wb-p2-art svg, .wb-p3-art svg { width: 100%; }
+  .wb-page h1 { font-size: clamp(42px, 13vw, 64px); }
+  .wb-page h2 { font-size: clamp(38px, 11vw, 58px); }
+  .wb-boom { font-size: clamp(36px, 10.5vw, 54px); }
+  .wb-doors nav a { font-size: clamp(34px, 10vw, 52px); }
+  .wb-top-inner { padding: 16px 20px; }
+  .wb-top nav { gap: 20px; }
+}
 
 /* ---------- case file header ---------- */
 
