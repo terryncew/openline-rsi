@@ -46,15 +46,20 @@ def main():
     manifest = load("manifest.json")
 
     ok = True
-    ok &= inject("index.html", [("REPLAY_JSON", replay), ("MANIFEST_JSON", manifest)])
+    ok &= inject("case-file.html", [("REPLAY_JSON", replay), ("MANIFEST_JSON", manifest)])
     ok &= inject("investigations.html", [
         ("CONTRAST_JSON", contrast),
         ("REPLAY_JSON", replay),
         ("MANIFEST_JSON", manifest),
     ])
+    # index.html is the story homepage: no data injection, copied as-is.
+    with open(os.path.join(TEMPLATES, "index.html"), encoding="utf-8") as f:
+        home = f.read()
+    with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
+        f.write(home)
     if not ok:
         return 1
-    print("built site/index.html, site/investigations.html (data inlined)")
+    print("built site/index.html, site/case-file.html, site/investigations.html (data inlined)")
     return 0
 
 

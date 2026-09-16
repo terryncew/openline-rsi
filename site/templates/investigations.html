@@ -8,17 +8,18 @@
 </head>
 <body>
 <header class="site-head">
-  <div class="wrap">
-    <div class="brand"><a href="index.html">openline-rsi</a></div>
-    <nav>
-      <a href="index.html">The replay</a>
-      <a href="investigations.html" aria-current="page">Other investigations</a>
-      <a href="methods.html">Methods &amp; provenance</a>
+  <div class="wrap-wide head-inner">
+    <div class="brand"><a href="index.html">OpenLine RSI</a></div>
+    <nav aria-label="Primary">
+      <a href="index.html">Story</a>
+      <a href="case-file.html">Case file</a>
+      <a href="investigations.html" aria-current="page">Investigations</a>
+      <a href="methods.html">Methods</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap prose">
+<main class="wrap-narrow prose">
   <h1>Other investigations</h1>
   <p>One investigation dominates this site. What follows is the contrast lane the replay needs: the earlier productivity work, with its negative and inconclusive results preserved exactly. Nothing here is replaced when later results arrive — the record grows.</p>
 
@@ -33,9 +34,10 @@
 </main>
 
 <footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap-wide"><div class="wrap-narrow">
     <p><strong>openline-rsi</strong> renders frozen scientific records. Verify the evidence: <code>python3 tools/verify_evidence.py</code> from the repository root.</p>
   </div>
+</div>
 </footer>
 
 <script type="application/json" id="contrast-data"><!--__CONTRAST_JSON__--></script>

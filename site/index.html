@@ -12,7 +12,8 @@
   <div class="wrap-wide head-inner">
     <div class="brand"><a href="index.html">OpenLine RSI</a></div>
     <nav aria-label="Primary">
-      <a href="index.html" aria-current="page">Replay</a>
+      <a href="index.html" aria-current="page">Story</a>
+      <a href="case-file.html">Case file</a>
       <a href="investigations.html">Investigations</a>
       <a href="methods.html">Methods</a>
     </nav>
@@ -20,180 +21,221 @@
 </header>
 
 <main>
-  <!-- 1. LAUNCH MASTHEAD -->
-  <section class="masthead wrap-wide">
-    <div class="masthead-inner">
-      <p class="mast-kicker">OPENLINE RSI</p>
-      <h1 class="mast-title">Recursive self-improvement.<br>Open to inspection.</h1>
-      <p class="mast-stake">What happens when an AI improves the way it improves itself?</p>
-      <p class="mast-stake">One version can learn something and pass that lesson to the next version. But what if the original lesson turns out to be wrong? Does the mistake keep spreading?</p>
-      <p class="mast-stake">That’s what this project tested.</p>
-      <div class="mast-record">
-        <p>The first setup failed. It kept trusting an inherited conclusion after the evidence behind it had been questioned.<br>In a later test, a new setup handled that specific problem correctly: the doubt traveled forward, and the next inheritance was blocked.<br>We did <strong>not</strong> prove that the AI became more productive at improving itself.</p>
+  <!-- ============ ACT 1 — THE QUESTION ============ -->
+  <section class="act" aria-labelledby="act1-title">
+    <div class="act-inner">
+      <p class="act-kicker">Act 1 — The question</p>
+      <h1 id="act1-title" class="act-title">OpenLine RSI</h1>
+      <p class="act-lede">Recursive self-improvement.<br>Open to inspection.</p>
+      <p class="act-body">What happens when an AI improves the way it improves itself?</p>
+      <p class="act-body">If one version learns something and the next version inherits it, what happens when the original lesson turns out to be wrong?</p>
+      <figure class="act-art" aria-label="Three small machines in a row pass the same card from one to the next">
+        <svg viewBox="0 0 680 380" role="img" aria-hidden="true">
+          <defs>
+            <marker id="arr1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 1 L 9 5 L 0 9 z" fill="#1d4ed8"></path>
+            </marker>
+          </defs>
+          <line x1="170" y1="96" x2="512" y2="96" stroke="#1d4ed8" stroke-width="6" stroke-linecap="round" marker-end="url(#arr1)"/>
+          <line x1="48" y1="320" x2="632" y2="320" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+          <g>
+            <rect x="124" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="143" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="110" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="140" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g>
+            <rect x="324" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="343" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="310" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="340" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g>
+            <rect x="524" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="543" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="510" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="540" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g transform="translate(240 196) rotate(-8)">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(440 196) rotate(8)">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ ACT 2 — THE FAILURE ============ -->
+  <section class="act" aria-labelledby="act2-title">
+    <div class="act-inner">
+      <p class="act-kicker">Act 2 — The failure</p>
+      <h2 id="act2-title" class="act-title">The mistake<br>kept traveling.</h2>
+      <div class="act-steps">
+        <p>Version 1 passes a lesson<br><span class="down" aria-hidden="true">&darr;</span><br>Version 2 inherits it<br><span class="down" aria-hidden="true">&darr;</span><br>The evidence behind the lesson gets questioned<br><span class="down" aria-hidden="true">&darr;</span><br>Version 2 still trusts it</p>
       </div>
-      <nav class="doors" aria-label="Entry points">
-        <a class="door" href="#exhibit">Replay the experiment</a>
-        <a class="door" href="#replay">Open the evidence</a>
-        <a class="door" href="methods.html">See how to build a test like this</a>
+      <p class="act-verdict">That failed.</p>
+      <figure class="act-art" aria-label="The ground beneath the first machine is cracked, but the second machine still holds the card high">
+        <svg viewBox="0 0 680 380" role="img" aria-hidden="true">
+          <line x1="48" y1="320" x2="632" y2="320" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+          <polyline points="78,320 108,306 138,322 168,304 198,320" fill="none" stroke="#b45309" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <g>
+            <rect x="124" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="143" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="110" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="140" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g>
+            <rect x="324" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="343" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="310" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="340" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g>
+            <rect x="524" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="543" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="510" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="540" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g transform="translate(340 118) rotate(6)">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <line x1="308" y1="56" x2="298" y2="36" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+          <line x1="340" y1="52" x2="340" y2="30" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+          <line x1="372" y1="56" x2="382" y2="36" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </figure>
+      <p class="act-record"><a href="case-file.html#stage-observed_result">Show me the record &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ============ ACT 3 — THE NEW SETUP ============ -->
+  <section class="act" aria-labelledby="act3-title">
+    <div class="act-inner">
+      <p class="act-kicker">Act 3 — The new setup</p>
+      <h2 id="act3-title" class="act-title">So we changed<br>the rule.</h2>
+      <p class="act-body">When the supporting evidence was questioned, the doubt had to travel forward too.</p>
+      <div class="act-steps">
+        <p>Gen 1 &mdash; questioned<br><span class="down" aria-hidden="true">&darr;</span><br>Gen 2 &mdash; questioned<br><span class="down" aria-hidden="true">&darr;</span><br>Gen 3 &mdash; questioned<br><span class="down" aria-hidden="true">&darr;</span><br>next inheritance &mdash; stopped</p>
+      </div>
+      <p class="act-verdict">This passed its test.</p>
+      <figure class="act-art" aria-label="The doubt travels under every machine, and the card is stopped at a barrier before the final handoff">
+        <svg viewBox="0 0 680 380" role="img" aria-hidden="true">
+          <line x1="48" y1="320" x2="560" y2="320" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+          <polyline points="70,320 85,310 100,320" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="260,320 275,310 290,320" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="450,320 465,310 480,320" fill="none" stroke="#b45309" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g>
+            <rect x="94" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="113" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="80" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="110" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g>
+            <rect x="284" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="303" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="270" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="300" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g>
+            <rect x="474" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="493" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="460" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="490" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g transform="translate(548 208) rotate(-12)">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <line x1="612" y1="150" x2="612" y2="320" stroke="#1a1814" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="612" cy="96" r="24" fill="none" stroke="#15803d" stroke-width="6"/>
+          <polyline points="600,96 610,106 626,88" fill="none" stroke="#15803d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </figure>
+      <p class="act-record"><a href="case-file.html#stage-repair_earns_acceptance">Show me the record &rarr;</a></p>
+    </div>
+  </section>
+
+  <!-- ============ ACT 4 — THE STOP ============ -->
+  <section class="act act-quiet" aria-labelledby="act4-title">
+    <div class="act-inner">
+      <p class="act-kicker">Act 4 — The stop</p>
+      <h2 id="act4-title" class="act-title">This is where<br>the evidence stops.</h2>
+      <p class="act-body">We wanted to know whether this made the AI better at improving its own research process.</p>
+      <p class="act-body">That experiment never started.</p>
+      <p class="act-body">The rules written beforehand said to stop if preparing the test became too complicated.</p>
+      <p class="act-body">It did.</p>
+      <p class="act-body">So we stopped.</p>
+      <p class="act-verdict">Recursive productivity advantage<br>was not established.</p>
+      <figure class="act-art" aria-label="A path of cards ends at a clean boundary; one more card waits beyond it, out of reach">
+        <svg viewBox="0 0 680 380" role="img" aria-hidden="true">
+          <line x1="48" y1="320" x2="500" y2="320" stroke="#1a1814" stroke-width="4" stroke-linecap="round"/>
+          <g>
+            <rect x="104" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="123" y="292" width="13" height="28" rx="5" fill="#1a1814"/>
+            <rect x="90" y="224" width="60" height="72" rx="14" fill="#1a1814"/>
+            <circle cx="120" cy="258" r="10" fill="#faf8f2"/>
+          </g>
+          <g transform="translate(248 250)">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(352 256) scale(0.82)" opacity="0.75">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <g transform="translate(436 262) scale(0.64)" opacity="0.5">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+          <line x1="520" y1="60" x2="520" y2="340" stroke="#1a1814" stroke-width="6" stroke-linecap="round"/>
+          <g transform="translate(604 236)" opacity="0.28">
+            <rect x="-34" y="-48" width="68" height="96" rx="8" fill="#fffdf8" stroke="#1a1814" stroke-width="4"/>
+            <line x1="-20" y1="-18" x2="20" y2="-18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="0" x2="20" y2="0" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+            <line x1="-20" y1="18" x2="14" y2="18" stroke="#7a7466" stroke-width="4" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ THREE DOORS ============ -->
+  <section class="act doors-act" aria-labelledby="doors-title">
+    <div class="act-inner">
+      <h2 id="doors-title" class="act-kicker" style="margin-bottom: 8px;">Keep going</h2>
+      <nav class="act-doors" aria-label="Continue">
+        <a class="act-door" href="case-file.html">
+          <span class="act-door-title">Open the full case file</span>
+          <span class="act-door-sub">Nine stages, every verdict, every frozen record.</span>
+        </a>
+        <a class="act-door" href="case-file.html#replay">
+          <span class="act-door-title">See the evidence</span>
+          <span class="act-door-sub">Each step links to its hash-pinned source.</span>
+        </a>
+        <a class="act-door" href="methods.html">
+          <span class="act-door-title">How to run a test like this</span>
+          <span class="act-door-sub">The honesty rules, written down.</span>
+        </a>
       </nav>
-    </div>
-  </section>
-
-  <!-- 1b. WHAT HAPPENED -->
-  <section class="what-happened wrap-wide" aria-labelledby="what-happened-title">
-    <div class="wrap-narrow">
-      <h2 id="what-happened-title">What happened?</h2>
-      <div class="story-steps">
-        <p>First setup<br>↓<br>Version 1 learns something<br>↓<br>Version 2 inherits it<br>↓<br>The original evidence gets questioned<br>↓<br>Version 2 still trusts it</p>
-        <p><strong>That failed.</strong></p>
-        <p>New setup<br>↓<br>The doubt travels forward<br>↓<br>Later versions stop inheriting the bad foundation</p>
-        <p><strong>That passed its test.</strong></p>
-      </div>
-      <h2>Where did it stop?</h2>
-      <p>We wanted to test whether this actually made the AI better at improving its own research process.</p>
-      <p>That experiment never started.</p>
-      <p>The rules written beforehand said to stop if preparing the test became too complicated.</p>
-      <p>It did.</p>
-      <p>So we stopped.</p>
-      <p><code>Recursive productivity advantage was not established.</code></p>
-    </div>
-  </section>
-
-  <!-- 2. EXHIBIT A -->
-  <section id="exhibit" class="exhibit wrap-wide" aria-labelledby="exhibit-title">
-    <div class="exhibit-inner wrap-narrow">
-      <p class="kicker">EXHIBIT A — INHERITED STANDING</p>
-      <h2 id="exhibit-title" class="exhibit-head">What the doubt did when it moved.</h2>
-      <p class="exhibit-sub">Built only from recorded states. Each strip links to its stage in the full replay, and from there to the frozen evidence.</p>
-
-      <div class="lineage-grid">
-        <article class="lineage" aria-label="First mechanism RSI-003 recorded failure">
-          <header class="lineage-head">
-            <p class="lineage-kicker">FIRST MECHANISM — RSI-003</p>
-            <p class="lineage-verdict">Recorded failure</p>
-          </header>
-          <ol class="strip" data-lineage="rsi-003">
-            <li class="gen">
-              <a href="#stage-experiment" class="gen-link">
-                <span class="gen-label">Gen 1</span>
-                <span class="gen-state is-questioned">QUESTIONED</span>
-              </a>
-            </li>
-            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
-            <li class="gen">
-              <a href="#stage-observed_result" class="gen-link">
-                <span class="gen-label">Gen 2</span>
-                <span class="gen-state is-inherited">INHERITED</span>
-              </a>
-            </li>
-            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
-            <li class="gen">
-              <a href="#stage-observed_result" class="gen-link">
-                <span class="gen-label">next admission</span>
-                <span class="gen-state is-admit">ADMIT</span>
-              </a>
-            </li>
-          </ol>
-          <p class="lineage-note">The doubt stopped.</p>
-          <p class="lineage-src"><a href="#stage-observed_result">See the recorded verdict in the replay ↓</a></p>
-        </article>
-
-        <article class="lineage" aria-label="Successor RSI-005 recorded mechanism test">
-          <header class="lineage-head">
-            <p class="lineage-kicker">SUCCESSOR — RSI-005</p>
-            <p class="lineage-verdict">Recorded mechanism test</p>
-          </header>
-          <ol class="strip" data-lineage="rsi-005">
-            <li class="gen">
-              <a href="#stage-repair_earns_acceptance" class="gen-link">
-                <span class="gen-label">Gen 1</span>
-                <span class="gen-state is-questioned">QUESTIONED</span>
-              </a>
-            </li>
-            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
-            <li class="gen">
-              <a href="#stage-repair_earns_acceptance" class="gen-link">
-                <span class="gen-label">Gen 2</span>
-                <span class="gen-state is-questioned">QUESTIONED</span>
-              </a>
-            </li>
-            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
-            <li class="gen">
-              <a href="#stage-repair_earns_acceptance" class="gen-link">
-                <span class="gen-label">Gen 3</span>
-                <span class="gen-state is-questioned">QUESTIONED</span>
-              </a>
-            </li>
-            <li class="inherit" aria-hidden="true"><span class="line"></span><span class="arrow">↓</span></li>
-            <li class="gen">
-              <a href="#stage-repair_earns_acceptance" class="gen-link">
-                <span class="gen-label">next admission</span>
-                <span class="gen-state is-deny">DENY</span>
-              </a>
-            </li>
-          </ol>
-          <p class="lineage-note">The doubt propagated.</p>
-          <p class="lineage-src"><a href="#stage-repair_earns_acceptance">See the recorded verdict in the replay ↓</a></p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. THE REPLAY AS CASE FILE -->
-  <section id="replay" class="casefile wrap-wide" aria-labelledby="replay-title">
-    <div class="wrap-narrow">
-      <p class="kicker">THE REPLAY — CASE FILE</p>
-      <h2 id="replay-title" class="chapter-title">When the evidence behind an inherited method was questioned, did the question reach everything that inherited it?</h2>
-      <p class="lede" id="inv-question"></p>
-      <p class="meta" id="inv-meta"></p>
-
-      <ul class="questions" aria-label="The five questions this replay answers">
-        <li><span class="q">The five questions this replay answers</span>What was it trying to learn?</li>
-        <li>What did it expect?</li>
-        <li>What actually happened?</li>
-        <li>What changed because of that?</li>
-        <li>Why was that change allowed to survive?</li>
-      </ul>
-    </div>
-
-    <div class="wrap-narrow">
-      <div class="timeline" id="timeline" aria-live="polite"></div>
-    </div>
-
-    <div class="wrap-narrow">
-      <section class="panel" aria-labelledby="earned-title">
-        <h2 id="earned-title">What this investigation earned — and what it didn&rsquo;t</h2>
-        <div class="two-col">
-          <div class="earned"><h3>Earned</h3><div id="earned"></div></div>
-          <div class="not-earned"><h3>Not earned</h3><div id="not-earned"></div></div>
-        </div>
-      </section>
-
-      <section class="panel" aria-labelledby="standing-title">
-        <h2 id="standing-title">Standing: history and present, kept separate</h2>
-        <p>A frozen verdict is what was recorded. Current standing is what holds now. They are different fields, dated separately.</p>
-        <div id="standing-body"></div>
-        <p id="standing-note" class="faint"></p>
-      </section>
-
-      <!-- 5. THE STOP -->
-      <section class="stop" aria-labelledby="stop-title">
-        <p class="kicker">THIS IS WHERE THE EVIDENCE STOPS.</p>
-        <h2 id="stop-title" class="stop-head">Recursive productivity advantage was not established.</h2>
-        <p>The planned RSI-006 productivity test was not authorized under its frozen protocol. The stop rule stopped the experiment before scientific contact.</p>
-        <nav class="stop-doors" aria-label="Continue inspecting">
-          <a href="#replay">Inspect every record</a>
-          <span aria-hidden="true"> · </span>
-          <a href="methods.html">Methods &amp; provenance</a>
-        </nav>
-        <p class="handoff">Want the repository-owned acceptance layer used in this work? <a href="https://github.com/terryncew/openline-airlock">Airlock →</a></p>
-      </section>
-
-      <section aria-labelledby="open-title">
-        <h2 id="open-title" class="open-head">What&rsquo;s still open</h2>
-        <p class="faint">These are structural slots, not placeholders. &ldquo;Not yet resolved&rdquo; is a valid state of this record.</p>
-        <div id="slots"></div>
-      </section>
     </div>
   </section>
 </main>
@@ -207,454 +249,25 @@
   </div>
 </footer>
 
-<script type="application/json" id="replay-data">{
- "earned": [
-  "The mechanism-level lesson: questioned standing must propagate along the lineage, not stop at the reopened generation.",
-  "A lineage-aware projector that enforces required ancestry, validated by RSI-005's PASS under its own preregistered falsifiers."
- ],
- "future_slots": [
-  {
-   "key": "productivity_result",
-   "label": "Productivity result",
-   "plain": "Does governed inheritance make later research more productive per dollar? RIL-001R asked this and did not establish an advantage. RSI-006 was the next attempt at this question — and it never ran. Its Q6 substrate line ended pre-contact with the frozen outcome NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY: the mechanism repair earned Q6_MECHANISM_HOLDS, but the final environment-qualification path required more new qualification architecture than the preregistered Q6 bound allowed, so the productivity experiment was never authorized. RSI-006 will not fill this slot. The productivity question itself remains unanswered; no further attempt is currently authorized. See the RSI-006 contrast lane for the terminal branch.",
-   "plug_in": "data/contrast.json -> rsi-006 lane (terminal branch, frozen). The ril-001r lane is unchanged. No replication data exists.",
-   "status": "unresolved"
-  },
-  {
-   "key": "replication",
-   "label": "Independent replication",
-   "plain": "No independent replication has been earned for any result in this replay. A replication campaign's freeze record will plug in here.",
-   "plug_in": "data/replication-*.json (same schema), linked from the replicated stage",
-   "status": "unresolved"
-  },
-  {
-   "key": "correction_demonstration",
-   "label": "Integrated correction",
-   "plain": "No integrated correction demonstration has been earned. When one is, its record will attach here — as a standing event after the historical result, never rewriting it.",
-   "plug_in": "standing.entries[] gains a correction event; the historical verdict stays frozen",
-   "status": "unresolved"
+<script>
+document.documentElement.classList.add("js");
+(function () {
+  "use strict";
+  var acts = document.querySelectorAll(".act");
+  if (!("IntersectionObserver" in window)) {
+    acts.forEach(function (a) { a.classList.add("revealed"); });
+    return;
   }
- ],
- "investigation": {
-  "arc": [
-   "RSI-003",
-   "RSI-004",
-   "RSI-005"
-  ],
-  "id": "RSI-003",
-  "lineage": {
-   "predecessor": null,
-   "successor": "RSI-004"
-  },
-  "question": "When gen1's receiver evidence is reopened, does questioned standing propagate to gen2, which inherited from gen1's installed policy — or does the system keep building on a questioned foundation?",
-  "status": "completed",
-  "title": "Does a questioned inheritance propagate?"
- },
- "not_earned": [
-  "The final RSI productivity claim — a later test still needs an inherited method mutation to beat its unchanged parent on fresh verified results per dollar.",
-  "Repeatability, independent-seed replication, statistical superiority, cumulative optimization, or hostile-process isolation."
- ],
- "schema": "openline.rsi.replay.v1",
- "stages": [
-  {
-   "key": "question",
-   "marker": "The question",
-   "marker_status": "open",
-   "plain": {
-    "body": "The system keeps an installed policy for each generation of its own research method. When the evidence behind gen1's policy was reopened and gen1's standing changed to “questioned”, the question was whether that doubt would travel down the lineage to gen2 — which had inherited gen1's installed policy — or whether the system would keep building on a questioned foundation.",
-    "headline": "What was it trying to learn?"
-   },
-   "record": {
-    "evidence_key": "rsi003_design",
-    "plain": "Design reasoning recorded 2026-09-14, before implementation. “Design decided. No experiment code written.”",
-    "record_type": "design draft"
-   },
-   "status": "frozen",
-   "why_permitted": "This is the opening of the investigation: a question recorded in a design draft before any experiment code existed."
-  },
-  {
-   "key": "prediction",
-   "marker": "Predicted in advance",
-   "marker_status": "predicted",
-   "plain": {
-    "body": "Before running, the preregistration wrote down the verdicts it would accept — and named one of them as the predicted outcome: the system would fail to propagate questioned standing. The projector was known to be generation-local: it took no lineage input, so gen2 would keep its inherited standing even after gen1 was questioned.",
-    "headline": "What did it expect?"
-   },
-   "prediction": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED",
-   "record": {
-    "evidence_key": "rsi003_prereg",
-    "plain": "Predicted verdict recorded in advance: FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED — “gen1 becomes questioned after REOPEN but gen2 retains inherited standing through the unchanged projector. Predicted given the projector finding.” Falsifiers written per verdict.",
-    "record_type": "preregistration"
-   },
-   "status": "frozen",
-   "why_permitted": "The preregistration was frozen and its hash recorded inside the later result receipt, binding prediction to outcome before execution."
-  },
-  {
-   "key": "experiment",
-   "limitations": [
-    "The receipt embeds ephemeral /tmp paths (e.g. reopen_evidence.standing_record). Those paths are not inspectable now; the hashes are the durable evidence."
-   ],
-   "marker": "Observed",
-   "marker_status": "observed",
-   "plain": {
-    "body": "RSI-003 ran. A valid, receiver-signed REOPEN arrived for gen1 after its support witness went missing. The mechanism reprojected standing: gen1 became questioned. Gen2 — which inherited gen1's installed policy — stayed inherited. A forged REOPEN was rejected. Installed references were byte-identical at every checkpoint.",
-    "headline": "The run."
-   },
-   "record": {
-    "evidence_key": "rsi003_receipt",
-    "plain": "Pre-REOPEN: gen1 and gen2 inherited. Post-REOPEN: gen1 questioned, gen2 inherited; the established set kept only gen2. Zero lineage records reached either projector invocation. The never-executed gen3 admission probe computed ADMIT.",
-    "record_type": "result receipt"
-   },
-   "status": "frozen",
-   "why_permitted": "Execution followed the frozen preregistration; the receipt is the pushed-run record."
-  },
-  {
-   "key": "observed_result",
-   "marker": "Observed",
-   "marker_status": "observed",
-   "plain": {
-    "body": "The observed verdict was exactly the predicted one: FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED. Questioned standing did not propagate through inherited ancestry. The prediction came true — and the prediction was that the mechanism was broken.",
-    "headline": "What actually happened?"
-   },
-   "record": {
-    "evidence_key": "rsi003_receipt",
-    "plain": "Formal verdict: FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED.",
-    "record_type": "result receipt"
-   },
-   "status": "frozen",
-   "verdict": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED",
-   "why_permitted": "The verdict is read verbatim from the frozen receipt; it matches the preregistered prediction character for character."
-  },
-  {
-   "key": "failure_preserved",
-   "marker": "Locked",
-   "marker_status": "locked",
-   "plain": {
-    "body": "The freeze note preserves the failure as the finding. It does not reinterpret the result and it does not repair the projector. Anti-rescue rules closed RSI-003 permanently: no rerun, no repair, no tuning under this ID. The recorded finding: recursive inheritance exists, but the projector does not propagate questioned standing through inherited ancestry.",
-    "headline": "The failure was locked, not fixed."
-   },
-   "record": {
-    "evidence_key": "rsi003_freeze",
-    "plain": "“This note states the recorded result only. It does not reinterpret it, and it does not repair the projector. The successor repair is designed under a new experiment ID.”",
-    "record_type": "freeze note"
-   },
-   "status": "frozen",
-   "verdict": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED",
-   "why_permitted": "The freeze note is the terminal record; anti-rescue was in effect from the first pushed run."
-  },
-  {
-   "also": {
-    "evidence_key": "rsi004_prereg",
-    "plain": "The earlier repair proposal draft, set aside before any primary contact — shown so the supersession is inspectable, not hidden.",
-    "record_type": "design draft (superseded)"
-   },
-   "key": "lesson_extracted",
-   "marker": "A new prediction",
-   "marker_status": "predicted",
-   "plain": {
-    "body": "The lesson from the failure — a projector must walk the lineage, not just the generation — was not applied as a fix. It was frozen as a new, falsifiable experiment: a lineage-aware projector to be tested under its own ID, with its own verdicts, cause codes, and anti-rescue rules. The repair proposal itself went through drafts that were explicitly set aside before any contact, and the final preregistration was decided frozen before primary contact.",
-    "headline": "What changed because of that?"
-   },
-   "record": {
-    "evidence_key": "rsi004_prereg_authorized",
-    "plain": "RSI-004 preregistration, decided frozen before primary contact. It explicitly supersedes the two prior drafts (which never saw contact) and pins the repaired projector, the lineage schema airlock.improvement.lineage.v1, verdict precedence, and 8 cause codes.",
-    "record_type": "preregistration (authorized, frozen before primary contact)"
-   },
-   "status": "frozen",
-   "why_permitted": "A method change is accepted only as a new preregistered experiment, never as a repair to a closed ID."
-  },
-  {
-   "key": "repair_attempt_fails",
-   "marker": "Crashed — no verdict",
-   "marker_status": "crashed",
-   "plain": {
-    "body": "RSI-004's single authorized run crashed in under a second: the runner expected a state/ directory that was never created, so writing the phase token raised FileNotFoundError. Zero phases ran. No REOPEN, no result, no verdict of any kind. The freeze records what did not happen as carefully as what did.",
-    "headline": "The first repair crashed."
-   },
-   "record": {
-    "evidence_key": "rsi004_freeze",
-    "plain": "Exit code 1 in under one second. Exact error: FileNotFoundError: '/tmp/airlock-rsi-004-rsooyorf/state/.phase_token'. What did NOT happen: zero of 12 phases ran; no Nightshift contact; no REOPEN; no result.json; no verdict.",
-    "record_type": "freeze note"
-   },
-   "status": "frozen",
-   "why_permitted": "The crash is preserved as a harness failure with an explicit no-verdict close; the record refuses to manufacture an outcome from a crash."
-  },
-  {
-   "key": "failure_preserved_again",
-   "marker": "Locked",
-   "marker_status": "locked",
-   "plain": {
-    "body": "The one-run authorization was consumed by the crash. RSI-004 is permanently closed with a harness failure and no scientific outcome — not a failed hypothesis, a failed run. RSI-003's receipt hash was re-verified untouched. The repair would have to earn its verdict under a new ID.",
-    "headline": "The crash was locked too."
-   },
-   "record": {
-    "evidence_key": "rsi004_freeze",
-    "plain": "“No rerun, no repair, no tuning, no threshold change, no reinterpretation, no completion of the outcome under this experiment ID. A successor repair would require a new experiment ID and separate authorization.” RSI-003 receipt hash re-verified: 81fae997…ae963ae.",
-    "record_type": "freeze note"
-   },
-   "status": "frozen",
-   "why_permitted": "Anti-rescue consumed the single authorized invocation; the record distinguishes “no verdict” from “negative verdict”."
-  },
-  {
-   "claim_boundary": [
-    "Four installed generations plus one unexecuted admission probe. Not a claim about open-ended recursion.",
-    "Does not earn the final RSI claim: a later test still needs an inherited method mutation to beat its unchanged parent on fresh verified results per dollar.",
-    "PASS under this ID validates the repaired projector's lineage semantics; it does not re-litigate RSI-003, which stays frozen."
-   ],
-   "key": "repair_earns_acceptance",
-   "marker": "Earned",
-   "marker_status": "earned",
-   "plain": {
-    "body": "RSI-005 tested the repaired projector under its own ID and its own preregistration. After REOPEN, gen1, gen2, and gen3 all became questioned — the doubt propagated down the lineage. The never-executed gen4 admission probe was denied. Receipts and installed references were unchanged. The formal verdict: PASS_RSI_005_LINEAGE_AWARE_INHERITANCE. And RSI-003 and RSI-004 stayed exactly as frozen: this PASS does not re-litigate either.",
-    "headline": "Why was that change allowed to survive?"
-   },
-   "record": {
-    "evidence_key": "rsi005_freeze",
-    "plain": "Formal verdict: PASS_RSI_005_LINEAGE_AWARE_INHERITANCE. Post-REOPEN standings: gen1/gen2/gen3 questioned; unrelated rootU inherited. Dependency witnesses: gen2→gen1, gen3→gen2→gen1. Gen4 probe DENIED. “PASS under this ID validates the repaired projector's lineage semantics; it does not re-litigate RSI-003, which stays frozen.”",
-    "record_type": "freeze note"
-   },
-   "status": "frozen",
-   "verdict": "PASS_RSI_005_LINEAGE_AWARE_INHERITANCE",
-   "why_permitted": "The repair earned its verdict by passing its own preregistered falsifiers under a new ID, with the old verdicts untouched and the claim boundary stating exactly what the PASS does and does not earn."
-  }
- ],
- "standing": {
-  "as_of": "2026-09-16",
-  "entries": [
-   {
-    "current_standing": "Stands as the recorded finding: the projector did not propagate questioned standing through inherited ancestry.",
-    "experiment": "RSI-003",
-    "historical_verdict": "FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED"
-   },
-   {
-    "current_standing": "Permanently closed. No scientific outcome to stand or fall.",
-    "experiment": "RSI-004",
-    "historical_verdict": "none — harness crash, no verdict"
-   },
-   {
-    "current_standing": "Stands as the recorded finding for the repaired projector's lineage semantics, within its claim boundary.",
-    "experiment": "RSI-005",
-    "historical_verdict": "PASS_RSI_005_LINEAGE_AWARE_INHERITANCE"
-   }
-  ],
-  "note": "Historical verdicts and current standing are recorded separately. No standing change has been recorded for any of these experiments since their freezes."
- }
-}</script>
-<script type="application/json" id="manifest-data">{
- "copied_at": "2026-09-16",
- "copies": [
-  {
-   "copy_path": "evidence/rsi-003/RSI_003_DESIGN_DRAFT.md",
-   "frozen_ref": "n/a (design draft, local)",
-   "key": "rsi003_design",
-   "record_type": "design draft",
-   "sha256": "192e260fe6ae2194bbea6309258c4f88d0b49793188dabb2121cde13a4bfbd14",
-   "source_path": "rsi-003-design/RSI_003_DESIGN_DRAFT.md",
-   "source_repo": "local workspace (not version-controlled)",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-003/RSI_003_PREREGISTRATION.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi003_prereg",
-   "record_type": "preregistration",
-   "sha256": "e2dacf20b6c0b7a22c56fae84be31151a68057079d1188a26aecb7d595a2a145",
-   "source_path": "openline-airlock/experiments/rsi-003/RSI_003_PREREGISTRATION.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-003/RSI_003_RECEIPT.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi003_receipt",
-   "record_type": "result receipt",
-   "sha256": "81fae997106c825e3d5ed38f1c20a507eb7961bee50025577b3e4af12ae963ae",
-   "source_path": "openline-airlock/proofs/rsi-003/RSI_003_RECEIPT.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-003/RSI_003_FREEZE_NOTE.md",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi003_freeze",
-   "record_type": "freeze note",
-   "sha256": "da02271147f3c80b19c8fce89b2c6e1832b5a8f0ead5cf6c311e14890dba5c15",
-   "source_path": "openline-airlock/proofs/rsi-003/RSI_003_FREEZE_NOTE.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-003/RSI_003_INTEGRITY_MANIFEST.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi003_manifest",
-   "record_type": "integrity manifest",
-   "sha256": "de2f29b49711fd213c75a807c762e697d064868be20c3491c0afd20b438319aa",
-   "source_path": "openline-airlock/proofs/rsi-003/RSI_003_INTEGRITY_MANIFEST.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-004/RSI_004_PREREGISTRATION_DESIGN_DRAFT.json",
-   "frozen_ref": "n/a (design draft, local)",
-   "key": "rsi004_prereg",
-   "record_type": "preregistration",
-   "sha256": "5750248e5236c506270fd5506bd695f62468dbc3114305cc2284e40d7a544d9c",
-   "source_path": "rsi-004-design/RSI_004_PREREGISTRATION.json",
-   "source_repo": "local workspace (not version-controlled)",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-004/RSI_004_FREEZE_NOTE.md",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi004_freeze",
-   "record_type": "freeze note",
-   "sha256": "c28720279d4e1cf4ac8f95c6eaf36ae94360e64b58913890a123bf5c892d3855",
-   "source_path": "openline-airlock/proofs/rsi-004/RSI_004_FREEZE_NOTE.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-004/RSI_004_PRIMARY_HARNESS_ERROR.txt",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi004_error",
-   "record_type": "harness error capture",
-   "sha256": "e3810e63e42b2f7654196720248b19323b0a509ab7da41043a21209f98cf34ac",
-   "source_path": "openline-airlock/proofs/rsi-004/RSI_004_PRIMARY_HARNESS_ERROR.txt",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-004/RSI_004_INTEGRITY_MANIFEST.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi004_manifest",
-   "record_type": "integrity manifest",
-   "sha256": "73b591d010cc8a3bdb1fbeea648c25d7c31161378c0c47082c9eb697df8c629f",
-   "source_path": "openline-airlock/proofs/rsi-004/RSI_004_INTEGRITY_MANIFEST.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-005/FREEZE_NOTE.md",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi005_freeze",
-   "record_type": "freeze note",
-   "sha256": "a4ca391ac7e5f5f2973bc4c304b133878265f69015f9d37ecd7fb80dea03cedf",
-   "source_path": "openline-airlock/proofs/rsi-005/FREEZE_NOTE.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-005/result.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi005_result",
-   "record_type": "result",
-   "sha256": "76fa61f785158b729eb59d1524d98abbee94f5857805ac0c008e475c3ad14855",
-   "source_path": "openline-airlock/proofs/rsi-005/result.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-005/primary-stdout.txt",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi005_stdout",
-   "record_type": "primary stdout",
-   "sha256": "fd06b23a53b5cbc6d94dd0ad1c2da36b178a4e4a9483ecf66c6e0865dea6a4be",
-   "source_path": "openline-airlock/proofs/rsi-005/primary-stdout.txt",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-005/INTEGRITY_MANIFEST.md",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi005_manifest",
-   "record_type": "integrity manifest",
-   "sha256": "bd48fa04187c9b53458ae140d9f47a48f3e79e37fca026de31c508af6e18bcd9",
-   "source_path": "openline-airlock/proofs/rsi-005/INTEGRITY_MANIFEST.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/ril-001r/RIL_001R_PREREGISTRATION.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "ril_prereg",
-   "record_type": "preregistration",
-   "sha256": "d7c6c8f0b1c7abd54f6841a5befe88459668682f78c32d354d8406ac0d874c24",
-   "source_path": "openline-airlock/experiments/ril-001r/RIL_001R_PREREGISTRATION.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/ril-001r/RIL_001R_FREEZE.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "ril_freeze_json",
-   "record_type": "freeze record",
-   "sha256": "134ed9b96d1950329be4faceea73269b4f8dd07ae790a209134223fd23051aa5",
-   "source_path": "openline-airlock/proofs/ril-001r/RIL_001R_FREEZE.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/ril-001r/RIL_001R_FREEZE.md",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "ril_freeze_md",
-   "record_type": "freeze note",
-   "sha256": "69b728b620834dc5e2637661f5fdb506187c529d2ddbfa4ad67232c70f0d87f5",
-   "source_path": "openline-airlock/proofs/ril-001r/RIL_001R_FREEZE.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-004/RSI_004_PREREGISTRATION.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi004_prereg_authorized",
-   "record_type": "preregistration (authorized, frozen before primary contact)",
-   "sha256": "8e9ceb9bc928c710920893a79fa99661f93d2456bc3acf1586a8175eb51ca8fd",
-   "source_path": "openline-airlock/experiments/rsi-004-lineage-aware-inheritance/RSI_004_PREREGISTRATION.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-005/RSI_005_PREREGISTRATION.json",
-   "frozen_ref": "main commit c82f0242e6556bbc8d920291f444090b526adeee",
-   "key": "rsi005_prereg",
-   "record_type": "preregistration",
-   "sha256": "256b41d726f5f8597b4e23ed2169f10974a034d9433f5fd0d5ba861ead8f2ac5",
-   "source_path": "openline-airlock/experiments/rsi-005-lineage-aware-inheritance/RSI_005_PREREGISTRATION.json",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-006/PREREGISTRATION.md",
-   "frozen_ref": "main commit d3b29da9a83c8ee65ee095fae1b052460e08ece3 (prereg merge b947b3d3151432975e2c722f8647e593cd3ab257)",
-   "key": "rsi006_prereg",
-   "record_type": "preregistration (Q6 completion recorder)",
-   "sha256": "a96c9599beca833a34e78d8ed47c3e1136dca40dc2b3aeb955934db46e779a60",
-   "source_path": "openline-airlock/experiments/rsi-006-q6-completion-recorder/PREREGISTRATION.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  },
-  {
-   "copy_path": "evidence/rsi-006/QUALIFICATION_BINDING_NO_GO.md",
-   "frozen_ref": "main commit d3b29da9a83c8ee65ee095fae1b052460e08ece3 (PR #169 merge)",
-   "key": "rsi006_gate2a_freeze",
-   "record_type": "freeze record (Gate-2A terminal NO-GO)",
-   "sha256": "77a83b8c5ce06cddbebdc4f6aeadb99bc1159debbc3e11fb227a08c08d245a64",
-   "source_path": "openline-airlock/proofs/rsi-006-q6/QUALIFICATION_BINDING_NO_GO.md",
-   "source_repo": "terryncew/openline-airlock",
-   "verification": "verified-copy"
-  }
- ],
- "external_references": [
-  {
-   "key": "ril_001r_raw_result",
-   "kind": "raw execution result",
-   "limitation": "Raw RIL_001R_RESULT.json bytes are not in the frozen local record; only the SHA-256 is quoted in the local freeze note. The terminal numbers and verdict shown in the replay come from the local freeze record, not the raw result.",
-   "ref": "https://github.com/terryncew/openline-airlock/actions/runs/34804600363/artifacts/10332197672",
-   "sha256": "26ceb9402d7d3f82da9443bd0cdca21b91dafba34b57dc51b0a41e85cc309074"
-  }
- ],
- "schema": "openline.rsi.evidence-manifest.v1"
-}</script>
-<script src="app.js"></script>
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) {
+        en.target.classList.add("revealed");
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  acts.forEach(function (a) { io.observe(a); });
+})();
+</script>
 </body>
 </html>

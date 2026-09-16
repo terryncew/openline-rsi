@@ -8,17 +8,18 @@
 </head>
 <body>
 <header class="site-head">
-  <div class="wrap">
-    <div class="brand"><a href="index.html">openline-rsi</a></div>
-    <nav>
-      <a href="index.html">The replay</a>
-      <a href="investigations.html">Other investigations</a>
-      <a href="methods.html" aria-current="page">Methods &amp; provenance</a>
+  <div class="wrap-wide head-inner">
+    <div class="brand"><a href="index.html">OpenLine RSI</a></div>
+    <nav aria-label="Primary">
+      <a href="index.html">Story</a>
+      <a href="case-file.html">Case file</a>
+      <a href="investigations.html">Investigations</a>
+      <a href="methods.html" aria-current="page">Methods</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap prose">
+<main class="wrap-narrow prose">
   <h1>Methods &amp; provenance</h1>
   <p>The replay has honesty rules of its own. They are enforced by validation, not just stated here.</p>
 
@@ -61,9 +62,10 @@ python3 tools/validate_replay.py   # enforces the data contract above</code></pr
 </main>
 
 <footer class="site-foot">
-  <div class="wrap">
+  <div class="wrap-wide"><div class="wrap-narrow">
     <p>Frozen records are cited, not paraphrased into stronger claims. If a sentence on this site outruns its evidence, that is a bug — report it against the record it cites.</p>
   </div>
+</div>
 </footer>
 </body>
 </html>
