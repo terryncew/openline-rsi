@@ -419,6 +419,9 @@ body.page-story {
 .receipts nav { margin-top: 40px; display: grid; gap: 30px; }
 .receipts nav a { font-size: clamp(36px, 5.4vw, 72px); color: #000; text-decoration: none; line-height: 1; display: block; }
 .receipts nav a:hover { text-decoration: underline; text-underline-offset: 8px; }
+.rec-sub { font-size: 16px; color: #333; margin: -18px 0 0; }
+.rec-note { max-width: 640px; margin: 44px auto 0; font-size: 17px; line-height: 1.55; color: #111; }
+.rec-note a { color: #000; }
 .wb-foot { border-top: 6px solid #000; background: #fff; }
 .wb-foot-inner { max-width: 1150px; margin: 0 auto; padding: 36px 24px 56px; font-size: 14px; line-height: 1.6; }
 .wb-foot-inner p { margin: 0 0 10px; max-width: 60em; }
