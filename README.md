@@ -10,9 +10,9 @@ Does the mistake keep spreading?
 
 That’s what this project tested.
 
-The first version failed. It kept trusting an inherited conclusion after the evidence behind it had been questioned.
+The first setup failed. It kept trusting an inherited conclusion after the evidence behind it had been questioned.
 
-A later version fixed that specific problem: the doubt traveled forward, and the next inheritance was blocked.
+In a later test, a new setup handled that specific problem correctly: the doubt traveled forward, and the next inheritance was blocked.
 
 Then the research hit its stop rule.
 
@@ -26,6 +26,8 @@ Everything is here so you can see what happened for yourself.
 
 ## What happened?
 
+First setup
+↓
 Version 1 learns something
 ↓
 Version 2 inherits it
@@ -38,11 +40,11 @@ Version 2 still trusts it
 
 Then:
 
-New mechanism
+New setup
 ↓
 The doubt travels forward
 ↓
-Later versions lose permission to inherit the bad foundation
+Later versions stop inheriting the bad foundation
 
 **That passed its test.**
 
