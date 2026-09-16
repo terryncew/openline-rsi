@@ -2,38 +2,126 @@
 
 **Recursive self-improvement. Open to inspection.**
 
-An AI that changes its own research process can inherit a bad foundation as easily as a useful one. This investigation asks what happens when evidence underneath an inherited conclusion loses standing.
+What happens when an AI improves the way it improves itself?
 
-The first mechanism failed. Its successor passed the bounded mechanism test. The productivity advantage remains unproven.
+One version can learn something and pass that lesson to the next version. But what if the original lesson turns out to be wrong?
 
-- [Replay the investigation](https://terryncew.github.io/openline-rsi/) — step through the recorded stages, each bound to its evidence
-- [Inspect the evidence](https://github.com/terryncew/openline-rsi/tree/main/evidence) — frozen records, hash-pinned, never edited
-- [Build an investigation using the same structure](#build-your-own-investigation) — the seven-step method this repo demonstrates
+Does the mistake keep spreading?
+
+That’s what this project tested.
+
+The first version failed. It kept trusting an inherited conclusion after the evidence behind it had been questioned.
+
+A later version fixed that specific problem: the doubt traveled forward, and the next inheritance was blocked.
+
+Then the research hit its stop rule.
+
+We did **not** prove that the AI became more productive at improving itself.
+
+Everything is here so you can see what happened for yourself.
+
+- [Replay the experiment](https://terryncew.github.io/openline-rsi/) — step through what happened, stage by stage
+- [Open the evidence](https://github.com/terryncew/openline-rsi/tree/main/evidence) — the frozen records behind every claim
+- [See how to build a test like this](#build-your-own-investigation) — the method, so you can copy the structure
+
+## What happened?
+
+Version 1 learns something
+↓
+Version 2 inherits it
+↓
+The original evidence gets questioned
+↓
+Version 2 still trusts it
+
+**That failed.**
+
+Then:
+
+New mechanism
+↓
+The doubt travels forward
+↓
+Later versions lose permission to inherit the bad foundation
+
+**That passed its test.**
+
+## Where did it stop?
+
+We wanted to test whether this actually made the AI better at improving its own research process.
+
+That experiment never started.
+
+The rules written beforehand said to stop if preparing the test became too complicated.
+
+It did.
+
+So we stopped.
+
+`Recursive productivity advantage was not established.`
+
+The exact stop record lives below in the technical section. The short version is: the experiment never started because its own rules said to stop.
+
+## Replay the experiment
+
+Open the replay in your browser — no server, no credentials:
+
+[https://terryncew.github.io/openline-rsi/](https://terryncew.github.io/openline-rsi/)
+
+It walks through each investigation stage by stage: the question, what was predicted, what actually happened, and what was earned. Each stage links directly to the frozen record it came from.
+
+`site/investigations.html` holds the subordinate lanes and the explicitly empty future slots — the places where the record says "nothing here."
+
+## Inspect the evidence
+
+The records are copies, made once and never edited. You can check them yourself:
+
+```bash
+python3 tools/verify_evidence.py   # confirm every copied record still matches its fingerprint
+python3 tools/validate_replay.py   # confirm every stage in the replay points to real evidence
+```
+
+`site/data/manifest.json` lists every record with its source and fingerprint. The Methods page (`site/methods.html`) describes the record types, the verification steps, and the known limitations.
 
 Claims about self-improving AI are usually stories told after the fact. This one you can check.
 
-A replayable record of real investigations into recursive self-improvement — systems that revise their own research method, one generation at a time — built from frozen evidence: predictions written down before each run, results recorded after. Every claim links to the record behind it, and every record is hash-pinned so you can check it yourself.
+## Want the technical version?
 
-## What this is
+This is where the precise language lives. The story above is accurate; what follows is the machinery.
 
 `openline-rsi` is a statement repository: evidence-backed claims plus a legible method you can copy. It replays what was predicted, what actually happened, what evidence survives, and what claim was earned — for each investigation, including the ones that failed, crashed, or stopped before contact.
 
 It is not the Airlock runtime, a teaching starter, a generic agent framework, a product SDK, or a graveyard of experiment reports. Airlock remains the thing you can adopt operationally; this repo is where the claims about the method are kept checkable.
 
-## What you can do here
+### The investigations, precisely
 
-**Step through the investigations.** Open `site/index.html` in a browser — no server, no credentials. It walks each investigation stage by stage: question, prediction, run, verdict, lock. Each stage links directly to the frozen record it came from. `site/investigations.html` holds the subordinate lanes and the explicitly empty future slots.
+The system under study keeps an installed policy for each generation of its own research method. The question that started everything: when the evidence behind the first generation's policy was reopened and that generation's standing changed to "questioned," would the doubt travel down to the second generation — which had inherited the first generation's policy — or would the system keep building on a questioned foundation?
 
-**Verify the evidence yourself.** The records are copies, made once and hash-pinned:
+**RSI-003** ran that question as a preregistered experiment. The prediction, written down before execution, was blunt: the system would fail. The component that assigns standing to each generation was known to look at one generation at a time — it took no lineage input — so the second generation would keep its inherited standing even after the first was questioned. The run confirmed the prediction exactly: formal verdict `FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED`. A forged reopening message was rejected along the way; installed references were byte-identical at every checkpoint.
 
-```bash
-python3 tools/verify_evidence.py   # confirm every copied record still matches its digest
-python3 tools/validate_replay.py   # confirm every earned stage binds to evidence
-```
+The failure was then locked, not fixed. RSI-003 is permanently closed under that ID — no rerun, no repair, no tuning. The recorded finding: recursive inheritance exists, but questioned standing does not propagate through inherited ancestry.
 
-`site/data/manifest.json` lists every record with its source and digest. The Methods & provenance page (`site/methods.html`) describes the record types, the verification steps, and the known limitations — including the one external reference that exists only as a GitHub artifact.
+The lesson — doubt has to travel down the lineage, not stop at the generation where it started — was not applied as a patch. It was frozen as a new experiment with its own ID, its own preregistration, and its own verdicts. **RSI-004** tested a component redesigned to walk the lineage — a *lineage-aware projector*, in the records' term. Its run crashed in under a second: the runner expected a `state/` directory that was never created, so writing the phase token raised `FileNotFoundError`. Zero of twelve phases ran. No verdict of any kind — a failed run, not a failed hypothesis. RSI-004 is permanently closed as a harness failure.
 
-**Structure your own investigation the same way.** The reusable thing here is not a framework to install; it is a structure for making a claim checkable.
+**RSI-005** tested the redesigned component under its own ID and its own preregistration. After the reopening, all three generations became questioned — the doubt propagated down the lineage. An admission probe for a never-executed fourth generation was denied. Receipts and installed references were unchanged. Formal verdict: `PASS_RSI_005_LINEAGE_AWARE_INHERITANCE`. RSI-003 and RSI-004 stayed exactly as frozen; the PASS does not re-litigate either one.
+
+What the arc earned: questioned standing must propagate along the lineage — and a redesigned component that passed its own preregistered tests. What it did not earn: the productivity claim — whether any of this makes later research cheaper per verified result.
+
+### The productivity question, precisely
+
+That productivity question was asked once on live infrastructure as RIL-001R. The verdict was `INCONCLUSIVE_RIL_001R_LIVE_EXECUTION`: negative evidence, preserved rather than hidden. It appears here as a contrast lane.
+
+RSI-006 was the next attempt at that question, not the first. The planned productivity test was not authorized under its frozen protocol. Q6's mechanism repair held, but qualification required more new architecture than the preregistered bound allowed, so the experiment stopped before scientific contact.
+
+The full terminal branch — preregistration, mechanism result, and the Gate-2A freeze record (`NO_GO_Q6_QUALIFICATION_BINDING_COMPLEXITY`) — is preserved as its own contrast lane, not hidden. The productivity question itself remains unanswered, and no further attempt is currently authorized.
+
+### What's unresolved
+
+- **Productivity result.** The planned RSI-006 productivity test was not authorized under its frozen protocol. The question itself remains unanswered.
+- **Independent replication.** No result in this replay has been independently replicated.
+- **Integrated correction.** Not yet demonstrated.
+
+These render in the replay as explicitly empty slots.
 
 ## Build your own investigation
 
@@ -48,36 +136,6 @@ The pattern this repo demonstrates, in seven steps:
 7. If a result earns something useful, that mechanism can then become part of a product, workflow, service, or other system. That operational step lives outside this repo — in Airlock's case, Airlock itself is the thing people adopt.
 
 That is what a reader should be able to take away: "I understand how this was done, I can verify it, and I could structure one of my own claims this way."
-
-## The investigations
-
-The system under study keeps an installed policy for each generation of its own research method. The question that started everything: when the evidence behind the first generation's policy was reopened and that generation's standing changed to "questioned," would the doubt travel down to the second generation — which had inherited the first generation's policy — or would the system keep building on a questioned foundation?
-
-**RSI-003** ran that question as a preregistered experiment. The prediction, written down before execution, was blunt: the system would fail. The component that assigns standing to each generation was known to look at one generation at a time — it took no lineage input — so the second generation would keep its inherited standing even after the first was questioned. The run confirmed the prediction exactly: formal verdict `FAIL_RSI_003_QUESTIONED_ANCESTRY_NOT_PROPAGATED`. A forged reopening message was rejected along the way; installed references were byte-identical at every checkpoint.
-
-The failure was then locked, not fixed. RSI-003 is permanently closed under that ID — no rerun, no repair, no tuning. The recorded finding: recursive inheritance exists, but questioned standing does not propagate through inherited ancestry.
-
-The lesson — doubt has to travel down the lineage, not stop at the generation where it started — was not applied as a patch. It was frozen as a new experiment with its own ID, its own preregistration, and its own verdicts. **RSI-004** tested a component redesigned to walk the lineage — a *lineage-aware projector*, in the records' term. Its run crashed in under a second: the runner expected a `state/` directory that was never created, so writing the phase token raised `FileNotFoundError`. Zero of twelve phases ran. No verdict of any kind — a failed run, not a failed hypothesis. RSI-004 is permanently closed as a harness failure.
-
-**RSI-005** tested the redesigned component under its own ID and its own preregistration. After the reopening, all three generations became questioned — the doubt propagated down the lineage. An admission probe for a never-executed fourth generation was denied. Receipts and installed references were unchanged. Formal verdict: `PASS_RSI_005_LINEAGE_AWARE_INHERITANCE`. RSI-003 and RSI-004 stayed exactly as frozen; the PASS does not re-litigate either one.
-
-What the arc earned: questioned standing must propagate along the lineage — and a redesigned component that passed its own preregistered tests. What it did not earn: the productivity claim — whether any of this makes later research cheaper per verified result.
-
-## The productivity question, briefly
-
-That productivity question was asked once on live infrastructure as RIL-001R. The verdict was `INCONCLUSIVE_RIL_001R_LIVE_EXECUTION`: negative evidence, preserved rather than hidden. It appears here as a contrast lane.
-
-RSI-006 was the next attempt at that question, not the first. The planned productivity test was not authorized under its frozen protocol. Q6's mechanism repair held, but qualification required more new architecture than the preregistered bound allowed, so the experiment stopped before scientific contact.
-
-The full terminal branch — preregistration, mechanism result, and the Gate-2A freeze record — is preserved as its own contrast lane, not hidden. The productivity question itself remains unanswered, and no further attempt is currently authorized.
-
-## What's unresolved
-
-- **Productivity result.** The planned RSI-006 productivity test was not authorized under its frozen protocol. The question itself remains unanswered.
-- **Independent replication.** No result in this replay has been independently replicated.
-- **Integrated correction.** Not yet demonstrated.
-
-These render in the replay as explicitly empty slots.
 
 ## Running it
 
