@@ -1,8 +1,18 @@
-# openline-rsi
+# OpenLine RSI
 
-A replayable record of real investigations into recursive self-improvement — systems that revise their own research method, one generation at a time — built from frozen evidence: predictions written down before each run, results recorded after. Every claim links to the record behind it, and every record is hash-pinned so you can check it yourself.
+**Recursive self-improvement. Open to inspection.**
+
+An AI that changes its own research process can inherit a bad foundation as easily as a useful one. This investigation asks what happens when evidence underneath an inherited conclusion loses standing.
+
+The first mechanism failed. Its successor passed the bounded mechanism test. The productivity advantage remains unproven.
+
+- [Replay the investigation](https://terryncew.github.io/openline-rsi/) — step through the recorded stages, each bound to its evidence
+- [Inspect the evidence](https://github.com/terryncew/openline-rsi/tree/main/evidence) — frozen records, hash-pinned, never edited
+- [Build an investigation using the same structure](#build-your-own-investigation) — the seven-step method this repo demonstrates
 
 Claims about self-improving AI are usually stories told after the fact. This one you can check.
+
+A replayable record of real investigations into recursive self-improvement — systems that revise their own research method, one generation at a time — built from frozen evidence: predictions written down before each run, results recorded after. Every claim links to the record behind it, and every record is hash-pinned so you can check it yourself.
 
 ## What this is
 
