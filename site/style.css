@@ -481,3 +481,159 @@ img, pre, table { max-width: 100%; }
 }
 .stage .verdict, .ev-body dd { overflow-wrap: break-word; }
 .stage .body, .excerpt, .stage .why, .slot p, .slot h3 { overflow-wrap: break-word; word-break: break-word; }
+
+
+/* ---------- TRY THE BOUNDARY (additive demo section) ----------
+   Kept visually separate from the frozen RSI record above:
+   heavy rule, its own label, plain system objects. No glow, no art. */
+.tb {
+  border-top: 6px double var(--ink);
+  padding: 56px 0 64px;
+  background: var(--paper);
+}
+.tb-title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(30px, 5vw, 44px); line-height: 1.15;
+  letter-spacing: -0.01em; margin: 0 0 8px;
+}
+.tb-demo-label {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-faint); margin: 0 0 28px;
+}
+.tb-bridge { max-width: 38em; margin: 0 0 28px; }
+.tb-bridge p { font-family: var(--serif); font-size: 21px; line-height: 1.45; margin: 0 0 10px; color: var(--ink); }
+.tb-bridge .tb-recruit { font-weight: 700; }
+
+.tb-arch {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  margin: 0 0 12px; max-width: 60em;
+}
+.tb-arch-item {
+  background: var(--card); border: 1.5px solid var(--ink);
+  padding: 14px 16px;
+}
+.tb-arch-name {
+  display: block; font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.14em; font-weight: 700; margin-bottom: 4px;
+}
+.tb-arch-role { font-size: 15px; color: var(--ink-soft); }
+.tb-rule {
+  font-size: 16px; color: var(--ink-soft); max-width: 44em;
+  border-left: 3px solid var(--ink); padding-left: 14px; margin: 0 0 32px;
+}
+
+.tb-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 24px; }
+.tb-tabs [role="tab"] {
+  font-family: var(--sans); font-size: 15px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  border: 1.5px solid var(--ink); border-radius: 999px;
+  background: transparent; color: var(--ink);
+  padding: 11px 20px; min-height: 48px; cursor: pointer;
+}
+.tb-tabs [role="tab"][aria-selected="true"] { background: var(--ink); color: var(--paper); }
+
+.tb-panel {
+  background: var(--card); border: 1px solid var(--rule);
+  padding: 26px 24px; margin: 0 0 8px; max-width: 60em;
+}
+.tb-basis {
+  font-family: var(--mono); font-size: 12.5px; color: var(--ink-faint);
+  letter-spacing: 0.02em; margin: 0 0 18px; max-width: 52em;
+}
+.tb-job {
+  border: 1px solid var(--rule); background: var(--paper);
+  padding: 12px 16px; margin: 0 0 18px; font-size: 16px;
+}
+.tb-k {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-faint); margin-right: 8px;
+}
+.tb-h {
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-soft); margin: 22px 0 10px;
+}
+.tb-h:first-child { margin-top: 0; }
+
+.tb-stage { margin: 0 0 18px; }
+.tb-head { margin: 0 0 16px; }
+.tb-flow {
+  display: flex; align-items: stretch; flex-wrap: wrap; gap: 8px;
+  margin: 12px 0;
+}
+.tb-box {
+  border: 1.5px solid var(--ink); background: var(--paper);
+  padding: 10px 14px; min-width: 0;
+}
+.tb-box-label { font-weight: 700; font-size: 15px; }
+.tb-box-sub { font-size: 13.5px; color: var(--ink-soft); }
+.tb-arrow { align-self: center; font-size: 20px; color: var(--ink-soft); }
+.tb-pill {
+  align-self: center;
+  font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.08em; padding: 8px 14px;
+  border: 1.5px solid currentColor; border-radius: 3px; white-space: nowrap;
+}
+.tb-commit { color: var(--earned); background: #f0fdf4; }
+.tb-quar { color: var(--predicted); background: #fff8e6; }
+.tb-deny { color: var(--crashed); background: #fef2f2; }
+
+.tb-note { font-size: 16px; color: var(--ink-soft); max-width: 42em; margin: 10px 0; }
+.tb-note.tb-key { font-family: var(--serif); font-size: 19px; color: var(--ink); }
+
+.tb-traj { margin: 0 0 12px 22px; padding: 0; font-size: 16px; }
+.tb-traj li { margin: 4px 0; }
+.tb-drift-step { font-weight: 700; }
+.tb-verdicts { display: flex; flex-wrap: wrap; gap: 24px; margin: 8px 0 4px; }
+.tb-verdict { display: flex; align-items: center; }
+
+.tb-checks { margin: 0 0 18px; }
+.tb-check {
+  display: flex; align-items: flex-start; gap: 12px;
+  border: 1px solid var(--rule); background: var(--paper);
+  padding: 12px 14px; margin: 0 0 8px; cursor: pointer;
+}
+.tb-check input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--ink); flex: none; }
+.tb-check-tx { font-size: 16px; }
+.tb-check-desc { color: var(--ink-soft); font-size: 14.5px; }
+.tb-reasons { margin: 0 0 12px 22px; padding: 0; font-family: var(--mono); font-size: 13.5px; color: var(--crashed); overflow-wrap: break-word; }
+.tb-reasons li { margin: 4px 0; }
+
+.tb-controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 6px 0 0; }
+.tb-btn {
+  font-family: var(--sans); font-size: 15px; font-weight: 600;
+  border: 1.5px solid var(--ink); border-radius: 999px;
+  background: transparent; color: var(--ink);
+  padding: 11px 20px; min-height: 48px; cursor: pointer;
+}
+.tb-btn:hover { background: var(--ink); color: var(--paper); }
+
+.tb-keys {
+  border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  padding: 22px 0; margin: 32px 0; max-width: 44em;
+}
+.tb-keys p { font-family: var(--serif); font-size: 21px; line-height: 1.45; margin: 0 0 8px; }
+.tb-keys .tb-keys-plain { font-family: var(--sans); font-size: 16px; color: var(--ink-soft); }
+
+.tb-bridge2 { max-width: 42em; margin: 0 0 28px; }
+.tb-bridge2 p { font-size: 16.5px; color: var(--ink-soft); margin: 0 0 12px; }
+
+.tb-limits {
+  border: 1px solid var(--rule); background: var(--card);
+  padding: 16px 20px; max-width: 44em;
+}
+.tb-limits summary {
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.12em;
+  text-transform: uppercase; cursor: pointer; font-weight: 700;
+}
+.tb-limits ul { margin: 12px 0 12px 22px; padding: 0; font-size: 16px; }
+.tb-limits li { margin: 4px 0; }
+.tb-limits p { font-size: 15.5px; color: var(--ink-soft); margin: 0; }
+
+@media (max-width: 640px) {
+  .tb-arch { grid-template-columns: 1fr; }
+  .tb-flow { flex-direction: column; align-items: stretch; }
+  .tb-arrow { align-self: center; transform: rotate(90deg); }
+  .tb-pill { align-self: flex-start; }
+  .tb-panel { padding: 20px 16px; }
+  .tb-verdicts { gap: 12px; }
+}
