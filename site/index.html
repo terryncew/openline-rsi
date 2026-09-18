@@ -225,37 +225,90 @@
     <p class="airlock-line"><a href="https://github.com/terryncew/openline-airlock">OpenLine Airlock.</a><br>The operational implementation.</p>
   </section>
 
-  <!-- TRY THE BOUNDARY: interactive architecture demonstration.
-       Additive. The RSI scientific record above is unchanged. -->
-  <section class="tb" id="try-boundary" aria-labelledby="tb-title">
+  <!-- WHAT CAME AFTER: a later research update, clearly separated from the
+       frozen RSI record above. The RSI story is unchanged. -->
+  <section class="tb" id="what-came-after" aria-labelledby="wca-title">
     <div class="wrap-wide">
-      <p class="kicker">What followed the record</p>
-      <h2 id="tb-title" class="tb-title">TRY THE BOUNDARY</h2>
-      <p class="tb-demo-label">Interactive replay / architecture demonstration &mdash; not a new scientific result</p>
+      <p class="kicker">Epilogue</p>
+      <h2 id="wca-title" class="tb-title">WHAT CAME AFTER</h2>
+      <p class="tb-demo-label">A later research update &mdash; separate from the frozen RSI result</p>
 
-      <div class="tb-bridge">
-        <p>RSI asked what happens when an AI inherits yesterday&rsquo;s answer.</p>
-        <p>OpenLine now asks what happens when an AI inherits yesterday&rsquo;s authority.</p>
-        <p class="tb-recruit">Recruit SENTRY.</p>
+      <h3 class="tb-h2">Where RSI stopped</h3>
+      <div class="tb-prose">
+        <p>We tried to push the RSI program one step further: could the recursive process actually make later verified work cheaper or more productive?</p>
+        <p>We never earned the right to run that test.</p>
+        <p>The mechanism worked far enough to expose a different problem: proving the qualification binding required more machinery than the frozen experiment allowed. Rather than loosen the bar, we stopped.</p>
+        <p>So the productivity question remained open. No productivity advantage was established. No disadvantage was established either. There was no Q7.</p>
       </div>
 
-      <div class="tb-arch" aria-label="The architecture: worker, sentry, receiver">
+      <h3 class="tb-h2">The research moved sideways</h3>
+      <div class="tb-prose">
+        <p>After RSI, I kept testing a related structural idea: can important standing live outside the AI itself?</p>
+        <p>In RSI, the standing was epistemic &mdash; should an inherited conclusion remain trusted after its evidence changes? Later work tested the authority version &mdash; should an action remain authorized after the authority behind it changes?</p>
+      </div>
+
+      <div class="tb-keys">
+        <p>OpenLine keeps consequential authority outside the AI.</p>
+        <p class="tb-keys-plain">Later experiments tested what happens when workers are revoked, replaced, watched by other AIs, or leave artifacts behind.</p>
+      </div>
+
+      <h3 class="tb-h2">Later bounded results</h3>
+      <p class="tb-pre">Each of these was a separate bounded experiment with its own frozen record. None of them is the definition of OpenLine, and not all of them passed.</p>
+
+      <div class="tb-exp">
+        <h4><span class="tb-exp-k">A.</span> Revoke / replace</h4>
+        <p>Later wallet and receiver work tested whether a worker could lose authority while a fresh successor continued under new owner-issued authority. The model can change without resetting the owner&rsquo;s control state.</p>
+      </div>
+
+      <div class="tb-exp">
+        <h4><span class="tb-exp-k">B.</span> SENTRY &mdash; one experimental way to add judgment above the hard boundary</h4>
+        <p>SENTRY-LIVE put a real guardian on live cases: it added protection in one case, was fooled in another, and could not weaken the deterministic owner boundary. SENTRY-TRAJECTORY tested whether a watcher could challenge a technically permitted trajectory that had drifted from the owner-approved job while allowing a matched legitimate one. It could.</p>
+        <p>The architectural idea is simple: the watcher can make the system stricter. It cannot make a hard refusal more permissive. SENTRY is not required for OpenLine, and it is not OpenLine&rsquo;s authority layer.</p>
+      </div>
+
+      <div class="tb-exp">
+        <h4><span class="tb-exp-k">C.</span> Trust-handoff</h4>
+        <p>An artifact created while a worker was valid could still execute after that worker&rsquo;s revocation under a naive creation-time-only rule. Rechecking current origin standing at consequence time blocked the revoked origin &mdash; even after trusted transformation &mdash; while a fresh successor artifact still worked.</p>
+        <p class="tb-take">Being valid when created does not make something permanently authorized.</p>
+      </div>
+
+      <div class="tb-exp">
+        <h4><span class="tb-exp-k">D.</span> Containment / recovery</h4>
+        <p>CONTAINMENT-003 remained a FAIL under its frozen taxonomy: its recovery-usefulness criterion was not met, and that stands. But the authority mechanics tested in that fixture held &mdash; the revoked worker produced no new receiver-controlled effects, laundering through helpers failed, helpers minted no authority, coalition authority did not expand, and a successor continued under fresh owner authority.</p>
+        <p>Later, RECOVERY-001 independently established one narrow capability: a real recovery helper produced a mechanically admissible successor proposal, which stayed inert until fresh owner authority existed. That did not retroactively turn CONTAINMENT-003 into a PASS.</p>
+      </div>
+
+      <h3 class="tb-h2">Why I kept following this</h3>
+      <p class="tb-interp-label">My interpretation &mdash; not a frozen scientific result</p>
+      <div class="tb-prose">
+        <p>The experiments started to point at the same structural question.</p>
+        <p>What if increasingly capable AIs do not need to be the place where authority lives?</p>
+        <p>A worker can reason. Another AI can watch it. Another can help recover work. A successor can take over. But the consequential boundary &mdash; what is actually allowed to happen &mdash; can remain outside all of them.</p>
+        <p>That is why I think this may eventually matter for alignment or AI safety.</p>
+        <p>My interest is narrower: if AI systems become harder to supervise directly, one useful safety property may be keeping consequential authority outside the models themselves. You may not need every AI in the system to be perfectly trustworthy if none of them can unilaterally manufacture more authority.</p>
+        <p class="tb-caveat">This is a hypothesis, not an experimentally established conclusion.</p>
+      </div>
+
+      <h3 class="tb-h2">Play with the idea</h3>
+      <p class="tb-demo-note">These are simplified deterministic replays of later research ideas. They are not part of the frozen RSI result, and they are not a claim that every OpenLine deployment includes SENTRY or these exact mechanisms.</p>
+
+      <div class="tb-arch" aria-label="One later experimental configuration">
         <div class="tb-arch-item">
           <span class="tb-arch-name">WORKER</span>
-          <span class="tb-arch-role">does the work</span>
+          <span class="tb-arch-role">proposes work</span>
         </div>
-        <div class="tb-arch-item">
-          <span class="tb-arch-name">SENTRY</span>
-          <span class="tb-arch-role">watches the trajectory, adds challenge</span>
+        <div class="tb-arch-item tb-arch-opt">
+          <span class="tb-arch-name">SENTRY <span class="tb-opt-tag">optional</span></span>
+          <span class="tb-arch-role">may add challenge</span>
         </div>
         <div class="tb-arch-item">
           <span class="tb-arch-name">RECEIVER</span>
-          <span class="tb-arch-role">controls consequence</span>
+          <span class="tb-arch-role">independently decides consequence under owner-controlled rules</span>
         </div>
       </div>
-      <p class="tb-rule">SENTRY can make the system stricter. SENTRY cannot make it more permissive than the owner-controlled Receiver boundary. The watcher never grants permission.</p>
+      <p class="tb-rule">One later experimental configuration &mdash; not the definition of OpenLine.</p>
 
-      <div class="tb-tabs" role="tablist" aria-label="Boundary demonstrations">
+      <div class="tb-tabs" role="tablist" aria-label="Later experiment replays">
         <button role="tab" id="tb-tab-fire" aria-controls="tb-panel-fire">Fire the worker</button>
         <button role="tab" id="tb-tab-drift" aria-controls="tb-panel-drift">Catch the drift</button>
         <button role="tab" id="tb-tab-list" aria-controls="tb-panel-list">Check the list</button>
@@ -265,30 +318,18 @@
       <div class="tb-panel" role="tabpanel" id="tb-panel-drift" aria-labelledby="tb-tab-drift" tabindex="0" hidden></div>
       <div class="tb-panel" role="tabpanel" id="tb-panel-list" aria-labelledby="tb-tab-list" tabindex="0" hidden></div>
 
-      <div class="tb-keys">
-        <p>Models can reason, supervise, recover, and hand work to one another.</p>
-        <p>They do not get to decide how much authority exists.</p>
-        <p>The Receiver does.</p>
-        <p class="tb-keys-plain">Adding more AI should not add more power.</p>
-        <p class="tb-keys-plain">Worker navigates. SENTRY watches the trajectory. Receiver controls consequence.</p>
-      </div>
-
-      <div class="tb-bridge2">
-        <p>RSI was about inherited epistemic standing: should yesterday&rsquo;s conclusion remain trusted after the evidence changes? The broader OpenLine work asks the authority version: should yesterday&rsquo;s action remain authorized after the authority changes?</p>
-        <p>Across separate bounded experiments, OpenLine has tested direct action, replacement, guardian judgment, coalition bounds, trajectory drift, recovery proposals, and deferred trusted handoffs &mdash; each its own fixture, each its own record.</p>
-      </div>
-
       <details class="tb-limits">
-        <summary>What this does not show</summary>
+        <summary>What this does not establish</summary>
         <ul>
-          <li>Not arbitrary rogue-AI containment.</li>
-          <li>Not control over unmanaged infrastructure.</li>
-          <li>Not revocation of independent external credentials.</li>
-          <li>Not solved alignment.</li>
-          <li>Not a claim that SENTRY is always correct.</li>
-          <li>Not a production certification.</li>
+          <li>RSI productivity advantage remains unearned.</li>
+          <li>SENTRY results are bounded experiments.</li>
+          <li>CONTAINMENT-003 remains a FAIL.</li>
+          <li>TRUST-HANDOFF is a bounded fixture result.</li>
+          <li>No claim of arbitrary rogue-AI containment.</li>
+          <li>No claim of solved alignment.</li>
+          <li>No claim of control over external or unmanaged authority paths.</li>
         </ul>
-        <p>The demos show receiver-governed consequence control in bounded fixtures and deterministic replays.</p>
+        <p>The replays show receiver-governed consequence control in bounded fixtures and deterministic replays. The interpretation above is a hypothesis, not a result.</p>
       </details>
     </div>
   </section>

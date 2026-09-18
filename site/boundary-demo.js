@@ -1,4 +1,4 @@
-/* OpenLine RSI — TRY THE BOUNDARY interactive demo.
+/* OpenLine RSI — "What came after" epilogue demos.
    Deterministic replay/state transitions only. No backend, no model calls,
    no network after page load. Demos 1 and 2 replay bounded frozen results;
    Demo 3 is a deterministic architecture demonstration modeled on the
@@ -373,7 +373,7 @@
 
   /* ---------------- boot ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
-    var root = document.getElementById("try-boundary");
+    var root = document.getElementById("what-came-after");
     if (!root) return;
     initTabs(root);
     var fire = document.getElementById("tb-panel-fire");
