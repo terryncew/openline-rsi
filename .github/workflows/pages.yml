@@ -39,7 +39,7 @@ jobs:
         # site/ still resolves to the repo-root evidence/ directory.
         run: |
           rm -rf public && mkdir -p public
-          cp site/index.html site/case-file.html site/investigations.html site/methods.html site/style.css site/app.js site/og-preview.png public/
+          cp site/index.html site/case-file.html site/investigations.html site/methods.html site/style.css site/app.js site/boundary-demo.js site/og-preview.png public/
           sed -i 's|href="../|href="|' public/app.js
           cp -r evidence public/evidence
       - uses: actions/upload-pages-artifact@v3

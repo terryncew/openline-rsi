@@ -224,6 +224,74 @@
     </nav>
     <p class="airlock-line"><a href="https://github.com/terryncew/openline-airlock">OpenLine Airlock.</a><br>The operational implementation.</p>
   </section>
+
+  <!-- TRY THE BOUNDARY: interactive architecture demonstration.
+       Additive. The RSI scientific record above is unchanged. -->
+  <section class="tb" id="try-boundary" aria-labelledby="tb-title">
+    <div class="wrap-wide">
+      <p class="kicker">What followed the record</p>
+      <h2 id="tb-title" class="tb-title">TRY THE BOUNDARY</h2>
+      <p class="tb-demo-label">Interactive replay / architecture demonstration &mdash; not a new scientific result</p>
+
+      <div class="tb-bridge">
+        <p>RSI asked what happens when an AI inherits yesterday&rsquo;s answer.</p>
+        <p>OpenLine now asks what happens when an AI inherits yesterday&rsquo;s authority.</p>
+        <p class="tb-recruit">Recruit SENTRY.</p>
+      </div>
+
+      <div class="tb-arch" aria-label="The architecture: worker, sentry, receiver">
+        <div class="tb-arch-item">
+          <span class="tb-arch-name">WORKER</span>
+          <span class="tb-arch-role">does the work</span>
+        </div>
+        <div class="tb-arch-item">
+          <span class="tb-arch-name">SENTRY</span>
+          <span class="tb-arch-role">watches the trajectory, adds challenge</span>
+        </div>
+        <div class="tb-arch-item">
+          <span class="tb-arch-name">RECEIVER</span>
+          <span class="tb-arch-role">controls consequence</span>
+        </div>
+      </div>
+      <p class="tb-rule">SENTRY can make the system stricter. SENTRY cannot make it more permissive than the owner-controlled Receiver boundary. The watcher never grants permission.</p>
+
+      <div class="tb-tabs" role="tablist" aria-label="Boundary demonstrations">
+        <button role="tab" id="tb-tab-fire" aria-controls="tb-panel-fire">Fire the worker</button>
+        <button role="tab" id="tb-tab-drift" aria-controls="tb-panel-drift">Catch the drift</button>
+        <button role="tab" id="tb-tab-list" aria-controls="tb-panel-list">Check the list</button>
+      </div>
+
+      <div class="tb-panel" role="tabpanel" id="tb-panel-fire" aria-labelledby="tb-tab-fire" tabindex="0"></div>
+      <div class="tb-panel" role="tabpanel" id="tb-panel-drift" aria-labelledby="tb-tab-drift" tabindex="0" hidden></div>
+      <div class="tb-panel" role="tabpanel" id="tb-panel-list" aria-labelledby="tb-tab-list" tabindex="0" hidden></div>
+
+      <div class="tb-keys">
+        <p>Models can reason, supervise, recover, and hand work to one another.</p>
+        <p>They do not get to decide how much authority exists.</p>
+        <p>The Receiver does.</p>
+        <p class="tb-keys-plain">Adding more AI should not add more power.</p>
+        <p class="tb-keys-plain">Worker navigates. SENTRY watches the trajectory. Receiver controls consequence.</p>
+      </div>
+
+      <div class="tb-bridge2">
+        <p>RSI was about inherited epistemic standing: should yesterday&rsquo;s conclusion remain trusted after the evidence changes? The broader OpenLine work asks the authority version: should yesterday&rsquo;s action remain authorized after the authority changes?</p>
+        <p>Across separate bounded experiments, OpenLine has tested direct action, replacement, guardian judgment, coalition bounds, trajectory drift, recovery proposals, and deferred trusted handoffs &mdash; each its own fixture, each its own record.</p>
+      </div>
+
+      <details class="tb-limits">
+        <summary>What this does not show</summary>
+        <ul>
+          <li>Not arbitrary rogue-AI containment.</li>
+          <li>Not control over unmanaged infrastructure.</li>
+          <li>Not revocation of independent external credentials.</li>
+          <li>Not solved alignment.</li>
+          <li>Not a claim that SENTRY is always correct.</li>
+          <li>Not a production certification.</li>
+        </ul>
+        <p>The demos show receiver-governed consequence control in bounded fixtures and deterministic replays.</p>
+      </details>
+    </div>
+  </section>
 </main>
 
 <footer class="wb-foot">
@@ -233,6 +301,7 @@
   </div>
 </footer>
 
+<script src="boundary-demo.js"></script>
 <script>
 document.documentElement.classList.add("js");
 (function () {
