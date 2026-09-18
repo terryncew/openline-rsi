@@ -369,6 +369,18 @@ details.evidence summary:focus-visible { outline: 2px solid var(--accent); outli
   .gen-state { font-size: 11.5px; }
 }
 
+/* Narrow phones: the four short nav labels settle into two balanced rows
+   instead of one cramped row or a ragged wrap. Desktop/large-tablet keep
+   the original single-row flex layout. */
+@media (max-width: 480px) {
+  .site-head nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px 24px;
+    width: 100%;
+  }
+}
+
 /* ---------- story panels (homepage only: white / black / yellow) ---------- */
 body.page-story {
   background: #fff; color: #000;
@@ -386,7 +398,7 @@ body.page-story {
   font-family: var(--wb-display); font-size: 24px; color: #000;
   text-decoration: none; letter-spacing: 0;
 }
-.page-story .wb-top nav { display: flex; gap: 30px; }
+.page-story .wb-top nav { display: flex; gap: 30px; flex-wrap: wrap; }
 .page-story .wb-top nav a { color: #000; text-decoration: none; font-weight: 700; font-size: 16px; }
 .page-story .wb-top nav a:hover, .page-story .wb-top nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
 
