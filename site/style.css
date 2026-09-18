@@ -637,3 +637,41 @@ img, pre, table { max-width: 100%; }
   .tb-panel { padding: 20px 16px; }
   .tb-verdicts { gap: 12px; }
 }
+
+/* ---------- WHAT CAME AFTER epilogue (extends the tb demo section) ---------- */
+.tb-h2 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(24px, 3.6vw, 32px); line-height: 1.25;
+  letter-spacing: -0.01em; margin: 44px 0 14px; max-width: 24em;
+}
+.tb-prose { max-width: 40em; }
+.tb-prose p { font-size: 17.5px; color: var(--ink-soft); margin: 0 0 12px; line-height: 1.65; }
+.tb-prose p:first-child { color: var(--ink); }
+.tb-pre { font-size: 16px; color: var(--ink-soft); max-width: 44em; margin: 0 0 20px; }
+.tb-exp {
+  border: 1px solid var(--rule); background: var(--card);
+  padding: 18px 20px; margin: 0 0 12px; max-width: 46em;
+}
+.tb-exp h4 {
+  font-family: var(--sans); font-size: 16.5px; font-weight: 700;
+  margin: 0 0 8px; color: var(--ink);
+}
+.tb-exp-k { font-family: var(--mono); font-size: 13px; color: var(--ink-faint); margin-right: 6px; }
+.tb-exp p { font-size: 16px; color: var(--ink-soft); margin: 0 0 10px; line-height: 1.6; }
+.tb-exp p:last-child { margin-bottom: 0; }
+.tb-exp .tb-take { font-family: var(--serif); font-size: 18px; color: var(--ink); }
+.tb-interp-label {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-faint); margin: 0 0 14px;
+}
+.tb-caveat { font-style: italic; }
+.tb-demo-note {
+  font-size: 16px; color: var(--ink-soft); max-width: 44em;
+  border-left: 3px solid var(--ink); padding-left: 14px; margin: 0 0 24px;
+}
+.tb-arch-opt { border-style: dashed; }
+.tb-opt-tag {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.1em;
+  border: 1px solid currentColor; border-radius: 3px; padding: 2px 6px;
+  vertical-align: 2px; margin-left: 6px; font-weight: 400;
+}
