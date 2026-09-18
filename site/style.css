@@ -675,3 +675,84 @@ img, pre, table { max-width: 100%; }
   border: 1px solid currentColor; border-radius: 3px; padding: 2px 6px;
   vertical-align: 2px; margin-left: 6px; font-weight: 400;
 }
+
+/* ---------- LATER INVESTIGATIONS (additive page styles)
+   Reuses the site visual system: warm paper, ink, earned green / crashed red.
+   Scoped under .li-* so existing pages are untouched. */
+.li-mast { padding: 64px 0 8px; }
+.li-title {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(34px, 6vw, 58px); line-height: 1.1;
+  letter-spacing: -0.01em; margin: 12px 0 10px;
+}
+.li-sub { font-family: var(--serif); font-size: 22px; line-height: 1.4; color: var(--ink); margin: 0 0 28px; }
+.li-bridge { max-width: 44em; margin: 0 0 28px; }
+.li-bridge p { font-size: 17px; color: var(--ink-soft); margin: 0 0 12px; }
+.li-bridge-q { font-family: var(--serif); font-size: 21px; color: var(--ink); }
+.li-boundary {
+  border: 1px solid var(--rule); background: var(--card);
+  padding: 16px 20px; max-width: 46em; margin: 0 0 12px; border-radius: 4px;
+}
+.li-boundary p { font-size: 15.5px; color: var(--ink-soft); margin: 0; }
+.li-card {
+  border: 1px solid var(--rule); background: var(--card);
+  padding: 26px 26px; margin: 28px 0; border-radius: 6px;
+}
+.li-card.li-newest { border: 2px solid var(--ink); }
+.li-num {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--ink-faint); margin: 0 0 10px;
+}
+.li-newtag {
+  display: inline-block; background: var(--ink); color: var(--paper);
+  font-size: 11px; letter-spacing: 0.14em; padding: 3px 9px; border-radius: 999px;
+  vertical-align: 2px; margin-left: 8px;
+}
+.li-q {
+  font-family: var(--serif); font-weight: 400; font-size: 23px;
+  line-height: 1.35; margin: 0 0 14px;
+}
+.li-result { margin: 0 0 14px; }
+.li-badge {
+  display: inline-block; font-family: var(--mono); font-size: 13px; font-weight: 700;
+  letter-spacing: 0.1em; padding: 4px 12px; border-radius: 4px; margin-right: 10px;
+  vertical-align: middle;
+}
+.li-pass { background: var(--earned); color: #fff; }
+.li-fail { background: var(--crashed); color: #fff; }
+.li-code {
+  font-family: var(--mono); font-size: 13px; background: var(--paper-dim);
+  border: 1px solid var(--rule); padding: 4px 8px; border-radius: 4px;
+  overflow-wrap: break-word; word-break: break-word;
+}
+.li-obs { margin: 0 0 14px; }
+.li-obs p, .li-card > p { font-size: 16.5px; color: var(--ink-soft); }
+.li-obs ul, .li-list { margin: 8px 0 14px; padding-left: 22px; font-size: 16px; color: var(--ink-soft); }
+.li-obs li, .li-list li { margin: 4px 0; line-height: 1.55; }
+.li-list { list-style: disc; }
+.li-h {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink); margin: 18px 0 8px;
+}
+.li-plain { font-family: var(--serif); font-size: 19px; line-height: 1.45; color: var(--ink); }
+.li-ev { margin: 18px 0 0; font-size: 15.5px; }
+.li-ev-note {
+  margin: 18px 0 0; font-size: 14px; color: var(--ink-faint);
+  border-top: 1px solid var(--rule-soft); padding-top: 12px;
+}
+.li-close { border-top: 6px double var(--ink); margin: 56px 0 0; padding: 40px 0 8px; }
+.li-close-title {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 4vw, 36px);
+  margin: 0 0 16px;
+}
+.li-close p { font-size: 17px; color: var(--ink-soft); margin: 0 0 12px; max-width: 44em; }
+.li-interp { border: 1px solid var(--rule); background: var(--paper-dim); padding: 20px 22px; margin: 32px 0 64px; border-radius: 4px; }
+.li-interp-label {
+  font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em;
+  text-transform: uppercase; font-weight: 700; margin: 0 0 10px; color: var(--ink);
+}
+.li-interp p { font-size: 16.5px; color: var(--ink-soft); margin: 0 0 10px; max-width: 44em; }
+@media (max-width: 640px) {
+  .li-card { padding: 20px 16px; }
+  .li-mast { padding: 44px 0 4px; }
+}
