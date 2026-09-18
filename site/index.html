@@ -27,6 +27,7 @@
     <a class="wb-brand" href="index.html">OPENLINE RSI</a>
     <nav aria-label="Primary">
       <a href="index.html" aria-current="page">Story</a>
+      <a href="later-investigations.html">Later investigations</a>
       <a href="case-file.html">Case file</a>
       <a href="methods.html">Methods</a>
     </nav>
@@ -253,30 +254,8 @@
       </div>
 
       <h3 class="tb-h2">Later bounded results</h3>
-      <p class="tb-pre">Each of these was a separate bounded experiment with its own frozen record. None of them is the definition of OpenLine, and not all of them passed.</p>
-
-      <div class="tb-exp">
-        <h4><span class="tb-exp-k">A.</span> Revoke / replace</h4>
-        <p>Later wallet and receiver work tested whether a worker could lose authority while a fresh successor continued under new owner-issued authority. The model can change without resetting the owner&rsquo;s control state.</p>
-      </div>
-
-      <div class="tb-exp">
-        <h4><span class="tb-exp-k">B.</span> SENTRY &mdash; one experimental way to add judgment above the hard boundary</h4>
-        <p>SENTRY-LIVE put a real guardian on live cases: it added protection in one case, was fooled in another, and could not weaken the deterministic owner boundary. SENTRY-TRAJECTORY tested whether a watcher could challenge a technically permitted trajectory that had drifted from the owner-approved job while allowing a matched legitimate one. It could.</p>
-        <p>The architectural idea is simple: the watcher can make the system stricter. It cannot make a hard refusal more permissive. SENTRY is not required for OpenLine, and it is not OpenLine&rsquo;s authority layer.</p>
-      </div>
-
-      <div class="tb-exp">
-        <h4><span class="tb-exp-k">C.</span> Trust-handoff</h4>
-        <p>An artifact created while a worker was valid could still execute after that worker&rsquo;s revocation under a naive creation-time-only rule. Rechecking current origin standing at consequence time blocked the revoked origin &mdash; even after trusted transformation &mdash; while a fresh successor artifact still worked.</p>
-        <p class="tb-take">Being valid when created does not make something permanently authorized.</p>
-      </div>
-
-      <div class="tb-exp">
-        <h4><span class="tb-exp-k">D.</span> Containment / recovery</h4>
-        <p>CONTAINMENT-003 remained a FAIL under its frozen taxonomy: its recovery-usefulness criterion was not met, and that stands. But the authority mechanics tested in that fixture held &mdash; the revoked worker produced no new receiver-controlled effects, laundering through helpers failed, helpers minted no authority, coalition authority did not expand, and a successor continued under fresh owner authority.</p>
-        <p>Later, RECOVERY-001 independently established one narrow capability: a real recovery helper produced a mechanically admissible successor proposal, which stayed inert until fresh owner authority existed. That did not retroactively turn CONTAINMENT-003 into a PASS.</p>
-      </div>
+      <p class="tb-pre">Each later experiment was a separate bounded study with its own frozen record. None of them is the definition of OpenLine, and not all of them passed.</p>
+      <p class="tb-pre"><a href="later-investigations.html">See the later investigations &rarr;</a> &mdash; the chronological public research record, failures kept visible.</p>
 
       <h3 class="tb-h2">Why I kept following this</h3>
       <p class="tb-interp-label">My interpretation &mdash; not a frozen scientific result</p>

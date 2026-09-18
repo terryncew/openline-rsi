@@ -57,9 +57,14 @@ def main():
         home = f.read()
     with open(os.path.join(SITE, "index.html"), "w", encoding="utf-8") as f:
         f.write(home)
+    # later-investigations.html is a static research-record page: copied as-is.
+    with open(os.path.join(TEMPLATES, "later-investigations.html"), encoding="utf-8") as f:
+        later = f.read()
+    with open(os.path.join(SITE, "later-investigations.html"), "w", encoding="utf-8") as f:
+        f.write(later)
     if not ok:
         return 1
-    print("built site/index.html, site/case-file.html, site/investigations.html (data inlined)")
+    print("built site/index.html, site/case-file.html, site/investigations.html, site/later-investigations.html (data inlined)")
     return 0
 
 
