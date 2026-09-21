@@ -127,9 +127,13 @@
 
   function renderSlots(list) {
     return (list || []).map(function (s) {
+      var links = (s.links || []).map(function (l) {
+        return '<a href="' + esc(l.url) + '">' + esc(l.label) + "</a>";
+      }).join(" &middot; ");
       return '<div class="slot"><span class="tag">Not yet resolved</span>' +
         "<h3>" + esc(s.label) + "</h3>" +
         "<p>" + esc(s.plain) + "</p>" +
+        (links ? '<p class="slot-links">' + links + "</p>" : "") +
         "<p><code>plugs in at: " + esc(s.plug_in) + "</code></p></div>";
     }).join("");
   }
