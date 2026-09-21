@@ -54,6 +54,10 @@
           <li><a href="#candidate-admission-001">19. The evidence-closure hole: CANDIDATE-ADMISSION-001</a></li>
           <li><a href="#evidence-closure-002">20. The repair, sealed: EVIDENCE-CLOSURE-002 (rc3)</a></li>
           <li><a href="#context-admit">21. A shipped doorway, not a result: CONTEXT-ADMIT (rc4)</a></li>
+          <li><a href="#trust-root-succession-001">22. Advancing the trust root: TRUST-ROOT-SUCCESSION-001</a></li>
+          <li><a href="#owner-control-002">23. The old owner cannot return: OWNER-CONTROL-002</a></li>
+          <li><a href="#platform-exit-kill-001">24. The first platform-exit attempt: PLATFORM-EXIT-KILL-001 (inconclusive)</a></li>
+          <li><a href="#platform-exit-kill-002">25. Planned exit, bounded: PLATFORM-EXIT-KILL-002</a></li>
         </ul>
       </nav>
     </div>
@@ -468,8 +472,62 @@
         <p class="li-ev">Shipped artifact: <a href="https://github.com/terryncew/openline-half-life/tree/3bdb16f0c8c6d9cb4e5486206d3f87c5d0a1853c/src/openline_half_life/context_admit.py">context_admit.py, openline-half-life at 3bdb16f</a> &middot; <a href="https://github.com/terryncew/openline-half-life/tree/3bdb16f0c8c6d9cb4e5486206d3f87c5d0a1853c/CLAIM_BOUNDARY.md">claim boundary</a></p>
       </article>
 
+      <article class="li-card" id="trust-root-succession-001">
+        <p class="li-num">22 &middot; TRUST-ROOT-SUCCESSION-001 &middot; September 20, 2026</p>
+        <h2 class="li-q">Can an owner&rsquo;s trust root advance to a successor in-band, without the old owner key staying current?</h2>
+        <div class="li-result"><span class="li-badge li-pass">PASS</span> <span class="li-code">PASS</span></div>
+        <div class="li-obs">
+          <p>One owner-signed succession event moved the pinned trust root forward, with exactly one owner key current per slot at all times. The successor exercised owner authority (ACTIVE, STOP, ACTIVE); the predecessor&rsquo;s fresh authority was refused; pre-succession receipts stayed signature-verifiable without standing as current; the transition survived a receiver restart. All 6 preregistered cases held on both receivers; the independent appraiser re-derived 56 checks with 0 violations; the full suite passed (477 tests, exit 0).</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>&ldquo;An owner trust root can advance in-band through a currently-signed succession event: exactly one owner key is current per slot, the predecessor&rsquo;s fresh authority is refused, pre-succession receipts remain signature-verifiable without standing as current, and the transition survives restart.&rdquo;</p>
+          <h3 class="li-h">Limits</h3>
+          <p>Transition authority is per-receiver admission, not broadcast. Key custody and rotation policy are outside this study. Terminal commit <span class="li-code">106f6fb</span>.</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-receipt-gate/tree/41631b7c09f1d5c319d3a2e98685577fa99e52ef/experiments/trust-root-succession-001/TERMINAL.md">terminal record, openline-receipt-gate</a></p>
+      </article>
+
+      <article class="li-card" id="owner-control-002">
+        <p class="li-num">23 &middot; OWNER-CONTROL-002 &middot; September 20, 2026</p>
+        <h2 class="li-q">After succession, does the old owner stay unable to take authority back &mdash; and can only the current owner exercise the kill?</h2>
+        <div class="li-result"><span class="li-badge li-pass">PASS</span> <span class="li-code">PASS</span></div>
+        <div class="li-obs">
+          <p>The owner holds the kill authority, and succession does not give the old holder power back. A worker credential with full realistic knowledge was refused at the owner-key standing check; the successor became current through the in-band mechanism and exercised owner authority; the superseded owner&rsquo;s fresh STOP was refused; cryptographic validity of the old credential did not restore standing; restart preserved the successor; historical receipts stayed verifiable without conferring currency. Harness-only over the shipped succession primitive &mdash; zero product-code lines changed. All 7 preregistered cases held; the appraiser re-derived 92 checks with 0 violations; the full suite passed (484 tests).</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>&ldquo;The owner holds the kill authority, and succession does not give the old holder power back: current owner authority is accepted, worker credentials cannot self-elevate, the successor becomes current through the in-band mechanism, the superseded owner cannot regain current authority, and historical receipts remain verifiable without conferring current authority.&rdquo;</p>
+          <h3 class="li-h">Not claimed</h3>
+          <p>Perfect custody, unlosable keys, arbitrary account recovery, compromise resistance beyond the tested model, malicious receiver tolerance, or a standard. Terminal commit <span class="li-code">86df169</span>.</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-receipt-gate/tree/3a4501c46f12675c061b1680e32f9c21bf65ff2e/experiments/owner-control-002/TERMINAL.md">terminal record, openline-receipt-gate</a></p>
+      </article>
+
+      <article class="li-card" id="platform-exit-kill-001">
+        <p class="li-num">24 &middot; PLATFORM-EXIT-KILL-001 &middot; September 20, 2026</p>
+        <h2 class="li-q">Can a revoked agent be stopped on a platform while a fresh key under the same owner continues the job?</h2>
+        <div class="li-result"><span class="li-badge li-open">INCONCLUSIVE</span> <span class="li-code">INCONCLUSIVE_APPARATUS</span></div>
+        <div class="li-obs">
+          <p>The claim was neither established nor falsified. The worker crashed on first contact on an apparatus defect &mdash; a serialization envelope mismatch between driver and worker &mdash; before any bounded case produced evidence: zero attempts executed, zero commits, zero case results. The preregistration forbids repair-and-rerun under this label after contact, so the failed attempt was preserved untouched and the lane was closed. A successor ran the identical frozen scientific contract under a new label.</p>
+          <h3 class="li-h">What this record is</h3>
+          <p>An apparatus failure, frozen with the exact terminal label INCONCLUSIVE_APPARATUS. Not a pass, not a fail. No downstream conclusion may cite this experiment. Terminal commit <span class="li-code">b310332</span>.</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-receipt-gate/tree/95c1ecfd77bd13b9e7b0f441559e69223ee7b20b/experiments/platform-exit-kill-001/TERMINAL.md">terminal record, openline-receipt-gate</a></p>
+      </article>
+
+      <article class="li-card" id="platform-exit-kill-002">
+        <p class="li-num">25 &middot; PLATFORM-EXIT-KILL-002 &middot; September 20, 2026</p>
+        <h2 class="li-q">Can the owner stop one agent and have a distinct agent continue under the same owner-controlled authority regime, with history intact?</h2>
+        <div class="li-result"><span class="li-badge li-pass">PASS</span> <span class="li-code">PASS</span></div>
+        <div class="li-obs">
+          <p>Agent A operated, the owner stopped it, and agent B continued under the same owner key with shared ordered history. Post-STOP attempts by A &mdash; fresh, restarted, and replayed &mdash; were refused with zero effects; B&rsquo;s effects committed to the continuing journal; every owner-signed admission verified under the same owner key; per-case ledger snapshots are byte-equal prefixes of the final journal. All 6 preregistered cases ran end to end under the identical frozen scientific contract; the independent appraiser re-derived 213 checks with 0 violations. The single disclosed apparatus fix &mdash; the envelope mismatch that froze 001 &mdash; is what this label repairs; 001&rsquo;s failed run is not counted as evidence.</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>&ldquo;An agent operating under owner authority can be stopped by the owner and replaced by a distinct agent that continues under the same owner-controlled authority regime, with history intact across the switch and the stopped agent unable to regain consequential authority.&rdquo;</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <p>Real-provider portability, cloud-platform exit, cross-organization handoff, Byzantine tolerance, unlosable keys, arbitrary recovery, or a standard. The exit earned is bounded: the stopped agent&rsquo;s authority ended at the receiver, and the continuing agent operated under the same owner&rsquo;s receiver-verified regime &mdash; not arbitrary failover, and not control over effects the receiver never governs. Terminal commit <span class="li-code">59b9cb0</span>.</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-receipt-gate/tree/325a662a9d4135dba80c560c5660502da461da4c/experiments/platform-exit-kill-002/TERMINAL.md">terminal record, openline-receipt-gate</a></p>
+      </article>
+
       <article class="li-card li-newest" id="rpi-001">
-        <p class="li-num">22 &middot; RPI-001 &middot; September 21, 2026 <span class="li-newtag">NEWEST</span></p>
+        <p class="li-num">26 &middot; RPI-001 &middot; September 21, 2026 <span class="li-newtag">NEWEST</span></p>
         <h2 class="li-q">Does recursive self-improvement pay for itself? A fresh A/B/C attempt on matched tasks, with every cost counted.</h2>
         <div class="li-result"><span class="li-badge li-fail">TERMINAL &middot; NEGATIVE</span> <span class="li-code">RPI-001_TERMINAL_2026-09-21</span></div>
         <div class="li-obs">
@@ -497,8 +555,8 @@
         <p>Some properties held.<br>Some helpers were useful.<br>Some helpers failed.<br>More agents sometimes created more failure points.<br>A watcher could notice trouble earlier and still intervene too early.</p>
         <p>The recurring constraint is narrower:</p>
         <p class="li-plain">intelligence can propose, watch, recover, replace and coordinate.<br>That does not mean it should own the consequence boundary.</p>
-        <p>The September 16&ndash;21 entries above extend the record without changing its shape. The economics lines (9&ndash;13) left recursive productivity an open question: one incomplete study, one closed negative, three attempts that never reached a verdict. A portable STOP (16) and a planned host replacement (14) earned their claims inside stated limits; an independent implementation (17) exposed a real gap in the public contract instead of a clean pass; the Jev witness (18) bound judgment to exact action and current authority; the Half-Life failure (19) stayed frozen while its repair sealed (20); the context-admit doorway shipped as a product (21), not a result; and the fresh recursive-productivity attempt (22) then terminalized negative on its own frozen terms.</p>
-        <p>One slot stays deliberately open: owner-controlled platform exit has not started. The fresh attempt is closed with its exact disposition, hashes, economics, and limits. RSI-006 stays frozen as NO-GO, and the earlier economics attempts stay visible as they were.</p>
+        <p>The September 16&ndash;21 entries above extend the record without changing its shape. The economics lines (9&ndash;13) left recursive productivity an open question: one incomplete study, one closed negative, three attempts that never reached a verdict. A portable STOP (16) and a planned host replacement (14) earned their claims inside stated limits; an independent implementation (17) exposed a real gap in the public contract instead of a clean pass; the Jev witness (18) bound judgment to exact action and current authority; the Half-Life failure (19) stayed frozen while its repair sealed (20); the context-admit doorway shipped as a product (21), not a result; the owner trust root advanced in-band (22) and the superseded owner was kept out (23); the first platform-exit attempt (24) froze on an apparatus defect and its successor (25) earned only the bounded exit; and the fresh recursive-productivity attempt (26) then terminalized negative on its own frozen terms.</p>
+        <p>The platform-exit slot is closed with a bounded result: PLATFORM-EXIT-KILL-002 earned a planned, receiver-verified exit &mdash; the owner stops one agent and a distinct agent continues under the same owner-controlled authority regime, with history intact. Not earned: arbitrary failover to an unmanaged host, or control over effects the receiver never governs. The fresh attempt is closed with its exact disposition, hashes, economics, and limits. RSI-006 stays frozen as NO-GO, and the earlier economics attempts stay visible as they were.</p>
       </section>
 
       <section class="li-interp" aria-labelledby="li-interp-title">
