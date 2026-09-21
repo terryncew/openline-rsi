@@ -732,6 +732,15 @@ img, pre, table { max-width: 100%; }
 }
 .li-pass { background: var(--earned); color: #fff; }
 .li-fail { background: var(--crashed); color: #fff; }
+.li-open {
+  background: transparent; color: var(--ink-soft);
+  border: 2px solid var(--ink-soft); padding: 3px 10px;
+}
+.li-toc { margin: 26px 0 8px; border-top: 1px solid var(--rule-soft); padding-top: 18px; }
+.li-toc p { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 8px; }
+.li-toc ul { margin: 0; padding-left: 20px; font-size: 15.5px; color: var(--ink-soft); }
+.li-toc li { margin: 3px 0; line-height: 1.5; }
+.li-toc a { color: inherit; }
 .li-code {
   font-family: var(--mono); font-size: 13px; background: var(--paper-dim);
   border: 1px solid var(--rule); padding: 4px 8px; border-radius: 4px;
