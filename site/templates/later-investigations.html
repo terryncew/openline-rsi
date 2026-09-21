@@ -38,6 +38,24 @@
       <div class="li-boundary">
         <p>This page is <strong>not</strong> a continuation of the RSI experiment, not one planned research program, not a product feature list, and not a definition of OpenLine. It is a chronological record of later frozen experiments &mdash; and it keeps the failures visible.</p>
       </div>
+      <nav class="li-toc" aria-label="Newer entries">
+        <p>Newer entries (September 16&ndash;20, 2026)</p>
+        <ul>
+          <li><a href="#econ-001">9. Amortizing method improvement: ECON-001</a></li>
+          <li><a href="#econ-002">10. The cheapest acceptable successor: ECON-002</a></li>
+          <li><a href="#payback-001">11. Payback, first attempt: PAYBACK-001</a></li>
+          <li><a href="#payback-002">12. Payback, second attempt: PAYBACK-002</a></li>
+          <li><a href="#payback-003">13. Payback, third attempt: PAYBACK-003</a></li>
+          <li><a href="#acs-continuity-002">14. Replacing the enforcement host: ACS-CONTINUITY</a></li>
+          <li><a href="#owner-control-001">15. Owner succession: OWNER-CONTROL-001 (open)</a></li>
+          <li><a href="#kill-switch-portability-001">16. A portable STOP: KILL-SWITCH-PORTABILITY-001</a></li>
+          <li><a href="#independent-interop-001">17. An independent implementation: INDEPENDENT-INTEROP-001</a></li>
+          <li><a href="#jev-witness-demo-001">18. A witness with judgment: JEV-WITNESS-DEMO-001</a></li>
+          <li><a href="#candidate-admission-001">19. The evidence-closure hole: CANDIDATE-ADMISSION-001</a></li>
+          <li><a href="#evidence-closure-002">20. The repair, sealed: EVIDENCE-CLOSURE-002 (rc3)</a></li>
+          <li><a href="#context-admit">21. A shipped doorway, not a result: CONTEXT-ADMIT (rc4)</a></li>
+        </ul>
+      </nav>
     </div>
   </section>
 
@@ -219,8 +237,8 @@
         <p class="li-ev-note">Frozen record exists; public artifact link not yet available.</p>
       </article>
 
-      <article class="li-card li-newest" id="incident-replay-001">
-        <p class="li-num">8 &middot; INCIDENT-REPLAY-001 <span class="li-newtag">NEWEST</span></p>
+      <article class="li-card" id="incident-replay-001">
+        <p class="li-num">8 &middot; INCIDENT-REPLAY-001</p>
         <h2 class="li-q">Does one non-sovereign guardian catch a real-world-style trajectory escape earlier than a deterministic gate without incorrectly stopping a matched legitimate trajectory?</h2>
         <p class="li-result"><span class="li-badge li-fail">FAIL</span> <code class="li-code">FAIL_INCIDENT_REPLAY_001_FALSE_HOLD</code></p>
         <div class="li-obs">
@@ -247,12 +265,217 @@
         <p class="li-ev-note">Frozen record exists; public artifact link not yet available.</p>
       </article>
 
+      <article class="li-card" id="econ-001">
+        <p class="li-num">9 &middot; ECON-001 &middot; September 16, 2026</p>
+        <h2 class="li-q">Can successive model-proposed method improvements amortize their acquisition debt inside a frozen horizon?</h2>
+        <div class="li-result"><span class="li-badge li-open">INCOMPLETE</span> <span class="li-code">INCONCLUSIVE_INCOMPLETE_REPETITIONS</span></div>
+        <div class="li-obs">
+          <p>One of three planned repetitions finished. The run halted under the frozen fail-fast rule during rep two; reps two and three never executed. A second run died on a VM egress outage before it started.</p>
+          <p>Rep one completed: 128 invocations, all verified per arm. The acquisition gate rejected both candidates &mdash; no strict improvement. Acquisition debts were $0.277330 and $0.253009. Both payback inequalities failed, short $0.269030 and $0.305689. Break-even never crossed zero.</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>Rep one observed neither first-acquisition payback nor second-acquisition payback within the frozen 36-task horizon. The study as a whole earns no economic verdict.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>a verdict that process improvement does not pay back;</li>
+            <li>any inference about reps two and three, longer horizons, other task distributions, or other models;</li>
+            <li>a relaunch, a repair-and-continue, or replacement repetitions.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-airlock/commit/43f8436e5cd39392fb3eeeb4373ee365d1046bb8">rep-one report, openline-airlock</a> &middot; <a href="https://github.com/terryncew/openline-airlock/commit/2c777303ab29fa02e75f7f7df77eb02d968c9427">R2 reconciliation</a></p>
+      </article>
+
+      <article class="li-card" id="econ-002">
+        <p class="li-num">10 &middot; ECON-002 &middot; September 16, 2026</p>
+        <h2 class="li-q">Can any frozen candidate-generation strategy produce one successor at least 20% cheaper than the baseline, keeping 12/12 verified success on fresh paired tasks?</h2>
+        <div class="li-result"><span class="li-badge li-fail">CLOSED</span> <span class="li-code">ECON-002_CLOSED_NO_LARGE_SUCCESSOR</span></div>
+        <div class="li-obs">
+          <p>All six frozen candidates were rejected by the paired-12 / 20%-margin receiver rule. Every candidate preserved 12/12 verified success; the savings did not clear the bar. Best observed: 8.6% (S1). 152 of 152 scientific calls settled; nothing left unresolved.</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>None of the frozen candidate-generation strategies produced a successor at least 20% cheaper than the paired baseline while preserving 12/12 verified success on the frozen fresh-task evaluation.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>any inference beyond the frozen claim;</li>
+            <li>a follow-up under the same study identity &mdash; no ECON-003 is authorized by this freeze.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-airlock/commit/916895b6567a0645f722b78427665e9d18c5f48c">results freeze, openline-airlock</a> &middot; <a href="https://github.com/terryncew/openline-airlock/commit/ebae981927abcc4e7a2c1cbf1f378128adf3507b">closeout note</a></p>
+      </article>
+
+      <article class="li-card" id="payback-001">
+        <p class="li-num">11 &middot; PAYBACK-001 &middot; September 16, 2026</p>
+        <h2 class="li-q">Can one improvement investment amortize its debt over a frozen 450-task horizon?</h2>
+        <div class="li-result"><span class="li-badge li-open">INCOMPLETE</span> <span class="li-code">INCOMPLETE_APPARATUS_DEFECT</span></div>
+        <div class="li-obs">
+          <p>The runner instantiated the abstract <span class="li-code">Provider()</span> base class instead of <span class="li-code">RealProvider</span>. Every invocation died on a bare <span class="li-code">NotImplementedError</span> with empty usage. Zero provider data was obtained; zero calls settled. The preflight gate checked only that a response object came back, so four scientific invocations went out after an unclean preflight &mdash; against the authorization's own preflight rule.</p>
+          <p>The study never attempted contact. It earned no verdict on the payback question.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>a repair, a relaunch, or a rescue;</li>
+            <li>any claim about whether the debt would have paid back.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-airlock/commit/225f64bd320a57bc0452281718224e42193154d7">preregistration, openline-airlock</a> &middot; <a href="https://github.com/terryncew/openline-airlock/commit/acdc0b4ccb637aaa2782996018c370628b6b44a0">run evidence</a></p>
+      </article>
+
+      <article class="li-card" id="payback-002">
+        <p class="li-num">12 &middot; PAYBACK-002 &middot; September 16, 2026</p>
+        <h2 class="li-q">The same payback question, with the apparatus defect fixed. Does the debt amortize over 450 tasks?</h2>
+        <div class="li-result"><span class="li-badge li-open">INCOMPLETE</span> <span class="li-code">INCOMPLETE</span></div>
+        <div class="li-obs">
+          <p>Real contact this time. Acquisition completed; a successor was accepted (cost ratio 1.0175, 12/12 vs 12/12, zero regressions). The runner died on two consecutive transport failures at task 171 of 450. The partial curve went from &minus;$0.371712 to &minus;$0.381312 &mdash; no break-even.</p>
+          <p class="li-plain">This is not a negative payback result. It is a study that ended at task 171.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>a verdict on the payback question;</li>
+            <li>a retroactive completion from the partial curve &mdash; the 171-task curve was not used to move thresholds;</li>
+            <li>a rescue, a relaunch, or a horizon extension.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-airlock/commit/a24aa56ef0600c1d6953cbf06c36227c1523ad4">terminal evidence, openline-airlock</a> &middot; <a href="https://github.com/terryncew/openline-airlock/commit/aac08aed03f052da04c66e0e1f5b6872dfdf649a">PR #173</a></p>
+      </article>
+
+      <article class="li-card" id="payback-003">
+        <p class="li-num">13 &middot; PAYBACK-003 &middot; September 16, 2026</p>
+        <h2 class="li-q">The payback question again, on a fresh disjoint corpus. Does the debt amortize over 450 tasks?</h2>
+        <div class="li-result"><span class="li-badge li-open">INCOMPLETE</span> <span class="li-code">INCOMPLETE</span></div>
+        <div class="li-obs">
+          <p>Clean preflight. Acquisition on the fresh corpus; the accepted successor was byte-identical to PAYBACK-002's delta, earned independently on fresh data. The runner died at task 141 of 450 when a worker-level <span class="li-code">InfrastructureHalt</span> propagated past the runner's exception handlers &mdash; the same signature, on retrospective reading, as PAYBACK-002's death. Partial curve: &minus;$0.353316 to &minus;$0.348196. No break-even.</p>
+          <p class="li-plain">The partial curves are visible evidence, not a verdict. They must not be used to interpret or modify any future study.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>a verdict on the payback question;</li>
+            <li>a PAYBACK-004 &mdash; the freeze says none;</li>
+            <li>any claim about provider behavior beyond the recorded calls.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-airlock/commit/73f011a09828eebae7e6330f5594c99d3064cfa3">terminal evidence, openline-airlock</a> &middot; <a href="https://github.com/terryncew/openline-airlock/commit/13791a9ecb5370377ee50ec54530d6ffc0a9dce8">PR #175</a></p>
+      </article>
+
+      <article class="li-card" id="acs-continuity-002">
+        <p class="li-num">14 &middot; ACS-CONTINUITY &middot; September 17, 2026</p>
+        <h2 class="li-q">Can a planned replacement of one enforcement host with another preserve the owner's authority history, without a shared mutable database?</h2>
+        <div class="li-result"><span class="li-badge li-pass">PASS</span> <span class="li-code">PASS_ACS_CONTINUITY_PLANNED_HOST_HANDOFF_CONSERVES_AUTHORITY</span></div>
+        <div class="li-obs">
+          <p>One execution, $0, no rerun. All 11 cases passed; all 12 frozen conditions held; the invariant &mdash; committed + encumbered + available = 100 &mdash; held across the handoff. A successor-bound OpenLine handoff carried the cumulative 100-unit authority history from one independent enforcement host to the other.</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>Across a planned replacement of one independent ACS enforcement host with another, a successor-bound OpenLine handoff preserved the owner's cumulative 100-unit authority history without a shared mutable database.</p>
+          <h3 class="li-h">Limits</h3>
+          <p>This result proves only a planned one-way host replacement. Not claimed: that ACS is broken; arbitrary failover; active-active authority; distributed exactly-once semantics; arbitrary clone recovery; consensus-free multi-writer conservation.</p>
+          <p>The predecessor run, ACS-CONTINUITY-001, failed on an apparatus defect &mdash; a harness bug stopped the SIGKILL probe from ever executing &mdash; and froze as a terminal failure with no rerun. The method kept that failure frozen and ran the successor under a new identity.</p>
+        </div>
+        <p class="li-ev-note">Frozen record exists; public artifact link not yet available.</p>
+      </article>
+
+      <article class="li-card" id="owner-control-001">
+        <p class="li-num">15 &middot; OWNER-CONTROL-001 &middot; September 19, 2026</p>
+        <h2 class="li-q">Does the receipt-gate / wallet architecture have a defensible in-band owner succession path?</h2>
+        <div class="li-result"><span class="li-badge li-open">OPEN</span> <span class="li-code">INCONCLUSIVE_ARCHITECTURE</span></div>
+        <div class="li-obs">
+          <p>No scientific contact was made and no apparatus was built, so no claim was earned. The finding stands as an open design question: the owner key is pinned outside the protocol; supersede changes standing, never the issuer key. The smallest required missing primitive is an owner-signed trust-root transition event.</p>
+          <p>The planned platform-exit follow-up has not started. This slot is deliberately left open.</p>
+        </div>
+        <p class="li-ev-note">Frozen record exists; public artifact link not yet available.</p>
+      </article>
+
+      <article class="li-card" id="kill-switch-portability-001">
+        <p class="li-num">16 &middot; KILL-SWITCH-PORTABILITY-001 &middot; September 19, 2026</p>
+        <h2 class="li-q">Can an owner-controlled STOP survive being ported to a second, independent implementation?</h2>
+        <div class="li-result"><span class="li-badge li-pass">PASS</span> <span class="li-code">PASS_KILL_SWITCH_PORTABILITY_001_PROTOCOL_PATTERN</span></div>
+        <div class="li-obs">
+          <p>A second implementation was built from the frozen contract alone &mdash; no OpenLine implementation code &mdash; and stopped all seven covered post-stop consequence-survival paths. Stale receivers and pre-stop in-flight work were stopped at a final consequence boundary that serialized effect commitment against STOP_EFFECTIVE. A separate auditor verified the resulting evidence.</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>In the tested reference architecture, an owner-controlled STOP prevented all seven covered post-stop consequence-survival paths from committing protected effects. Stale receivers and pre-stop in-flight work were stopped at a final consequence boundary that serialized effect commitment against STOP_EFFECTIVE, and a separate auditor verified the resulting evidence.</p>
+          <h3 class="li-h">What it did not solve</h3>
+          <ul class="li-list">
+            <li>bypassing receivers &mdash; any receiver, tool, or system that routes around the gate is outside coverage;</li>
+            <li>pre-STOP_EFFECTIVE irreversibility;</li>
+            <li>the authoritative store itself &mdash; a file rewrite with privileged access defeats the control;</li>
+            <li>owner compromise;</li>
+            <li>shutting down the model &mdash; not that any process was turned off, and not that AI anywhere was shut down.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-kill-switch/tree/a303796745164e3c186d7a45cc090004afdc8e7f">openline-kill-switch, main at a303796 (tag v0.1.0)</a></p>
+      </article>
+
+      <article class="li-card" id="independent-interop-001">
+        <p class="li-num">17 &middot; INDEPENDENT-INTEROP-001 &middot; September 19&ndash;20, 2026</p>
+        <h2 class="li-q">Can an implementation written only from the public documents verify OpenLine-signed authority artifacts and reach the same dispositions?</h2>
+        <div class="li-result"><span class="li-badge li-open">INCOMPLETE</span> <span class="li-code">INCOMPLETE_INDEPENDENT_INTEROP_001_PROFILE_AMBIGUITY</span></div>
+        <div class="li-obs">
+          <p>The independent implementation verified genuine OpenLine-signed artifacts and matched dispositions on the grant path: accept a valid COMMIT, refuse a tampered one, refuse a replay, accept a fresh successor. It committed real protected effects itself, and the existing independent verifier accepted its receipt.</p>
+          <p>The revocation path exposed a genuine gap in the public contract. The docs list verdicts {VERIFIED, REJECTED, UNDECIDABLE} but pin no (verdict, decision) pairing for a terminal DENY &mdash; so the independent build, following the frozen profile exactly, refused a genuine revocation artifact as not authoritative. Not a FAIL: B executed the frozen profile exactly, and A produced a genuine artifact.</p>
+          <p class="li-plain">The tempting sentence &mdash; "the contract traveled without the implementation" &mdash; is not earned. A full PASS was not earned.</p>
+        </div>
+        <p class="li-ev">Frozen record: <a href="https://github.com/terryncew/openline-provider-sandbox/tree/study/independent-interop-001">effect branches, openline-provider-sandbox</a>. The clean-room implementation itself remains local.</p>
+      </article>
+
+      <article class="li-card" id="jev-witness-demo-001">
+        <p class="li-num">18 &middot; JEV-WITNESS-DEMO-001 &middot; September 20, 2026</p>
+        <h2 class="li-q">Can a receiver bind a Jev judgment to the exact action and current authority &mdash; one judgment, one effect, revocation effective?</h2>
+        <div class="li-result"><span class="li-badge li-pass">PASS</span> <span class="li-code">PASS_JEV_WITNESS_DEMO_001</span></div>
+        <div class="li-obs">
+          <p>A live end-to-end demo: one Jev judgment at P=0.84. Version one committed once. After revocation, version two ran the same evidence to a DENY &mdash; no second effect. Versions three, four, and five were refused.</p>
+          <h3 class="li-h">Earned claim</h3>
+          <p>A receiver can choose what confidence earns for a particular consequence. Jev supplies the judgment. OpenLine binds it to the exact action and current authority.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <p>Jev correctness. Improved calibration. An official TypeSafe or Vercel partnership. Zero Data Retention. Provider non-retention. Production privacy or safety. Demand. Adoption.</p>
+          <p>The study predecessor, JEV-WITNESS-001, is frozen INCONCLUSIVE on an apparatus defect; JEV-WITNESS-002 has not started. A separate provider study, VERCEL-003, froze BELOW_RECEIVER_THRESHOLD. Each record stands on its own; none was merged into this one.</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-receipt-gate/tree/31070c80ad254284227ce04263138ad52cc04dc9/proofs/jev-witness-demo-001">proofs/jev-witness-demo-001, openline-receipt-gate</a></p>
+      </article>
+
+      <article class="li-card" id="candidate-admission-001">
+        <p class="li-num">19 &middot; CANDIDATE-ADMISSION-001 &middot; September 20, 2026</p>
+        <h2 class="li-q">Does the Half-Life candidate-admission doorway preserve the receiver's required evidence when a candidate is compressed by a different compiler?</h2>
+        <div class="li-result"><span class="li-badge li-fail">FAIL</span> <span class="li-code">FAIL &mdash; CANDIDATE ADMISSION ALLOWED LOSS OF REQUIRED EVIDENCE-REFERENCE STATE</span></div>
+        <div class="li-obs">
+          <p>A candidate that emptied its evidence references (4 to 0) was admitted as equivalent. The doorway compared evidence-reference IDs, never the evidence objects themselves &mdash; dangling references pass with zero mismatches. No repair, no release, no PR, no merge followed. The failure is frozen exactly as found and became the falsifier for everything after it.</p>
+          <p>The frozen REASON reads, in full: "A candidate that severed all required evidence objects from the carried-forward state was admitted as equivalent."</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-half-life/tree/0b80bd40e3f79d9458fb5457468f0c2a3bb6a128/evidence/frozen-failures/p5-evidence-refs-emptied">frozen failure record, openline-half-life</a></p>
+      </article>
+
+      <article class="li-card" id="evidence-closure-002">
+        <p class="li-num">20 &middot; EVIDENCE-CLOSURE-002 &middot; September 20, 2026</p>
+        <h2 class="li-q">Can the evidence-closure hole be repaired without giving up compiler neutrality?</h2>
+        <div class="li-result"><span class="li-badge li-open">REPAIR SEALED</span> <span class="li-code">0.4.0rc3 &middot; candidate-admission doorway, evidence-closed</span></div>
+        <div class="li-obs">
+          <p>The repair keeps compiler neutrality and closes the hole: every evidence reference relied on by protected candidate state must resolve to the exact source-bound evidence required by receiver policy. No byte-identity backdoor &mdash; that would have defeated the point.</p>
+          <p>The contract was frozen first, then the implementation. The release candidate sealed with the gates green: the release checker exited 0, CI passed on 3.11, 3.12, and 3.13, and the frozen 001 falsifier is refused through the CLI.</p>
+          <h3 class="li-h">Earned contract invariant</h3>
+          <p>Every evidence reference relied on by protected candidate state must resolve to the exact source-bound evidence required by receiver policy.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <p>Semantic preservation of arbitrary LLM behavior. Production memory safety. Compatibility with any external compiler.</p>
+          <p>The frozen 001 failure record above was left untouched. rc3 is the historical incumbent; it is a sealed release candidate, not a research verdict.</p>
+        </div>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-half-life/tree/4162554fa0bd41f01e83c609f6254c2192c3960f/EVIDENCE_CLOSURE_CONTRACT_002.md">evidence-closure contract, openline-half-life</a> &middot; <a href="https://github.com/terryncew/openline-half-life/tree/b9a1359fea2d3a436348357da35e9398ab07deaf/RELEASE_MANIFEST.json">rc3 release manifest</a></p>
+      </article>
+
+      <article class="li-card li-newest" id="context-admit">
+        <p class="li-num">21 &middot; CONTEXT-ADMIT &middot; September 20, 2026 <span class="li-newtag">NEWEST</span></p>
+        <h2 class="li-q">A shipped doorway for admitting contexts, and a check on whether they still stand. Is this a research result?</h2>
+        <div class="li-result"><span class="li-badge li-open">PRODUCT</span> <span class="li-code">0.4.0rc4 &middot; shipped CLI, not an experiment</span></div>
+        <div class="li-obs">
+          <p>The discrimination study ran 6 of 6 discrimination tests clean &mdash; fixtures and test code only, zero source-code changes &mdash; but it carries no experiment verdict, and nothing in the pipeline forces the continued-use check before the next protected use. That is the honest boundary of the study, and it stays a boundary.</p>
+          <p>The shipped artifact is different from the study. <span class="li-code">context-admit</span> is a CLI in 0.4.0rc4: <span class="li-code">admit</span> is a thin wrapper over the rc3 doorway and produces an admitted-context artifact; <span class="li-code">check</span> answers whether the admitted context still matches receiver-protected state implied by verifiable current history &mdash; CURRENT, or REHYDRATE_REQUIRED. It fails closed: missing or unverifiable history can never be CURRENT. There is no rehydrate command and no automatic rehydration.</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>an experiment verdict &mdash; no PASS or FAIL is manufactured for a product feature;</li>
+            <li>automatic enforcement &mdash; the check is caller-invoked, never self-triggering;</li>
+            <li>arbitrary semantic-equivalence claims or production durability guarantees.</li>
+          </ul>
+        </div>
+        <p class="li-ev">Shipped artifact: <a href="https://github.com/terryncew/openline-half-life/tree/3bdb16f0c8c6d9cb4e5486206d3f87c5d0a1853c/src/openline_half_life/context_admit.py">context_admit.py, openline-half-life at 3bdb16f</a> &middot; <a href="https://github.com/terryncew/openline-half-life/tree/3bdb16f0c8c6d9cb4e5486206d3f87c5d0a1853c/CLAIM_BOUNDARY.md">claim boundary</a></p>
+      </article>
+
       <section class="li-close" aria-labelledby="li-close-title">
         <h2 id="li-close-title" class="li-close-title">WHAT THE RECORD SAYS SO FAR</h2>
         <p>The later experiments did not produce one clean march of successes.</p>
         <p>Some properties held.<br>Some helpers were useful.<br>Some helpers failed.<br>More agents sometimes created more failure points.<br>A watcher could notice trouble earlier and still intervene too early.</p>
         <p>The recurring constraint is narrower:</p>
         <p class="li-plain">intelligence can propose, watch, recover, replace and coordinate.<br>That does not mean it should own the consequence boundary.</p>
+        <p>The September 16&ndash;20 entries above extend the record without changing its shape. The economics lines (9&ndash;13) left recursive productivity an open question: one incomplete study, one closed negative, three attempts that never reached a verdict. A portable STOP (16) and a planned host replacement (14) earned their claims inside stated limits; an independent implementation (17) exposed a real gap in the public contract instead of a clean pass; the Jev witness (18) bound judgment to exact action and current authority; the Half-Life failure (19) stayed frozen while its repair sealed (20); and the context-admit doorway shipped as a product (21), not a result.</p>
+        <p>Two slots stay deliberately open. Recursive productivity has a fresh attempt on the board that has not yet run &mdash; no experiment ID, no preregistration, and no result are claimed here. Owner-controlled platform exit has not started.</p>
       </section>
 
       <section class="li-interp" aria-labelledby="li-interp-title">
