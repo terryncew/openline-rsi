@@ -711,6 +711,9 @@ img, pre, table { max-width: 100%; }
   padding: 26px 26px; margin: 28px 0; border-radius: 6px;
 }
 .li-card.li-newest { border: 2px solid var(--ink); }
+.li-media { margin: 1.25em 0; }
+.li-media img { display: block; max-width: 360px; height: auto; border: 1px solid var(--rule); border-radius: 4px; }
+.li-media figcaption { margin-top: .5em; font-size: 13.5px; color: var(--ink-faint); line-height: 1.5; }
 .li-num {
   font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--ink-faint); margin: 0 0 10px;

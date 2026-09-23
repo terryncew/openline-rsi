@@ -39,7 +39,7 @@
         <p>This page is <strong>not</strong> a continuation of the RSI experiment, not one planned research program, not a product feature list, and not a definition of OpenLine. It is a chronological record of later frozen experiments &mdash; and it keeps the failures visible.</p>
       </div>
       <nav class="li-toc" aria-label="Newer entries">
-        <p>Newer entries (September 16&ndash;20, 2026)</p>
+        <p>Newer entries (September 16&ndash;23, 2026)</p>
         <ul>
           <li><a href="#econ-001">9. Amortizing method improvement: ECON-001</a></li>
           <li><a href="#econ-002">10. The cheapest acceptable successor: ECON-002</a></li>
@@ -54,6 +54,7 @@
           <li><a href="#candidate-admission-001">19. The evidence-closure hole: CANDIDATE-ADMISSION-001</a></li>
           <li><a href="#evidence-closure-002">20. The repair, sealed: EVIDENCE-CLOSURE-002 (rc3)</a></li>
           <li><a href="#context-admit">21. A shipped doorway, not a result: CONTEXT-ADMIT (rc4)</a></li>
+          <li><a href="#capability-exchange-001">23. An agent buys a skill: CAPABILITY-EXCHANGE-001</a></li>
         </ul>
       </nav>
     </div>
@@ -468,8 +469,8 @@
         <p class="li-ev">Shipped artifact: <a href="https://github.com/terryncew/openline-half-life/tree/3bdb16f0c8c6d9cb4e5486206d3f87c5d0a1853c/src/openline_half_life/context_admit.py">context_admit.py, openline-half-life at 3bdb16f</a> &middot; <a href="https://github.com/terryncew/openline-half-life/tree/3bdb16f0c8c6d9cb4e5486206d3f87c5d0a1853c/CLAIM_BOUNDARY.md">claim boundary</a></p>
       </article>
 
-      <article class="li-card li-newest" id="rpi-001">
-        <p class="li-num">22 &middot; RPI-001 &middot; September 21, 2026 <span class="li-newtag">NEWEST</span></p>
+      <article class="li-card" id="rpi-001">
+        <p class="li-num">22 &middot; RPI-001 &middot; September 21, 2026</p>
         <h2 class="li-q">Does recursive self-improvement pay for itself? A fresh A/B/C attempt on matched tasks, with every cost counted.</h2>
         <div class="li-result"><span class="li-badge li-fail">TERMINAL &middot; NEGATIVE</span> <span class="li-code">RPI-001_TERMINAL_2026-09-21</span></div>
         <div class="li-obs">
@@ -491,13 +492,38 @@
         <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-airlock/tree/d4c81e6/study/rpi-001/TERMINAL_RESULT.md">terminal result, openline-airlock at d4c81e6</a> &middot; <a href="https://github.com/terryncew/openline-airlock/tree/d4c81e6/study/rpi-001/PREREGISTRATION.md">preregistration</a> &middot; <a href="https://github.com/terryncew/openline-airlock/tree/d4c81e6/study/rpi-001/FUNDS_LEDGER_FREEZE.json">frozen funds ledger</a></p>
       </article>
 
+      <article class="li-card li-newest" id="capability-exchange-001">
+        <p class="li-num">23 &middot; CAPABILITY-EXCHANGE-001 &middot; September 23, 2026 <span class="li-newtag">NEWEST</span></p>
+        <h2 class="li-q">Can one agent buy a skill from another &mdash; and prove what happened?</h2>
+        <p class="li-result"><span class="li-badge li-pass">PASS</span> <code class="li-code">PASS_CAPABILITY_TRANSFER_AND_SETTLEMENT_001</code></p>
+        <div class="li-obs">
+          <p>An agent offers a skill. The buyer sets the rules. The seller packaged <code class="li-code">symptom_summarizer</code> (baseline, a real frozen repair-process component &mdash; zero imports, deterministic) with a signed manifest and submitted its 64-hex package hash. The buyer's own acceptance battery &mdash; 12 frozen fixtures with expected labels predating the exchange &mdash; judged the exact submitted package: schema, determinism, accuracy 10/12, no-regression against the frozen 10/12 baseline, fixture integrity. The buyer accepted the exact capability it evaluated.</p>
+          <p>Then, in order: import re-verified the artifact hash; the buyer ran the capability on 4 fresh-work fixtures (disjoint from the acceptance battery), each output recomputed by the receiver from the hash-bound lineage artifact; one payment of 250 SIM_USD settled after acceptance (buyer 10000 &rarr; 9750, seller 0 &rarr; 250, transfers = 1). Hash chain intact over 12 events. Fully offline: $0.00 of $3.00 spent, zero paid calls.</p>
+          <p>The frozen negative controls all held: a schema-violating candidate was REJECTED, blocking settlement; a mutated artifact failed the import binding check, denied; a wrong-version delivery failed the artifact binding check, denied; a double settle and a direct bank receipt replay produced the same receipt &mdash; still one payment; a wrong-buyer signature returned PARTY_MISMATCH; a fixture write at import was detected and rejected; an altered battery aborted on integrity; an altered agreement amount mismatched. After settlement the buyer revoked the buyer-agent invoke mandate and the next invocation through the receiver was denied (MANDATE_REVOKED) while the settlement receipt stayed byte-identical. Future use through this receiver blocked.</p>
+          <h3 class="li-h">What it earned</h3>
+          <p>&ldquo;One independently controlled agent transferred a reusable capability to another; the buyer independently accepted the exact capability under its own rules, invoked it on fresh work, and settled one simulated payment after acceptance.&rdquo;</p>
+          <h3 class="li-h">What it did not earn</h3>
+          <ul class="li-list">
+            <li>any claim about marketplaces, demand, economics, production readiness, interoperability, adoption, recursive improvement, equilibrium, receipt market value, or BUY-beats-BUILD;</li>
+            <li>independent outside adoption &mdash; both agents were operated by Terrynce on one host; separate keys, credential directories, and signing subprocesses demonstrate the authority boundary, not adoption;</li>
+            <li>transfer of stateful, networked, or nondeterministic capabilities &mdash; the capability was genuine but small and deterministic;</li>
+            <li>erasure or global prevention of use &mdash; revocation denies gated future use through this receiver only.</li>
+          </ul>
+        </div>
+        <figure class="li-media">
+          <a href="https://raw.githubusercontent.com/terryncew/openline-rsi/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/cx001-demo.mp4"><img src="https://raw.githubusercontent.com/terryncew/openline-rsi/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/cx001-demo-poster.png" alt="Still from the CAPABILITY-EXCHANGE-001 demo replay: Local prototype, simulated payment — one simulated payment settles." width="360"></a>
+          <figcaption>Demo video (38s, 1080&times;1920, sound-off) &mdash; a replay of the recorded results above, labeled on screen throughout. Not a new experiment.</figcaption>
+        </figure>
+        <p class="li-ev">Frozen evidence: <a href="https://github.com/terryncew/openline-rsi/tree/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001">evidence/capability-exchange-001, pinned at e874477</a> &mdash; <a href="https://github.com/terryncew/openline-rsi/blob/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/CAPABILITY_EXCHANGE_001_TERMINAL_REPORT.md">terminal report</a> &middot; <a href="https://github.com/terryncew/openline-rsi/blob/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/CAPABILITY_EXCHANGE_001_PREREGISTRATION_FREEZE.md">preregistration freeze</a> &middot; <a href="https://github.com/terryncew/openline-rsi/blob/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/CX001_TERMINAL_EVIDENCE.json">frozen identifiers</a> &middot; <a href="https://github.com/terryncew/openline-rsi/blob/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/CX001_EVENT_LOG.json">12-event run log</a> &middot; <a href="https://github.com/terryncew/openline-rsi/blob/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/CX001_SETTLEMENT_BANK.json">settlement bank state</a> &middot; <a href="https://github.com/terryncew/openline-rsi/blob/e8744773efa1fc9a3c716bef2c5b83f40ac5474c/evidence/capability-exchange-001/CX001_VERIFY_OFFLINE.md">offline verification instructions</a></p>
+      </article>
+
       <section class="li-close" aria-labelledby="li-close-title">
         <h2 id="li-close-title" class="li-close-title">WHAT THE RECORD SAYS SO FAR</h2>
         <p>The later experiments did not produce one clean march of successes.</p>
         <p>Some properties held.<br>Some helpers were useful.<br>Some helpers failed.<br>More agents sometimes created more failure points.<br>A watcher could notice trouble earlier and still intervene too early.</p>
         <p>The recurring constraint is narrower:</p>
         <p class="li-plain">intelligence can propose, watch, recover, replace and coordinate.<br>That does not mean it should own the consequence boundary.</p>
-        <p>The September 16&ndash;21 entries above extend the record without changing its shape. The economics lines (9&ndash;13) left recursive productivity an open question: one incomplete study, one closed negative, three attempts that never reached a verdict. A portable STOP (16) and a planned host replacement (14) earned their claims inside stated limits; an independent implementation (17) exposed a real gap in the public contract instead of a clean pass; the Jev witness (18) bound judgment to exact action and current authority; the Half-Life failure (19) stayed frozen while its repair sealed (20); the context-admit doorway shipped as a product (21), not a result; and the fresh recursive-productivity attempt (22) then terminalized negative on its own frozen terms.</p>
+        <p>The September 16&ndash;21 entries above extend the record without changing its shape. The economics lines (9&ndash;13) left recursive productivity an open question: one incomplete study, one closed negative, three attempts that never reached a verdict. A portable STOP (16) and a planned host replacement (14) earned their claims inside stated limits; an independent implementation (17) exposed a real gap in the public contract instead of a clean pass; the Jev witness (18) bound judgment to exact action and current authority; the Half-Life failure (19) stayed frozen while its repair sealed (20); the context-admit doorway shipped as a product (21), not a result; and the fresh recursive-productivity attempt (22) then terminalized negative on its own frozen terms; entry 23 (September 23) then recorded a capability exchange &mdash; one agent transferred a reusable capability to another, the buyer accepted it under its own rules, invoked it on fresh work, and settled one simulated payment &mdash; with a 38-second replay of the recorded steps beside the frozen record.</p>
         <p>One slot stays deliberately open: owner-controlled platform exit has not started. The fresh attempt is closed with its exact disposition, hashes, economics, and limits. RSI-006 stays frozen as NO-GO, and the earlier economics attempts stay visible as they were.</p>
       </section>
 
