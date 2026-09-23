@@ -1,0 +1,166 @@
+{
+ "rejected": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:f002f598e858e8d809a58d759987d6"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:f002f598e858e8d809a58d759987d6"
+  },
+  {
+   "seq": 3,
+   "kind": "submit",
+   "decision": "ALLOWED",
+   "action": "job:submit:fad03a636c4c21287dda3435b3a0a"
+  },
+  {
+   "seq": 4,
+   "kind": "evaluation",
+   "decision": null,
+   "action": ""
+  }
+ ],
+ "mutated": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:b94bd552d0ade73377ce6e1ab0ab48"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:b94bd552d0ade73377ce6e1ab0ab48"
+  },
+  {
+   "seq": 3,
+   "kind": "submit",
+   "decision": "ALLOWED",
+   "action": "job:submit:3f1e3a783c448080fa3d980940408"
+  },
+  {
+   "seq": 4,
+   "kind": "evaluation",
+   "decision": null,
+   "action": ""
+  },
+  {
+   "seq": 5,
+   "kind": "accept",
+   "decision": "ALLOWED",
+   "action": "job:accept:82b3de81788c0230eb184c468b39e"
+  }
+ ],
+ "wrong_buyer": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:18da3574efbf6bc7c98a82d59310df"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:18da3574efbf6bc7c98a82d59310df"
+  },
+  {
+   "seq": 3,
+   "kind": "submit",
+   "decision": "ALLOWED",
+   "action": "job:submit:56e0548a0ec0c1f3bb03a68df4ec3"
+  },
+  {
+   "seq": 4,
+   "kind": "evaluation",
+   "decision": null,
+   "action": ""
+  }
+ ],
+ "wrong_version": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:7049bc26994dbc9b955f7252ca9e26"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:7049bc26994dbc9b955f7252ca9e26"
+  },
+  {
+   "seq": 3,
+   "kind": "submit",
+   "decision": "ALLOWED",
+   "action": "job:submit:c19c05b62bcf25fe7a79d2068c45e"
+  }
+ ],
+ "tamper_battery": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:59382342c2ea7c57a62bc7dd29759b"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:59382342c2ea7c57a62bc7dd29759b"
+  },
+  {
+   "seq": 3,
+   "kind": "submit",
+   "decision": "ALLOWED",
+   "action": "job:submit:baec9308ea1200f1e8a2134935698"
+  }
+ ],
+ "tamper_fixture": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:d837005ee2037e4a9bb0744cf3b9c9"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:d837005ee2037e4a9bb0744cf3b9c9"
+  },
+  {
+   "seq": 3,
+   "kind": "submit",
+   "decision": "ALLOWED",
+   "action": "job:submit:26f68f8bd31a320dc9d57b3eb0b7b"
+  },
+  {
+   "seq": 4,
+   "kind": "evaluation",
+   "decision": null,
+   "action": ""
+  }
+ ],
+ "tamper_terms": [
+  {
+   "seq": 1,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:c0c86cd1c484b60c7a8e20bee9fea8"
+  },
+  {
+   "seq": 2,
+   "kind": "agree",
+   "decision": "ALLOWED",
+   "action": "job:agree:c0c86cd1c484b60c7a8e20bee9fea8"
+  }
+ ]
+}

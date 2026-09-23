@@ -200,6 +200,106 @@
       "record_type": "freeze record (Gate-2A terminal NO-GO)",
       "sha256": "77a83b8c5ce06cddbebdc4f6aeadb99bc1159debbc3e11fb227a08c08d245a64",
       "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CAPABILITY_EXCHANGE_001_TERMINAL_REPORT.md",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_terminal_report",
+      "record_type": "terminal report",
+      "sha256": "467a77e0d37e06d89fa6d034a65de3f69b129f976027d36f1e094196853ec6a8",
+      "source_path": "files/CAPABILITY-EXCHANGE-001-report.md",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CAPABILITY_EXCHANGE_001_PREREGISTRATION_FREEZE.md",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_preregistration_freeze",
+      "record_type": "preregistration / freeze note",
+      "sha256": "e4da2d4f9f8344497f5bd2b8845fb34b6554aa9d427565888f422c9670ff82d3",
+      "source_path": "files/FREEZE.md",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CX001_TERMINAL_EVIDENCE.json",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_terminal_evidence",
+      "record_type": "frozen identifiers",
+      "sha256": "d094c3786ed3f24cc7b83ffd0e6e3d3d1c4d0b5dd48c8390c258e855c98680e0",
+      "source_path": "hidden_files/evidence/terminal_evidence.json",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CX001_EVENT_LOG.json",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_event_log",
+      "record_type": "event log (12 hash-chained events)",
+      "sha256": "c51be83634b48971509382b574b5f83c93462cfdb39768e03242a93faa3993c4",
+      "source_path": "hidden_files/work/runs/main/coordinator/coordinator.sqlite (events table, exported)",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CX001_SETTLEMENT_BANK.json",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_settlement_bank",
+      "record_type": "settlement bank state",
+      "sha256": "9bfb949e14abe6095929d05aee2659da5f40b9047a73a31ac791defa4a9995da",
+      "source_path": "hidden_files/work/runs/main/provider/bank.sqlite (balances + transfers, exported)",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CX001_REPLAY_NOTE.md",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_replay_note",
+      "record_type": "replay note (demonstration vs experiment)",
+      "sha256": "5f4d0cd311085190938fd417a7ee1369f8c0526a1389228230611ec206cdcf5d",
+      "source_path": "new for this package (no source record)",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CX001_VERIFY_OFFLINE.md",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_verify_offline",
+      "record_type": "offline verification instructions",
+      "sha256": "bf0c9d9f23305eee49aebb133687cfa05e8be07c05319bda3c9135acd8123ad3",
+      "source_path": "new for this package (no source record)",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/cx001-demo.mp4",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_demo_video",
+      "record_type": "demo video (replay of recorded results)",
+      "sha256": "ce3f82a9e0627e358be5fa1674aff3a8633c0bb62da6403d73b1269e7321b9f3",
+      "source_path": "files/cx001-demo.mp4",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/cx001-demo-poster.png",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_demo_poster",
+      "record_type": "demo poster",
+      "sha256": "4e4619bbb2d65e884477aae433e958fe28c829b49bb6da13d3371037ffefb9dd",
+      "source_path": "files/cx001-demo-poster.png",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
+    },
+    {
+      "copy_path": "evidence/capability-exchange-001/CX001_CONTROL_EVENT_LOGS.json",
+      "frozen_ref": "capability-exchange-001 lane workspace (local, not version-controlled)",
+      "key": "cx001_control_event_logs",
+      "record_type": "control-run event logs (7 runs, exported, no reconstruction)",
+      "sha256": "2b8943907889bbabdf327b7215eb899eb266318cd80a1f98f937881fee6b6d1a",
+      "source_path": "hidden_files/work/runs/*/coordinator/coordinator.sqlite (seq + kind, exported)",
+      "source_repo": "local workspace (not version-controlled)",
+      "verification": "verified-copy"
     }
   ],
   "external_references": [
