@@ -15,6 +15,12 @@ It re-hashes every copied object against the digest declared in
 `site/data/manifest.json` and fails nonzero on any mismatch. The CX001
 copies are registered under keys `cx001_*`.
 
+A digest match proves only that these copies are byte-exact — that the
+evidence you are reading is the evidence that was frozen. It does not
+prove the experiment was correct, the controls were sufficient, or the
+claims are true. Those are questions for the frozen record and its stated
+limits, below.
+
 ## 2. Check the frozen identifiers against the terminal report
 
 `CX001_TERMINAL_EVIDENCE.json` carries the lane's frozen digests:
@@ -32,36 +38,73 @@ contact.
 
 ## 3. Walk the run log
 
-`CX001_EVENT_LOG.json` holds the coordinator's 12 hash-chained events:
+`CX001_EVENT_LOG.json` holds the coordinator's 12 hash-chained events of
+the main run. The exact sequence, read from the log itself:
 
-1. agree — both parties, distinct principals
-2. submit — 64-hex package hash
-3. accept — buyer ELIGIBLE verdict, accuracy 10/12
-4–7. invoke — 4 fresh-work invocations, each output recomputed by the
-   receiver from the hash-bound lineage artifact
-8. settle — one payment of 250 SIM_USD, transfers = 1
-9–12. control events and post-settlement revocation records
+1. agree — buyer agrees (distinct buyer principal)
+2. agree — seller agrees (distinct seller principal)
+3. submit — seller submits the 64-hex package hash
+4. evaluation — buyer-owned battery verdict (ELIGIBLE, accuracy 10/12)
+5. accept — buyer accepts the exact evaluated package
+6. import — artifact hash re-verified at import into the buyer lineage
+7. invocation — fresh-work invocation 1 (receiver gate: ALLOWED)
+8. invocation — fresh-work invocation 2 (ALLOWED)
+9. invocation — fresh-work invocation 3 (ALLOWED)
+10. invocation — fresh-work invocation 4 (ALLOWED)
+11. payment_intent — settlement precondition recorded
+12. settlement — one payment of 250 SIM_USD, transfers = 1
 
-Each event embeds its decision authority and epoch certificate; the chain
-is append-only — the frozen report notes "hash chain intact over 12 events".
+Each gate-checked event carries a gate receipt: `decision_authority` is the
+buyer's receiver (RECEIVER_GATE), and the ALLOWED decisions are signed by
+the gate. Events 4–6 and 11–12 are coordinator records without gate
+receipts; their content is what the frozen terminal report quotes.
 
-## 4. Check the settlement bank state
+Independently checkable from this file: the sequence of kinds, the two
+distinct principals, the ALLOWED gate decisions, and the single settlement
+with one transfer. The event bodies also embed the parties' mandate
+histories (mandate issue/revoke records with public keys and signatures —
+no private keys); these are per-action mandate lifecycle records, not a
+record of any single control.
+
+## 4. Check the control runs (separate from the main log)
+
+`CX001_CONTROL_EVENT_LOGS.json` exports the preserved coordinator event
+logs of the seven frozen control runs, exported with no reconstruction:
+
+- rejected: halted after event 4 (evaluation) — schema-violating candidate
+- mutated: halted after event 5 (accept) — accepted artifact mutated
+- wrong_buyer: halted after event 4 (evaluation) — seller-signed buyer accept
+- wrong_version: halted after event 3 (submit) — delivered bytes != hash
+- tamper_battery: halted after event 3 (submit) — altered battery
+- tamper_fixture: halted after event 4 (evaluation) — fixture write attempt
+- tamper_terms: halted after event 2 (agree) — altered agreement amount
+
+What these logs show: each control run stopped at the frozen boundary,
+with no event beyond the blocking step and no settlement in any of them.
+What they do not show: the denial payloads themselves (e.g. the REJECTED
+verdict text, the IMPORT_BINDING_MISMATCH / ARTIFACT_BINDING_MISMATCH /
+PARTY_MISMATCH / BATTERY_INTEGRITY / AGREEMENT_MISMATCH reason strings)
+were not preserved as standalone checkable records in this package. Those
+outcomes are claims of the frozen terminal report (section "Terminal
+conditions", items 10–14), not outcomes you can re-derive from the
+published artifacts. They are report-only here, stated as such.
+
+The post-settlement revocation control is likewise report-only in this
+package: the terminal report describes the buyer revoking the buyer-agent
+invoke mandate and the next receiver-gated invocation being denied
+(MANDATE_REVOKED) with the settlement receipt unchanged. No standalone
+denial receipt for that invocation is preserved in the published
+artifacts; the MANDATE_REVOKED records embedded in the mandate histories
+are lifecycle events, not the control's denial record. The wording stands
+as the report gives it: "Future use through this receiver blocked."
+
+## 5. Check the settlement bank state
 
 `CX001_SETTLEMENT_BANK.json` shows final balances (buyer 9750, seller 250)
-and a single transfer record — one payment, no double payment. The negative
-controls (rejected candidate, mutated artifact, double settle, receipt
-replay, wrong buyer, wrong version, tamper attempts) are narrated in the
-terminal report's "Terminal conditions" section; their frozen status is
-the report itself, not an attached second database.
-
-## 5. Confirm the revocation boundary
-
-After settlement the buyer revoked the buyer-agent invoke mandate; the next
-invocation attempt through the receiver was denied (MANDATE_REVOKED) while
-the historical settlement receipt is byte-identical and the state remains
-SETTLED. The exact wording: "Future use through this receiver blocked" —
-the revocation denies gated future use; it does not claim exported code was
-erased or all use prevented.
+and a single transfer record — one payment, no double payment. Checkable
+from this file: exactly one transfer exists. The replay control (double
+settle + direct bank receipt replay producing the same receipt, still one
+transfer) is report-only, per section 4 above.
 
 ## What these records do not let you claim
 
