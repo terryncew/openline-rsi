@@ -1,0 +1,13 @@
+{
+ "package_hash": "6ef470c4fbcd0cf6786b66c39ad090c21ce2bf92972185992c210202e48301ed",
+ "artifact_sha256": "80d6bb6ea5198cbbc4ec4fa300704fd1b1a7254062da461cd59b49ea43bfb44b",
+ "battery_sha256": "bfd48fc67d8e12cd95247851595c2d024778d48576cc45755700d575a8d8fcb8",
+ "settlement": {
+  "amount": 250,
+  "currency": "SIM_USD",
+  "transfers": 1,
+  "buyer": 9750,
+  "seller": 250
+ },
+ "paid_usd": 0.0
+}

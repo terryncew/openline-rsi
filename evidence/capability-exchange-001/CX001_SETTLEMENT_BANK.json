@@ -1,0 +1,18 @@
+{
+ "balances": [
+  {
+   "principal": "openline:principal:2c722570a8281049c0e113ffca1880286e86218f11baa07fdc1d9002d3235f8a",
+   "amount": 9750
+  },
+  {
+   "principal": "openline:principal:a84f9961655979d8a6dbf4e7b869fd187a956f92d53d89b1e7977b6ae252deaa",
+   "amount": 250
+  }
+ ],
+ "transfers": [
+  {
+   "id": "b39e54f675cf9037151151ad5c4236d2e3156ef4f5acee21e7ddf9db629579f6",
+   "body": "{\"schema\": \"coordinator.simulated-payment.v1\", \"request\": {\"id\": \"b39e54f675cf9037151151ad5c4236d2e3156ef4f5acee21e7ddf9db629579f6\", \"buyer\": \"openline:principal:2c722570a8281049c0e113ffca1880286e86218f11baa07fdc1d9002d3235f8a\", \"worker\": \"openline:principal:a84f9961655979d8a6dbf4e7b869fd187a956f92d53d89b1e7977b6ae252deaa\", \"amount\": 250, \"currency\": \"SIM_USD\"}, \"status\": \"SETTLED\", \"payload_hash\": \"3b766ae3ffbd6b50fb28fc98392e570c06ab49dd77c141f1b024beb154e5c9d1\", \"signature\": {\"algorithm\": \"Ed25519\", \"public_key\": \"a9666b575e2c7f80ce166c064f9d6cee678147321c585b45788b5d52937d2040\", \"value\": \"1bf69b04ddef51c521a4d89050fbacd9551ac8fc2d7295b6a1cc63183f2f578e213c5cf9a7adceea8e82fca482bb29149f4ca742eaab815e8f8328fd73506309\"}}"
+  }
+ ]
+}
